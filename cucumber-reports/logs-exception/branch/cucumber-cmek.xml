@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="569.306642">
-<testcase classname="BigQuery sink - Verification of GCS to BigQuery successful data transfer" name="Validate successful records transfer from GCS to BigQuery" time="105.40589">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="1011.211163">
+<testcase classname="BigQuery sink - Verification of GCS to BigQuery successful data transfer" name="Validate successful records transfer from GCS to BigQuery" time="211.964691">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -33,7 +33,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Validate the cmek key "cmekBQ" of target BigQuery table if cmek is enabled.passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="125.791655">
+<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="233.900453">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -66,7 +66,7 @@ Then Verify the pipeline status is "Succeeded"..............................pass
 Then Verify data is transferred to target GCS bucket........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="123.197211">
+<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="164.743543">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -95,7 +95,7 @@ Then Verify data is transferred to target GCS bucket........................pass
 Then Validate the cmek key "cmekGCS" of target GCS bucket if cmek is enabled.passed
 ]]></system-out>
 </testcase>
-<testcase classname="PubSub-Sink - Verification of BigQuery to PubSub successful data transfer" name="To verify data is getting transferred from BigQuery to PubSub successfully" time="120.940558">
+<testcase classname="PubSub-Sink - Verification of BigQuery to PubSub successful data transfer" name="To verify data is getting transferred from BigQuery to PubSub successfully" time="223.150925">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is PubSub.........................................................passed
@@ -130,7 +130,7 @@ Then Open and capture logs..................................................pass
 Then Validate the cmek key "cmekPubSub" of target PubSub topic if cmek is enabled.passed
 ]]></system-out>
 </testcase>
-<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="To verify data is getting transferred from GCS to PubSub successfully" time="93.971328">
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="To verify data is getting transferred from GCS to PubSub successfully" time="177.451551">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is PubSub.........................................................passed
