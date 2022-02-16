@@ -50,7 +50,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                616,
+                1024,
                 0,
                 0,
                 0,
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 616) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1024) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,7 +106,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                43,
+                65,
                 0
             ],
             backgroundColor: [
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 43) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 65) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -153,7 +153,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   13,
+                   18,
                    0
                ],
                backgroundColor: [
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 13) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 18) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reports</td>
         <td>1</td>
-      <td>08 Feb 2022, 17:14</td>
+      <td>16 Feb 2022, 08:21</td>
     </tr>
   </tbody>
 </table>
@@ -338,7 +338,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">8</td>
 
-        <td class="duration" data-value="64015191437">1:4.015</td>
+        <td class="duration" data-value="73901297022">1:13.901</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -355,7 +355,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">4</td>
 
-        <td class="duration" data-value="529883510394">8:49.883</td>
+        <td class="duration" data-value="555966203454">9:15.966</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -372,7 +372,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="98792374245">1:38.792</td>
+        <td class="duration" data-value="103241885687">1:43.241</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -389,7 +389,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="100307157841">1:40.307</td>
+        <td class="duration" data-value="100248016529">1:40.248</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -406,7 +406,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="19390123614">19.390</td>
+        <td class="duration" data-value="19730806945">19.730</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -423,7 +423,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="91507862921">1:31.507</td>
+        <td class="duration" data-value="106958359010">1:46.958</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -440,7 +440,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="108885165904">1:48.885</td>
+        <td class="duration" data-value="107029695325">1:47.029</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -457,11 +457,45 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="105731255588">1:45.731</td>
+        <td class="duration" data-value="114203566397">1:54.203</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_8_1279981740.html">BigQuery sink - Validate BigQuery sink plugin error scenarios</a></td>
+        <td class="tagname"><a href="report-feature_8_1286682263.html">PubSub-Sink - Verification of BigQuery to PubSub successful data transfer</a></td>
+
+        <td      class="passed"    >32</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">32</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="113107910499">1:53.107</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_9_3503203353.html">PubSub-Sink - Verification of GCS to PubSub successful data transfer</a></td>
+
+        <td      class="passed"    >32</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">32</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="90708287318">1:30.708</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_10_1279981740.html">BigQuery sink - Validate BigQuery sink plugin error scenarios</a></td>
 
         <td      class="passed"    >15</td>
         <td >0</td>
@@ -474,11 +508,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="20769816848">20.769</td>
+        <td class="duration" data-value="22481587335">22.481</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_9_1725327609.html">BigQuery sink - Verification of GCS to BigQuery successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_11_1725327609.html">BigQuery sink - Verification of GCS to BigQuery successful data transfer</a></td>
 
         <td      class="passed"    >30</td>
         <td >0</td>
@@ -491,11 +525,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="86543998111">1:26.543</td>
+        <td class="duration" data-value="92906739400">1:32.906</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_10_3595776294.html">GCS source - Verify GCS Source plugin error scenarios</a></td>
+        <td class="tagname"><a href="report-feature_12_3595776294.html">GCS source - Verify GCS Source plugin error scenarios</a></td>
 
         <td      class="passed"    >68</td>
         <td >0</td>
@@ -508,11 +542,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">8</td>
 
-        <td class="duration" data-value="99987483040">1:39.987</td>
+        <td class="duration" data-value="106361053248">1:46.361</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_11_1710343571.html">GCS source - Verification of GCS to BQ successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_13_1710343571.html">GCS source - Verification of GCS to BQ successful data transfer</a></td>
 
         <td      class="passed"    >145</td>
         <td >0</td>
@@ -525,11 +559,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">6</td>
 
-        <td class="duration" data-value="455117478264">7:35.117</td>
+        <td class="duration" data-value="584121975554">9:44.121</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_12_4003804296.html">GCS source - Validate GCS plugin output schema for different formats</a></td>
+        <td class="tagname"><a href="report-feature_14_4003804296.html">GCS source - Validate GCS plugin output schema for different formats</a></td>
 
         <td      class="passed"    >42</td>
         <td >0</td>
@@ -542,7 +576,58 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">5</td>
 
-        <td class="duration" data-value="57750679167">57.750</td>
+        <td class="duration" data-value="62474024989">1:2.474</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_15_1286682263.html">PubSub-Sink - Verification of BigQuery to PubSub successful data transfer</a></td>
+
+        <td      class="passed"    >32</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">32</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="91387825542">1:31.387</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_16_3503203353.html">PubSub-Sink - Verification of GCS to PubSub successful data transfer</a></td>
+
+        <td      class="passed"    >212</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">212</td>
+
+        <td  class="passed"    >7</td>
+        <td >0</td>
+        <td class="total">7</td>
+
+        <td class="duration" data-value="552255676376">9:12.255</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_17_1046707832.html">PubSub-Sink - Verify PubSub sink plugin error Scenarios</a></td>
+
+        <td      class="passed"    >100</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">100</td>
+
+        <td  class="passed"    >12</td>
+        <td >0</td>
+        <td class="total">12</td>
+
+        <td class="duration" data-value="96996578887">1:36.996</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -550,19 +635,19 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>616</td>
+      <td>1024</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>616</td>
+      <td>1024</td>
 
-      <td>43</td>
+      <td>65</td>
       <td>0</td>
-      <td>43</td>
+      <td>65</td>
 
-      <td class="duration">30:38.682</td>
-      <td>13</td>
+      <td class="duration">49:54.081</td>
+      <td>18</td>
     </tr>
     <tr>
       <td></td>
