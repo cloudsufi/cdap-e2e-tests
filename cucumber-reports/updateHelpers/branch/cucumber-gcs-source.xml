@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="19" time="597.885064">
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields" time="5.841549">
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="19" time="727.702198">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields" time="6.630964">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -8,7 +8,7 @@ Then Enter the GCS properties with blank property "referenceName"...........pass
 Then Validate mandatory property error for "referenceName"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields 2" time="5.630667">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields 2" time="6.145283">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -16,7 +16,7 @@ Then Enter the GCS properties with blank property "path"....................pass
 Then Validate mandatory property error for "path"...........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields 3" time="6.017989">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields 3" time="6.60047">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -24,7 +24,7 @@ Then Enter the GCS properties with blank property "format"..................pass
 Then Validate mandatory property error for "format".........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error message for invalid bucket name" time="7.831087">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error message for invalid bucket name" time="8.299669">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -34,18 +34,50 @@ Then Select GCS property format "csv".......................................pass
 Then Verify invalid bucket name error message is displayed for bucket "gcsInvalidBucketName".passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error message for incorrect output path field value" time="13.510895">
-<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error message for incorrect output path field value" time="9.247395">
+<failure message="org.openqa.selenium.ElementNotInteractableException: element not interactable&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-e2e-cdapio-65d7f4cfcc-svn87', ip: '10.116.16.15', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c417b89a745e75293730b927b03014e1, sendKeysToElement {id=11dd67ee-0376-4b23-bbf9-c31718228cff, value=[Ljava.lang.CharSequence;@35306879}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.s6FKR9}, goog:chromeOptions: {debuggerAddress: localhost:34975}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34975/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (c417b89a745e75293730b927b03014e1)] -&gt; xpath: //*[@data-cy='pathField'and @class='MuiInputBase-input']]&#10;Session ID: c417b89a745e75293730b927b03014e1&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:107)&#10;&#9;at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;&#9;at java.lang.reflect.Method.invoke(Method.java:498)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)&#10;&#9;at com.sun.proxy.$Proxy22.sendKeys(Unknown Source)&#10;&#9;at io.cdap.e2e.pages.actions.CdfGcsActions.enterPathField(CdfGcsActions.java:154)&#10;&#9;at io.cdap.plugin.gcs.stepsdesign.GCSSource.enterGCSSourcePropertyPathField(GCSSource.java:57)&#10;&#9;at ✽.Enter GCS source property path field &quot;gcsInvalidPathField&quot;(file:src/e2e-test/features/gcs/source/GCSSourceError.feature:33)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
 Then Enter GCS property projectId and reference name........................passed
 Then Enter GCS source property path "gcsOutputFieldTestFile"................passed
 Then Select GCS property format "csv".......................................passed
-Then Enter GCS source property path field "gcsInvalidPathField".............passed
-Then Verify Output Path field Error Message for incorrect path field "gcsInvalidPathField".passed
-]]></system-out>
+Then Enter GCS source property path field "gcsInvalidPathField".............failed
+Then Verify Output Path field Error Message for incorrect path field "gcsInvalidPathField".skipped
+
+StackTrace:
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-e2e-cdapio-65d7f4cfcc-svn87', ip: '10.116.16.15', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c417b89a745e75293730b927b03014e1, sendKeysToElement {id=11dd67ee-0376-4b23-bbf9-c31718228cff, value=[Ljava.lang.CharSequence;@35306879}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.s6FKR9}, goog:chromeOptions: {debuggerAddress: localhost:34975}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34975/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (c417b89a745e75293730b927b03014e1)] -> xpath: //*[@data-cy='pathField'and @class='MuiInputBase-input']]
+Session ID: c417b89a745e75293730b927b03014e1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:107)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.sendKeys(Unknown Source)
+	at io.cdap.e2e.pages.actions.CdfGcsActions.enterPathField(CdfGcsActions.java:154)
+	at io.cdap.plugin.gcs.stepsdesign.GCSSource.enterGCSSourcePropertyPathField(GCSSource.java:57)
+	at ✽.Enter GCS source property path field "gcsInvalidPathField"(file:src/e2e-test/features/gcs/source/GCSSourceError.feature:33)
+]]></failure>
 </testcase>
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error for incorrect delimiter" time="13.371744">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error for incorrect delimiter" time="12.618188">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -57,7 +89,7 @@ Then Toggle GCS source property skip header to true.........................pass
 Then Verify get schema fails with error.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error for incorrect override field" time="13.146888">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error for incorrect override field" time="13.510159">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -69,7 +101,7 @@ Then Toggle GCS source property skip header to true.........................pass
 Then Verify get schema fails with error.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Pipeline preview gets failed for incorrect Regex-Path" time="46.851106">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Pipeline preview gets failed for incorrect Regex-Path" time="45.54818">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -92,8 +124,8 @@ Then Preview and run the pipeline...........................................pass
 Then Verify the preview of pipeline is "failed".............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify data is getting transferred from GCS to BigQuery with Mandatory fields" time="11.988974">
-<failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li class=&quot;MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button&quot; tabindex=&quot;-1&quot; role=&quot;option&quot; aria-disabled=&quot;false&quot; data-cy=&quot;option-csv&quot; data-value=&quot;csv&quot;&gt;...&lt;/li&gt; is not clickable at point (490, 741). Other element would receive the click: &lt;li class=&quot;MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button&quot; tabindex=&quot;-1&quot; role=&quot;option&quot; aria-disabled=&quot;false&quot; data-cy=&quot;option-delimited&quot; data-value=&quot;delimited&quot;&gt;...&lt;/li&gt;&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-e2e-cdapio-65d7f4cfcc-svn87', ip: '10.116.16.15', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [9672fee7e8cfb280a7251b121f0b3145, clickElement {id=9aa3f509-1cd4-469f-9889-6ea7e66ba44d}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.8T6pyI}, goog:chromeOptions: {debuggerAddress: localhost:41753}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41753/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (9672fee7e8cfb280a7251b121f0b3145)] -&gt; xpath: //li[@data-value='csv']]&#10;Session ID: 9672fee7e8cfb280a7251b121f0b3145&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)&#10;&#9;at io.cdap.e2e.utils.ElementHelper.clickOnElement(ElementHelper.java:46)&#10;&#9;at io.cdap.e2e.pages.actions.CdfGcsActions.selectFormat(CdfGcsActions.java:111)&#10;&#9;at io.cdap.plugin.gcs.stepsdesign.GCSBase.selectGCSPropertyFormat(GCSBase.java:62)&#10;&#9;at ✽.Select GCS property format &quot;csv&quot;(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:14)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify data is getting transferred from GCS to BigQuery with Mandatory fields" time="104.00225">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
 Then Connect source as "GCS" and sink as "BigQuery" to establish connection.passed
@@ -101,57 +133,29 @@ Then Open GCS source properties.............................................pass
 Then Enter GCS property projectId and reference name........................passed
 Then Enter GCS source property path "gcsCsvFile"............................passed
 Then Toggle GCS source property skip header to true.........................passed
-Then Select GCS property format "csv".......................................failed
-Then Validate output schema with expectedSchema "gcsCsvFileSchema"..........skipped
-Then Validate "GCS" plugin properties.......................................skipped
-Then Close the GCS properties...............................................skipped
-Then Open BigQuery sink properties..........................................skipped
-Then Enter the BigQuery sink mandatory properties...........................skipped
-Then Validate "BigQuery" plugin properties..................................skipped
-Then Close the BigQuery properties..........................................skipped
-Then Save the pipeline......................................................skipped
-Then Preview and run the pipeline...........................................skipped
-Then Verify the preview of pipeline is "success"............................skipped
-Then Click on preview data for BigQuery sink................................skipped
-Then Verify preview output schema matches the outputSchema captured in properties.skipped
-Then Close the preview data.................................................skipped
-Then Deploy the pipeline....................................................skipped
-Then Run the Pipeline in Runtime............................................skipped
-Then Wait till pipeline is in running state.................................skipped
-Then Open and capture logs..................................................skipped
-Then Verify the pipeline status is "Succeeded"..............................skipped
-Then Get count of no of records transferred to target BigQuery Table........skipped
-
-StackTrace:
-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="-1" role="option" aria-disabled="false" data-cy="option-csv" data-value="csv">...</li> is not clickable at point (490, 741). Other element would receive the click: <li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="-1" role="option" aria-disabled="false" data-cy="option-delimited" data-value="delimited">...</li>
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-e2e-cdapio-65d7f4cfcc-svn87', ip: '10.116.16.15', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9672fee7e8cfb280a7251b121f0b3145, clickElement {id=9aa3f509-1cd4-469f-9889-6ea7e66ba44d}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.8T6pyI}, goog:chromeOptions: {debuggerAddress: localhost:41753}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41753/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on LINUX (9672fee7e8cfb280a7251b121f0b3145)] -> xpath: //li[@data-value='csv']]
-Session ID: 9672fee7e8cfb280a7251b121f0b3145
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at io.cdap.e2e.utils.ElementHelper.clickOnElement(ElementHelper.java:46)
-	at io.cdap.e2e.pages.actions.CdfGcsActions.selectFormat(CdfGcsActions.java:111)
-	at io.cdap.plugin.gcs.stepsdesign.GCSBase.selectGCSPropertyFormat(GCSBase.java:62)
-	at ✽.Select GCS property format "csv"(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:14)
-]]></failure>
+Then Select GCS property format "csv".......................................passed
+Then Validate output schema with expectedSchema "gcsCsvFileSchema"..........passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open BigQuery sink properties..........................................passed
+Then Enter the BigQuery sink mandatory properties...........................passed
+Then Validate "BigQuery" plugin properties..................................passed
+Then Close the BigQuery properties..........................................passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Click on preview data for BigQuery sink................................passed
+Then Verify preview output schema matches the outputSchema captured in properties.passed
+Then Close the preview data.................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Open and capture logs..................................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Get count of no of records transferred to target BigQuery Table........passed
+]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify successful data transfer from GCS to BigQuery with outputField" time="80.872382">
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify successful data transfer from GCS to BigQuery with outputField" time="82.059978">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -178,7 +182,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Verify output field "gcsPathField" in target BigQuery table contains path of the source GcsBucket "gcsOutputFieldTestFile".passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with Datatype override" time="81.822565">
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with Datatype override" time="93.812063">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -205,7 +209,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Verify datatype of field "gcsOverrideField" is overridden to data type "gcsOverrideDataType" in target BigQuery table.passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with Delimiter" time="80.8847">
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with Delimiter" time="92.260102">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -231,7 +235,7 @@ Then Verify the pipeline status is "Succeeded"..............................pass
 Then Get count of no of records transferred to target BigQuery Table........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with blob file by entering MaxMinSplitSize" time="80.115251">
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with blob file by entering MaxMinSplitSize" time="91.392221">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -257,7 +261,7 @@ Then Verify the pipeline status is "Succeeded"..............................pass
 Then Get count of no of records transferred to target BigQuery Table........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer using Regex path filter" time="80.308219">
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer using Regex path filter" time="82.154751">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -283,7 +287,7 @@ Then Verify the pipeline status is "Succeeded"..............................pass
 Then Get count of no of records transferred to target BigQuery Table........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation" time="14.444451">
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation" time="15.360622">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -294,7 +298,7 @@ Then Toggle GCS source property skip header to true.........................pass
 Then Validate output schema with expectedSchema "gcsCsvFileSchema"..........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation 2" time="14.411025">
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation 2" time="15.576298">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -305,7 +309,7 @@ Then Toggle GCS source property skip header to true.........................pass
 Then Validate output schema with expectedSchema "gcsTsvFileSchema"..........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation 3" time="12.89555">
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation 3" time="14.083118">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -316,7 +320,7 @@ Then Toggle GCS source property skip header to true.........................pass
 Then Validate output schema with expectedSchema "gcsBlobFileSchema".........passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation for delimited files" time="14.541579">
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation for delimited files" time="15.390007">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed
@@ -328,7 +332,7 @@ Then Toggle GCS source property skip header to true.........................pass
 Then Validate output schema with expectedSchema "gcsDelimitedFileSchema"....passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation for delimited files 2" time="13.398443">
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation for delimited files 2" time="13.01048">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 Then Open GCS source properties.............................................passed

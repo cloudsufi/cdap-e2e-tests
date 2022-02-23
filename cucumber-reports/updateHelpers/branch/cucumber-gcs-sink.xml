@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="141.532759">
-<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="123.640072">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="137.065164">
+<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="119.047889">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -29,7 +29,7 @@ Then Verify data is transferred to target GCS bucket........................pass
 Then Validate the cmek key "cmekGCS" of target GCS bucket if cmek is enabled.passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields" time="5.657405">
+<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields" time="5.834015">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Sink is GCS............................................................passed
 Then Open GCS sink properties...............................................passed
@@ -37,7 +37,7 @@ Then Enter the GCS properties with blank property "referenceName"...........pass
 Then Validate mandatory property error for "referenceName"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 2" time="6.108566">
+<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 2" time="5.884467">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Sink is GCS............................................................passed
 Then Open GCS sink properties...............................................passed
@@ -45,7 +45,7 @@ Then Enter the GCS properties with blank property "path"....................pass
 Then Validate mandatory property error for "path"...........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 3" time="6.126716">
+<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 3" time="6.298793">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Sink is GCS............................................................passed
 Then Open GCS sink properties...............................................passed
