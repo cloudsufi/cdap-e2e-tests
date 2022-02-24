@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="14" time="727.293773">
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields" time="5.648402">
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="14" time="743.885123">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields" time="6.117856">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -8,7 +8,7 @@ Then Enter the BigQuery properties with blank property "referenceName"......pass
 Then Validate mandatory property error for "referenceName"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 2" time="5.736527">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 2" time="6.146573">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -16,7 +16,7 @@ Then Enter the BigQuery properties with blank property "dataset"............pass
 Then Validate mandatory property error for "dataset"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 3" time="5.779868">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 3" time="6.11317">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -24,7 +24,7 @@ Then Enter the BigQuery properties with blank property "table"..............pass
 Then Validate mandatory property error for "table"..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values" time="14.339813">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values" time="14.074362">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -33,7 +33,7 @@ Then Enter the BigQuery source properties with incorrect property "dataset" valu
 Then Validate BigQuery source incorrect property error for table "dataset" value "bqIncorrectDataset".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 2" time="15.984054">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 2" time="17.024307">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -42,7 +42,7 @@ Then Enter the BigQuery source properties with incorrect property "table" value 
 Then Validate BigQuery source incorrect property error for table "table" value "bqIncorrectTableName".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 3" time="13.632376">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 3" time="14.681789">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -51,7 +51,7 @@ Then Enter the BigQuery source properties with incorrect property "datasetProjec
 Then Validate BigQuery source incorrect property error for table "datasetProject" value "bqIncorrectDatasetProjectId".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds" time="8.47277">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds" time="8.864759">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -63,7 +63,7 @@ Then Enter BigQuery source property table name..............................pass
 Then Verify plugin properties validation fails with 1 error.................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds 2" time="8.114713">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds 2" time="8.623036">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -75,7 +75,7 @@ Then Enter BigQuery source property table name..............................pass
 Then Verify plugin properties validation fails with 1 error.................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate successful records transfer from BigQuery to BigQuery with filter" time="154.233308">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate successful records transfer from BigQuery to BigQuery with filter" time="165.154976">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -109,7 +109,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Validate records transferred to target table is equal to number of records from source table with filter "bqFilter".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate that pipeline run preview gets failed when incorrect filter values are provided" time="66.242012">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate that pipeline run preview gets failed when incorrect filter values are provided" time="62.114504">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -133,7 +133,7 @@ Then Preview and run the pipeline...........................................pass
 Then Verify the preview of pipeline is "failed".............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are getting transferred with respect to partitioned date" time="155.084718">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are getting transferred with respect to partitioned date" time="153.931933">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -167,7 +167,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Validate partition date in output partitioned table....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are not getting transferred for future partitioned date" time="104.322197">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are not getting transferred for future partitioned date" time="105.162543">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -195,7 +195,7 @@ Then Validate the records are not created in output table...................pass
 Then Validate partitioning is not done on the output table..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="132.784426">
+<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="137.756409">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -228,8 +228,8 @@ Then Verify the pipeline status is "Succeeded"..............................pass
 Then Verify data is transferred to target GCS bucket........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to Multiple sinks successful data transfer" name="Validate successful records transfer from BigQuery to multiple sinks (GCS, BigQuery and PubSub)" time="36.918589">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@title='BigQuery']/ancestor::div[contains(@data-cy,'plugin-node-BigQuery') and @data-type='batchsource']//*[contains(@data-cy,'plugin-endpoint-BigQuery')]&quot;}&#10;  (Session info: headless chrome=92.0.4515.159)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-e2e-cdapio-65d7f4cfcc-rnptk', ip: '10.116.13.11', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c43232d60e83052db03582b238267299, findElement {using=xpath, value=//div[@title='BigQuery']/ancestor::div[contains(@data-cy,'plugin-node-BigQuery') and @data-type='batchsource']//*[contains(@data-cy,'plugin-endpoint-BigQuery')]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.3lBHFf}, goog:chromeOptions: {debuggerAddress: localhost:40307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40307/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c43232d60e83052db03582b238267299&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)&#10;&#9;at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)&#10;&#9;at io.cdap.e2e.pages.locators.CdfStudioLocators.sourceEndpointWithTitle(CdfStudioLocators.java:133)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.connectSourceAndSinkWithTitles(CdfHelper.java:148)&#10;&#9;at stepsdesign.PipelineSteps.connectSourceAsHavingTitleAndSinkAsHavingTitleToEstablishConnection(PipelineSteps.java:93)&#10;&#9;at ✽.Connect source as &quot;BigQuery&quot; having title &quot;BigQuery&quot; and sink1 as &quot;GCS&quot; having title &quot;GCS&quot; to establish connection(file:src/e2e-test/features/bigquery/source/BigQueryToMultipleSinks.feature:12)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+<testcase classname="BigQuery source - Verification of BigQuery to Multiple sinks successful data transfer" name="Validate successful records transfer from BigQuery to multiple sinks (GCS, BigQuery and PubSub)" time="38.118906">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@title='BigQuery']/ancestor::div[contains(@data-cy,'plugin-node-BigQuery') and @data-type='batchsource']//*[contains(@data-cy,'plugin-endpoint-BigQuery')]&quot;}&#10;  (Session info: headless chrome=92.0.4515.159)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-e2e-cdapio-65d7f4cfcc-rnptk', ip: '10.116.13.11', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [e31a7788a2d3d44ee0301f3d7f03fae4, findElement {using=xpath, value=//div[@title='BigQuery']/ancestor::div[contains(@data-cy,'plugin-node-BigQuery') and @data-type='batchsource']//*[contains(@data-cy,'plugin-endpoint-BigQuery')]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.Y5bXsh}, goog:chromeOptions: {debuggerAddress: localhost:41087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41087/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: e31a7788a2d3d44ee0301f3d7f03fae4&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)&#10;&#9;at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)&#10;&#9;at io.cdap.e2e.pages.locators.CdfStudioLocators.sourceEndpointWithTitle(CdfStudioLocators.java:133)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.connectSourceAndSinkWithTitles(CdfHelper.java:148)&#10;&#9;at stepsdesign.PipelineSteps.connectSourceAsHavingTitleAndSinkAsHavingTitleToEstablishConnection(PipelineSteps.java:93)&#10;&#9;at ✽.Connect source as &quot;BigQuery&quot; having title &quot;BigQuery&quot; and sink1 as &quot;GCS&quot; having title &quot;GCS&quot; to establish connection(file:src/e2e-test/features/bigquery/source/BigQueryToMultipleSinks.feature:12)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 And Wait for page to render properly........................................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -279,9 +279,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
 System info: host: 'runner-deployment-build-e2e-cdapio-65d7f4cfcc-rnptk', ip: '10.116.13.11', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c43232d60e83052db03582b238267299, findElement {using=xpath, value=//div[@title='BigQuery']/ancestor::div[contains(@data-cy,'plugin-node-BigQuery') and @data-type='batchsource']//*[contains(@data-cy,'plugin-endpoint-BigQuery')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.3lBHFf}, goog:chromeOptions: {debuggerAddress: localhost:40307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40307/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c43232d60e83052db03582b238267299
+Command: [e31a7788a2d3d44ee0301f3d7f03fae4, findElement {using=xpath, value=//div[@title='BigQuery']/ancestor::div[contains(@data-cy,'plugin-node-BigQuery') and @data-type='batchsource']//*[contains(@data-cy,'plugin-endpoint-BigQuery')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.Y5bXsh}, goog:chromeOptions: {debuggerAddress: localhost:41087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41087/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e31a7788a2d3d44ee0301f3d7f03fae4
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
