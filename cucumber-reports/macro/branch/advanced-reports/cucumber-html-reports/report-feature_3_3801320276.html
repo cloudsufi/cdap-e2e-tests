@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reports</td>
         <td>1</td>
-      <td>22 Feb 2022, 07:32</td>
+      <td>02 Mar 2022, 08:17</td>
     </tr>
   </tbody>
 </table>
@@ -140,7 +140,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="187090792913">3:7.090</td>
+          <td class="duration" data-value="215840307931">3:35.840</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -200,7 +200,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3:7.090</span>
+  <span class="lead-duration duration">3:35.840</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -252,9 +252,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">TestSetupHooks.createTempSourceBQTable()</span>
+              <span class="location name">TestSetupHooks.setTempTargetGCSBucketName()</span>
 
-  <span class="lead-duration duration">1.550</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
@@ -270,63 +270,7 @@ $(document).ready(function() {
         </div>
         <div id="output-3" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_f3d04850_64fa_4c25_9a55_91e8332b0164 created successfully</p></pre>
-        </div>
-      </div>
-  </div>
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">TestSetupHooks.createTargetPubSubTopic()</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-          </div>
-
-
-
-
-
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-4">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-4" class="collapse collapsable-details " >
-          
-          <pre><p>Target PubSub topic cdf-e2e-test-95777111-f215-4d6e-8415-d7f6800903f6</p></pre>
-        </div>
-      </div>
-  </div>
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">TestSetupHooks.setTempTargetGCSBucketName()</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-          </div>
-
-
-
-
-
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-5">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-5" class="collapse collapsable-details " >
-          
-          <pre><p>GCS target bucket name - cdf-e2e-test-69f11c49-0007-4012-ab4a-ad9a3e335089</p></pre>
+          <pre><p>GCS target bucket name - cdf-e2e-test-5230f986-a012-4120-8f0b-62d038ca2e61</p></pre>
         </div>
       </div>
   </div>
@@ -348,13 +292,69 @@ $(document).ready(function() {
 
   <div class="outputs inner-level">
       <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-4">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-4" class="collapse collapsable-details " >
+          
+          <pre><p>BQ Target table name - E2E_TEST_SINK_7189</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">TestSetupHooks.createTempSourceBQTable()</span>
+
+  <span class="lead-duration duration">2.105</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-5">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-5" class="collapse collapsable-details " >
+          
+          <pre><p>BQ source Table E2E_SOURCE_753f3a56_2ab5_483c_ad70_2b86e190df81 created successfully</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">TestSetupHooks.createTargetPubSubTopic()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
         <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-6">
           Output 1
           <i class="chevron fa fa-fw"></i>
         </div>
         <div id="output-6" class="collapse collapsable-details " >
           
-          <pre><p>BQ Target table name - E2E_TEST_SINK_9957</p></pre>
+          <pre><p>Target PubSub topic cdf-e2e-test-73d0122d-6776-471d-ac71-7942dd636947</p></pre>
         </div>
       </div>
   </div>
@@ -387,7 +387,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">3.327</span>
+  <span class="lead-duration duration">1.754</span>
 
 </div>
 
@@ -424,7 +424,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.201</span>
+  <span class="lead-duration duration">0.168</span>
 
           </div>
 
@@ -437,13 +437,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-9" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1403823596.png" download target="_blank">
+      <a href="embeddings/embedding_-1583551260.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-9" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1403823596.png">
+        <img src="embeddings/embedding_-1583551260.png">
       </div>
     </div>
   </div>
@@ -461,7 +461,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">Wait for page to render properly</span>
 
-  <span class="lead-duration duration">3.000</span>
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -498,7 +498,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.177</span>
+  <span class="lead-duration duration">0.168</span>
 
           </div>
 
@@ -511,13 +511,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-11" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1513478278.png" download target="_blank">
+      <a href="embeddings/embedding_-1583551260.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-11" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1513478278.png">
+        <img src="embeddings/embedding_-1583551260.png">
       </div>
     </div>
   </div>
@@ -535,7 +535,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.247</span>
+  <span class="lead-duration duration">0.157</span>
 
 </div>
 
@@ -572,7 +572,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.220</span>
+  <span class="lead-duration duration">0.213</span>
 
           </div>
 
@@ -585,13 +585,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-13" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_2024521884.png" download target="_blank">
+      <a href="embeddings/embedding_932370068.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-13" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_2024521884.png">
+        <img src="embeddings/embedding_932370068.png">
       </div>
     </div>
   </div>
@@ -609,7 +609,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">Sink is GCS</span>
 
-  <span class="lead-duration duration">0.227</span>
+  <span class="lead-duration duration">0.192</span>
 
 </div>
 
@@ -646,7 +646,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.214</span>
+  <span class="lead-duration duration">0.193</span>
 
           </div>
 
@@ -659,13 +659,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-15" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1172604835.png" download target="_blank">
+      <a href="embeddings/embedding_-2004045382.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-15" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1172604835.png">
+        <img src="embeddings/embedding_-2004045382.png">
       </div>
     </div>
   </div>
@@ -683,7 +683,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Connect source as <span class="argument">&quot;BigQuery&quot;</span> having title <span class="argument">&quot;BigQuery&quot;</span> and sink<span class="argument">1</span> as <span class="argument">&quot;GCS&quot;</span> having title <span class="argument">&quot;GCS&quot;</span> to establish connection</span>
 
-  <span class="lead-duration duration">0.823</span>
+  <span class="lead-duration duration">0.822</span>
 
 </div>
 
@@ -720,7 +720,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.194</span>
+  <span class="lead-duration duration">0.198</span>
 
           </div>
 
@@ -757,7 +757,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">Sink is BigQuery</span>
 
-  <span class="lead-duration duration">0.142</span>
+  <span class="lead-duration duration">0.131</span>
 
 </div>
 
@@ -794,7 +794,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.233</span>
+  <span class="lead-duration duration">0.207</span>
 
           </div>
 
@@ -807,13 +807,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-19" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-734122250.png" download target="_blank">
+      <a href="embeddings/embedding_-630313256.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-19" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-734122250.png">
+        <img src="embeddings/embedding_-630313256.png">
       </div>
     </div>
   </div>
@@ -831,7 +831,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Connect source as <span class="argument">&quot;BigQuery&quot;</span> having title <span class="argument">&quot;BigQuery&quot;</span> and sink<span class="argument">2</span> as <span class="argument">&quot;BigQuery&quot;</span> having title <span class="argument">&quot;BigQuery2&quot;</span> to establish connection</span>
 
-  <span class="lead-duration duration">0.878</span>
+  <span class="lead-duration duration">0.831</span>
 
 </div>
 
@@ -868,7 +868,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.209</span>
+  <span class="lead-duration duration">0.194</span>
 
           </div>
 
@@ -881,13 +881,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-21" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1881497699.png" download target="_blank">
+      <a href="embeddings/embedding_-1123561157.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-21" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1881497699.png">
+        <img src="embeddings/embedding_-1123561157.png">
       </div>
     </div>
   </div>
@@ -905,7 +905,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">Sink is PubSub</span>
 
-  <span class="lead-duration duration">0.171</span>
+  <span class="lead-duration duration">0.144</span>
 
 </div>
 
@@ -942,7 +942,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.269</span>
+  <span class="lead-duration duration">0.234</span>
 
           </div>
 
@@ -979,7 +979,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Connect source as <span class="argument">&quot;BigQuery&quot;</span> having title <span class="argument">&quot;BigQuery&quot;</span> and sink<span class="argument">3</span> as <span class="argument">&quot;GooglePublisher&quot;</span> having title <span class="argument">&quot;Pub/Sub&quot;</span> to establish connection</span>
 
-  <span class="lead-duration duration">0.894</span>
+  <span class="lead-duration duration">0.907</span>
 
 </div>
 
@@ -1016,7 +1016,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.227</span>
+  <span class="lead-duration duration">0.188</span>
 
           </div>
 
@@ -1029,13 +1029,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-25" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1122106297.png" download target="_blank">
+      <a href="embeddings/embedding_1763239927.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-25" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1122106297.png">
+        <img src="embeddings/embedding_1763239927.png">
       </div>
     </div>
   </div>
@@ -1053,7 +1053,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.194</span>
+  <span class="lead-duration duration">0.172</span>
 
 </div>
 
@@ -1090,7 +1090,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.347</span>
+  <span class="lead-duration duration">0.307</span>
 
           </div>
 
@@ -1103,13 +1103,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-27" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1553100438.png" download target="_blank">
+      <a href="embeddings/embedding_1869820656.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-27" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1553100438.png">
+        <img src="embeddings/embedding_1869820656.png">
       </div>
     </div>
   </div>
@@ -1127,7 +1127,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery source mandatory properties</span>
 
-  <span class="lead-duration duration">4.917</span>
+  <span class="lead-duration duration">4.904</span>
 
 </div>
 
@@ -1164,7 +1164,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.178</span>
+  <span class="lead-duration duration">0.196</span>
 
           </div>
 
@@ -1177,13 +1177,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-29" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-778875911.png" download target="_blank">
+      <a href="embeddings/embedding_1911357.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-29" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-778875911.png">
+        <img src="embeddings/embedding_1911357.png">
       </div>
     </div>
   </div>
@@ -1201,7 +1201,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Validate <span class="argument">&quot;BigQuery&quot;</span> plugin properties</span>
 
-  <span class="lead-duration duration">3.491</span>
+  <span class="lead-duration duration">2.950</span>
 
 </div>
 
@@ -1238,7 +1238,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.230</span>
+  <span class="lead-duration duration">0.185</span>
 
           </div>
 
@@ -1251,13 +1251,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-31" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1584287756.png" download target="_blank">
+      <a href="embeddings/embedding_-167001022.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-31" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1584287756.png">
+        <img src="embeddings/embedding_-167001022.png">
       </div>
     </div>
   </div>
@@ -1275,7 +1275,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Close the BigQuery properties</span>
 
-  <span class="lead-duration duration">0.157</span>
+  <span class="lead-duration duration">0.284</span>
 
 </div>
 
@@ -1312,7 +1312,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.211</span>
+  <span class="lead-duration duration">0.209</span>
 
           </div>
 
@@ -1349,7 +1349,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Open GCS sink properties</span>
 
-  <span class="lead-duration duration">0.210</span>
+  <span class="lead-duration duration">0.189</span>
 
 </div>
 
@@ -1386,7 +1386,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.426</span>
+  <span class="lead-duration duration">0.461</span>
 
           </div>
 
@@ -1423,7 +1423,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Enter the GCS sink mandatory properties</span>
 
-  <span class="lead-duration duration">3.890</span>
+  <span class="lead-duration duration">3.732</span>
 
 </div>
 
@@ -1460,7 +1460,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.225</span>
+  <span class="lead-duration duration">0.197</span>
 
           </div>
 
@@ -1473,13 +1473,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-37" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1031146135.png" download target="_blank">
+      <a href="embeddings/embedding_2029408745.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-37" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1031146135.png">
+        <img src="embeddings/embedding_2029408745.png">
       </div>
     </div>
   </div>
@@ -1534,7 +1534,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.217</span>
+  <span class="lead-duration duration">0.180</span>
 
           </div>
 
@@ -1547,13 +1547,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-39" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1031146135.png" download target="_blank">
+      <a href="embeddings/embedding_84445161.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-39" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1031146135.png">
+        <img src="embeddings/embedding_84445161.png">
       </div>
     </div>
   </div>
@@ -1571,7 +1571,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Validate <span class="argument">&quot;GCS&quot;</span> plugin properties</span>
 
-  <span class="lead-duration duration">2.499</span>
+  <span class="lead-duration duration">1.926</span>
 
 </div>
 
@@ -1608,7 +1608,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.169</span>
+  <span class="lead-duration duration">0.166</span>
 
           </div>
 
@@ -1621,13 +1621,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-41" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-2015191927.png" download target="_blank">
+      <a href="embeddings/embedding_-388299501.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-41" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-2015191927.png">
+        <img src="embeddings/embedding_-388299501.png">
       </div>
     </div>
   </div>
@@ -1645,7 +1645,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Close the GCS properties</span>
 
-  <span class="lead-duration duration">0.116</span>
+  <span class="lead-duration duration">0.113</span>
 
 </div>
 
@@ -1682,7 +1682,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.206</span>
+  <span class="lead-duration duration">0.195</span>
 
           </div>
 
@@ -1719,7 +1719,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery sink properties</span>
 
-  <span class="lead-duration duration">0.229</span>
+  <span class="lead-duration duration">0.201</span>
 
 </div>
 
@@ -1756,7 +1756,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.437</span>
+  <span class="lead-duration duration">0.558</span>
 
           </div>
 
@@ -1769,13 +1769,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-45" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1077326638.png" download target="_blank">
+      <a href="embeddings/embedding_-1229907810.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-45" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1077326638.png">
+        <img src="embeddings/embedding_-1229907810.png">
       </div>
     </div>
   </div>
@@ -1793,7 +1793,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery sink mandatory properties</span>
 
-  <span class="lead-duration duration">5.080</span>
+  <span class="lead-duration duration">4.934</span>
 
 </div>
 
@@ -1830,7 +1830,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.189</span>
+  <span class="lead-duration duration">0.184</span>
 
           </div>
 
@@ -1843,13 +1843,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-47" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1075611464.png" download target="_blank">
+      <a href="embeddings/embedding_130754912.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-47" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1075611464.png">
+        <img src="embeddings/embedding_130754912.png">
       </div>
     </div>
   </div>
@@ -1904,7 +1904,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.193</span>
+  <span class="lead-duration duration">0.167</span>
 
           </div>
 
@@ -1917,13 +1917,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-49" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1075611464.png" download target="_blank">
+      <a href="embeddings/embedding_130754912.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-49" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1075611464.png">
+        <img src="embeddings/embedding_130754912.png">
       </div>
     </div>
   </div>
@@ -1941,7 +1941,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Validate <span class="argument">&quot;BigQuery&quot;</span> plugin properties</span>
 
-  <span class="lead-duration duration">3.002</span>
+  <span class="lead-duration duration">2.464</span>
 
 </div>
 
@@ -1978,7 +1978,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.165</span>
+  <span class="lead-duration duration">0.175</span>
 
           </div>
 
@@ -1991,13 +1991,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-51" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1804730151.png" download target="_blank">
+      <a href="embeddings/embedding_-1288864715.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-51" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1804730151.png">
+        <img src="embeddings/embedding_-1288864715.png">
       </div>
     </div>
   </div>
@@ -2015,7 +2015,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Close the BigQuery properties</span>
 
-  <span class="lead-duration duration">0.148</span>
+  <span class="lead-duration duration">0.328</span>
 
 </div>
 
@@ -2052,7 +2052,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.191</span>
+  <span class="lead-duration duration">0.200</span>
 
           </div>
 
@@ -2089,7 +2089,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Open the PubSub sink properties</span>
 
-  <span class="lead-duration duration">0.202</span>
+  <span class="lead-duration duration">0.230</span>
 
 </div>
 
@@ -2126,7 +2126,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.253</span>
+  <span class="lead-duration duration">0.336</span>
 
           </div>
 
@@ -2139,13 +2139,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-55" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_826510759.png" download target="_blank">
+      <a href="embeddings/embedding_969039472.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-55" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_826510759.png">
+        <img src="embeddings/embedding_969039472.png">
       </div>
     </div>
   </div>
@@ -2163,7 +2163,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Enter the PubSub sink mandatory properties</span>
 
-  <span class="lead-duration duration">3.215</span>
+  <span class="lead-duration duration">3.521</span>
 
 </div>
 
@@ -2200,7 +2200,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.195</span>
+  <span class="lead-duration duration">0.190</span>
 
           </div>
 
@@ -2213,13 +2213,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-57" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_851799966.png" download target="_blank">
+      <a href="embeddings/embedding_-1676624686.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-57" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_851799966.png">
+        <img src="embeddings/embedding_-1676624686.png">
       </div>
     </div>
   </div>
@@ -2286,7 +2286,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.190</span>
+  <span class="lead-duration duration">0.168</span>
 
           </div>
 
@@ -2299,13 +2299,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-60" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_851799966.png" download target="_blank">
+      <a href="embeddings/embedding_-1676624686.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-60" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_851799966.png">
+        <img src="embeddings/embedding_-1676624686.png">
       </div>
     </div>
   </div>
@@ -2323,7 +2323,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Validate <span class="argument">&quot;PubSub&quot;</span> plugin properties</span>
 
-  <span class="lead-duration duration">2.606</span>
+  <span class="lead-duration duration">1.960</span>
 
 </div>
 
@@ -2373,13 +2373,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-62" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_185370447.png" download target="_blank">
+      <a href="embeddings/embedding_-1089479064.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-62" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_185370447.png">
+        <img src="embeddings/embedding_-1089479064.png">
       </div>
     </div>
   </div>
@@ -2397,7 +2397,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Close the PubSub properties</span>
 
-  <span class="lead-duration duration">0.107</span>
+  <span class="lead-duration duration">0.103</span>
 
 </div>
 
@@ -2434,7 +2434,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.207</span>
+  <span class="lead-duration duration">0.195</span>
 
           </div>
 
@@ -2471,7 +2471,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Save the pipeline</span>
 
-  <span class="lead-duration duration">4.449</span>
+  <span class="lead-duration duration">4.482</span>
 
 </div>
 
@@ -2508,7 +2508,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.173</span>
+  <span class="lead-duration duration">0.181</span>
 
           </div>
 
@@ -2521,13 +2521,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-66" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1131947805.png" download target="_blank">
+      <a href="embeddings/embedding_1486008183.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-66" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1131947805.png">
+        <img src="embeddings/embedding_1486008183.png">
       </div>
     </div>
   </div>
@@ -2545,7 +2545,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Preview and run the pipeline</span>
 
-  <span class="lead-duration duration">0.172</span>
+  <span class="lead-duration duration">0.323</span>
 
 </div>
 
@@ -2582,7 +2582,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.211</span>
+  <span class="lead-duration duration">0.223</span>
 
           </div>
 
@@ -2595,13 +2595,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-68" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1876989472.png" download target="_blank">
+      <a href="embeddings/embedding_-1308641304.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-68" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1876989472.png">
+        <img src="embeddings/embedding_-1308641304.png">
       </div>
     </div>
   </div>
@@ -2619,7 +2619,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Verify the preview of pipeline is <span class="argument">&quot;success&quot;</span></span>
 
-  <span class="lead-duration duration">35.493</span>
+  <span class="lead-duration duration">34.761</span>
 
 </div>
 
@@ -2656,7 +2656,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.231</span>
+  <span class="lead-duration duration">0.171</span>
 
           </div>
 
@@ -2669,13 +2669,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-70" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1993040042.png" download target="_blank">
+      <a href="embeddings/embedding_-1860367593.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-70" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1993040042.png">
+        <img src="embeddings/embedding_-1860367593.png">
       </div>
     </div>
   </div>
@@ -2693,7 +2693,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Close the preview</span>
 
-  <span class="lead-duration duration">0.093</span>
+  <span class="lead-duration duration">0.067</span>
 
 </div>
 
@@ -2730,7 +2730,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.242</span>
+  <span class="lead-duration duration">0.187</span>
 
           </div>
 
@@ -2743,13 +2743,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-72" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1897957322.png" download target="_blank">
+      <a href="embeddings/embedding_1881689875.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-72" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1897957322.png">
+        <img src="embeddings/embedding_1881689875.png">
       </div>
     </div>
   </div>
@@ -2767,7 +2767,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Deploy the pipeline</span>
 
-  <span class="lead-duration duration">0.110</span>
+  <span class="lead-duration duration">0.234</span>
 
 </div>
 
@@ -2804,7 +2804,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.235</span>
+  <span class="lead-duration duration">0.219</span>
 
           </div>
 
@@ -2817,13 +2817,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-74" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-916586298.png" download target="_blank">
+      <a href="embeddings/embedding_1226253388.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-74" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-916586298.png">
+        <img src="embeddings/embedding_1226253388.png">
       </div>
     </div>
   </div>
@@ -2841,7 +2841,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Run the Pipeline in Runtime</span>
 
-  <span class="lead-duration duration">5.158</span>
+  <span class="lead-duration duration">4.313</span>
 
 </div>
 
@@ -2878,7 +2878,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.212</span>
+  <span class="lead-duration duration">0.224</span>
 
           </div>
 
@@ -2891,13 +2891,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-76" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-624429760.png" download target="_blank">
+      <a href="embeddings/embedding_-403726121.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-76" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-624429760.png">
+        <img src="embeddings/embedding_-403726121.png">
       </div>
     </div>
   </div>
@@ -2915,7 +2915,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Wait till pipeline is in running state</span>
 
-  <span class="lead-duration duration">1:40.581</span>
+  <span class="lead-duration duration">2:1.215</span>
 
 </div>
 
@@ -2952,7 +2952,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.265</span>
+  <span class="lead-duration duration">0.182</span>
 
           </div>
 
@@ -2965,13 +2965,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-78" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1042565653.png" download target="_blank">
+      <a href="embeddings/embedding_856783789.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-78" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1042565653.png">
+        <img src="embeddings/embedding_856783789.png">
       </div>
     </div>
   </div>
@@ -2989,7 +2989,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Open and capture logs</span>
 
-  <span class="lead-duration duration">0.614</span>
+  <span class="lead-duration duration">0.524</span>
 
 </div>
 
@@ -3011,82 +3011,82 @@ $(document).ready(function() {
         </div>
         <div id="output-79" class="collapse collapsable-details " >
           
-          <pre><p>2022-02-22 07:17:02,787 - DEBUG [provisioning-task-6:i.c.c.i.p.t.ProvisioningTask@125] - Executing PROVISION subtask REQUESTING_CREATE for program run program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15.
-2022-02-22 07:17:02,787 - DEBUG [provisioning-task-6:i.c.c.i.p.t.ProvisioningTask@129] - Completed PROVISION subtask REQUESTING_CREATE for program run program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15.
-2022-02-22 07:17:02,816 - DEBUG [provisioning-task-9:i.c.c.i.p.t.ProvisioningTask@116] - Completed PROVISION task for program run program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15.
-2022-02-22 07:17:10,515 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@471] - Pipeline 'TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8' is started by user 'runner' with arguments {logical.start.time=1645514222607}
-2022-02-22 07:17:10,573 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@506] - Pipeline 'TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8' running
-2022-02-22 07:17:10,576 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@71] - Workflow service workflow.default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15 started
-2022-02-22 07:17:10,576 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@623] - Starting workflow execution for 'DataPipelineWorkflow' with Run id '6e9e4a38-93af-11ec-a0fb-d60032a2dc15'
-2022-02-22 07:17:10,615 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@337] - Starting Spark Program 'phase-1' in workflow
-2022-02-22 07:17:10,674 - DEBUG [action-phase-1-0:i.c.c.a.r.s.SparkProgramRunner@230] - Starting Spark Job. Context: SparkRuntimeContext{id=program:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.spark.phase-1, runId=736436b9-93af-11ec-b393-d60032a2dc15}
-2022-02-22 07:17:15,718 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@133] - Using GCS path gs://bq-source-bucket-c2ce7fd8-87b7-4140-9b84-82c212a3779a/c2ce7fd8-87b7-4140-9b84-82c212a3779a/hadoop/input/c2ce7fd8-87b7-4140-9b84-82c212a3779a as temp storage for table E2E_SOURCE_f3d04850_64fa_4c25_9a55_91e8332b0164.
-2022-02-22 07:17:15,757 - INFO  [SparkRunnerphase-1:c.g.c.h.i.b.BigQueryConfiguration@76] - Using specified project-id 'cdf-athena' for input
-2022-02-22 07:17:17,095 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.AbstractBigQuerySink@143] - Init output for table 'E2E_TEST_SINK_9957' with schema: {&quot;type&quot;:&quot;record&quot;,&quot;name&quot;:&quot;output&quot;,&quot;fields&quot;:[{&quot;name&quot;:&quot;Id&quot;,&quot;type&quot;:[&quot;long&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:[&quot;long&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;UID&quot;,&quot;type&quot;:[&quot;string&quot;,&quot;null&quot;]}]}
-2022-02-22 07:17:21,571 - DEBUG [SparkRunnerphase-1:i.c.c.i.a.r.LocalizationUtils@55] - Hard link file from /tmp/HydratorSpark3554385790436102689.config to /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1645514230678-0/HydratorSpark.config
-2022-02-22 07:17:21,599 - DEBUG [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:i.c.c.a.r.s.s.AbstractSparkSubmitter@192] - Calling SparkSubmit for program:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.spark.phase-1 736436b9-93af-11ec-b393-d60032a2dc15: [--master, local[2], --conf, spark.app.name=phase-1, --conf, spark.executor.memory=2048m, --conf, spark.driver.memory=2048m, --conf, spark.local.dir=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1645514230678-0, --conf, spark.driver.cores=1, --conf, spark.yarn.maxAppAttempts=1, --conf, spark.executor.id=TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8, --conf, spark.network.timeout=600s, --conf, spark.executor.cores=1, --conf, spark.metrics.conf=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1645514230678-0/metrics.properties, --conf, spark.speculation=false, --conf, spark.sql.caseSensitive=true, --conf, spark.app.id=TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8, --conf, spark.maxRemoteBlockSizeFetchToMem=2147483135, --conf, spark.extraListeners=io.cdap.cdap.app.runtime.spark.DelegatingSparkListener, --conf, spark.sql.autoBroadcastJoinThreshold=-1, --conf, spark.executor.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --conf, spark.cdap.localized.resources=[&quot;HydratorSpark.config&quot;], --conf, spark.driver.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --class, io.cdap.cdap.app.runtime.spark.SparkMainWrapper, /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/runtime/spark/cdapSparkJob.jar, --cdap.spark.program=program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.spark.phase-1.736436b9-93af-11ec-b393-d60032a2dc15, --cdap.user.main.class=io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver]
-2022-02-22 07:17:21,755 - INFO  [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@181] - Starting HTTP Service phase-1-http-service at address localhost/127.0.0.1:0
-2022-02-22 07:17:21,757 - DEBUG [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@191] - Started HTTP Service phase-1-http-service at address /127.0.0.1:36205
-2022-02-22 07:17:21,779 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:i.c.c.a.r.s.SparkMainWrapper$@78] - Launching user spark class class io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver
-2022-02-22 07:17:21,863 - WARN  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:o.a.s.SparkConf@66] - In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
-2022-02-22 07:17:23,162 - DEBUG [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:i.c.c.a.r.s.SparkMetricsSink@55] - Using SparkMetricsSink for reporting metrics: {class=io.cdap.cdap.app.runtime.spark.SparkMetricsSink}
-2022-02-22 07:17:23,273 - DEBUG [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:i.c.c.e.s.SparkPipelineRunner@162] - Stage consolidation is on.
-2022-02-22 07:17:23,273 - DEBUG [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:i.c.c.e.s.SparkPipelineRunner@165] - Group1: [BigQuery2, GCS, Pub/Sub]
-2022-02-22 07:17:24,616 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Using output path 'gs://adc1e9eb-48f1-4d42-9cda-569697f1b697/adc1e9eb-48f1-4d42-9cda-569697f1b697/input/E2E_TEST_SINK_9957-adc1e9eb-48f1-4d42-9cda-569697f1b697'.
-2022-02-22 07:17:24,892 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Bigquery connector version hadoop2-1.0.0
-2022-02-22 07:17:24,894 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
-2022-02-22 07:17:24,897 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
-2022-02-22 07:17:24,897 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
-2022-02-22 07:17:25,370 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
-2022-02-22 07:17:25,480 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
-2022-02-22 07:17:25,482 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
-2022-02-22 07:17:25,482 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
-2022-02-22 07:17:25,483 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
-2022-02-22 07:17:25,902 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
-2022-02-22 07:17:25,904 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
-2022-02-22 07:17:26,020 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
-2022-02-22 07:17:26,022 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
-2022-02-22 07:17:26,022 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.BigQueryConfiguration@76] - Using working path: 'gs://bq-source-bucket-c2ce7fd8-87b7-4140-9b84-82c212a3779a/c2ce7fd8-87b7-4140-9b84-82c212a3779a/hadoop/input/c2ce7fd8-87b7-4140-9b84-82c212a3779a'
-2022-02-22 07:17:38,047 - INFO  [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:c.g.c.h.i.b.UnshardedExportToCloudStorage@76] - Setting FileInputFormat's inputPath to 'gs://bq-source-bucket-c2ce7fd8-87b7-4140-9b84-82c212a3779a/c2ce7fd8-87b7-4140-9b84-82c212a3779a/hadoop/input/c2ce7fd8-87b7-4140-9b84-82c212a3779a'
-2022-02-22 07:17:38,653 - DEBUG [SparkListenerBus:i.c.c.a.r.s.AbstractSparkExecutionContext@156] - Spark program=program:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.spark.phase-1, runId=736436b9-93af-11ec-b393-d60032a2dc15, jobId=0 starts with auto-commit=false on transaction Transaction{readPointer: 1645514242918000000, transactionId: 1645514243244000000, writePointer: 1645514243244000000, invalids: [1644333117450000000, 1644333762008000000, 1644338845758000000, 1644339541211000000, 1644589942202000000, 1644590627703000000, 1644914008567000000, 1644914063834000000, 1644940475531000000, 1644940477100000000, 1644990055459000000, 1644990131589000000, 1644993203905000000, 1644993261485000000, 1645094941196000000, 1645095019929000000, 1645102227012000000, 1645102290281000000, 1645187378314000000, 1645187448908000000, 1645191208670000000, 1645191275364000000, 1645427776255000000, 1645427843175000000, 1645513713523000000], inProgress: [1645514242806000000], firstShortInProgress: 1645514242806000000, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}
-2022-02-22 07:17:38,662 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@110] - Spark job started: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1645514242918000000, transactionId: 1645514243244000000, writePointer: 1645514243244000000, invalids: [1644333117450000000, 1644333762008000000, 1644338845758000000, 1644339541211000000, 1644589942202000000, 1644590627703000000, 1644914008567000000, 1644914063834000000, 1644940475531000000, 1644940477100000000, 1644990055459000000, 1644990131589000000, 1644993203905000000, 1644993261485000000, 1645094941196000000, 1645095019929000000, 1645102227012000000, 1645102290281000000, 1645187378314000000, 1645187448908000000, 1645191208670000000, 1645191275364000000, 1645427776255000000, 1645427843175000000, 1645513713523000000], inProgress: [1645514242806000000], firstShortInProgress: 1645514242806000000, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
-2022-02-22 07:17:39,663 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
-2022-02-22 07:17:39,754 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
-2022-02-22 07:17:39,755 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
-2022-02-22 07:17:39,755 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
-2022-02-22 07:17:39,756 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
-2022-02-22 07:17:39,771 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
-2022-02-22 07:17:44,009 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@144] - Spark job ended: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1645514242918000000, transactionId: 1645514243244000000, writePointer: 1645514243244000000, invalids: [1644333117450000000, 1644333762008000000, 1644338845758000000, 1644339541211000000, 1644589942202000000, 1644590627703000000, 1644914008567000000, 1644914063834000000, 1644940475531000000, 1644940477100000000, 1644990055459000000, 1644990131589000000, 1644993203905000000, 1644993261485000000, 1645094941196000000, 1645095019929000000, 1645102227012000000, 1645102290281000000, 1645187378314000000, 1645187448908000000, 1645191208670000000, 1645191275364000000, 1645427776255000000, 1645427843175000000, 1645513713523000000], inProgress: [1645514242806000000], firstShortInProgress: 1645514242806000000, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
-2022-02-22 07:17:46,947 - DEBUG [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@187] - Allow schema relaxation: 'true'
-2022-02-22 07:17:46,947 - DEBUG [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@189] - Create Partitioned Table type: 'TIME'
-2022-02-22 07:17:46,947 - DEBUG [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@192] - Partition Field: 'null'
-2022-02-22 07:17:46,947 - DEBUG [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@194] - Require partition filter: 'false'
-2022-02-22 07:17:46,949 - DEBUG [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@210] - Partition filter: 'null'
-2022-02-22 07:17:46,950 - INFO  [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@263] - Importing into table 'cdf-athena:test_automation.E2E_TEST_SINK_9957' from 1 paths; path[0] is 'gs://adc1e9eb-48f1-4d42-9cda-569697f1b697/adc1e9eb-48f1-4d42-9cda-569697f1b697/input/E2E_TEST_SINK_9957-adc1e9eb-48f1-4d42-9cda-569697f1b697/part-r-00000.avro'; awaitCompletion: true
-2022-02-22 07:17:46,984 - INFO  [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@365] - Using schema 'GenericData{classInfo=[fields], {fields=[{&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;Id&quot;,&quot;type&quot;:&quot;INTEGER&quot;}, {&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;INTEGER&quot;}, {&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;UID&quot;,&quot;type&quot;:&quot;STRING&quot;}]}}' for the load job config.
-2022-02-22 07:17:47,817 - DEBUG [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (100 ms) 4c0a4ad2-4e68-4e5c-b791-19a84c6713d9: RUNNING
-2022-02-22 07:17:52,952 - DEBUG [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (5235 ms) 4c0a4ad2-4e68-4e5c-b791-19a84c6713d9: DONE
-2022-02-22 07:17:53,302 - INFO  [multi-output-committer-0:i.c.p.g.b.s.BigQueryOutputFormat@398] - Imported into table 'cdf-athena:test_automation.E2E_TEST_SINK_9957' from 1 paths; path[0] is 'gs://adc1e9eb-48f1-4d42-9cda-569697f1b697/adc1e9eb-48f1-4d42-9cda-569697f1b697/input/E2E_TEST_SINK_9957-adc1e9eb-48f1-4d42-9cda-569697f1b697/part-r-00000.avro'
-2022-02-22 07:17:53,440 - INFO  [multi-output-committer-0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Found GCS output data at 'gs://adc1e9eb-48f1-4d42-9cda-569697f1b697/adc1e9eb-48f1-4d42-9cda-569697f1b697/input/E2E_TEST_SINK_9957-adc1e9eb-48f1-4d42-9cda-569697f1b697', attempting to clean up.
-2022-02-22 07:17:53,861 - INFO  [multi-output-committer-0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Successfully deleted GCS output path 'gs://adc1e9eb-48f1-4d42-9cda-569697f1b697/adc1e9eb-48f1-4d42-9cda-569697f1b697/input/E2E_TEST_SINK_9957-adc1e9eb-48f1-4d42-9cda-569697f1b697'.
-2022-02-22 07:17:54,001 - DEBUG [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:i.c.c.a.r.s.SparkRuntimeEnv$@347] - Shutting down Server and ThreadPool used by Spark org.apache.spark.SparkContext@396b1f66
-2022-02-22 07:17:54,008 - INFO  [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@258] - Stopping HTTP Service phase-1-http-service
-2022-02-22 07:17:54,010 - DEBUG [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@276] - Stopped HTTP Service phase-1-http-service on address localhost/127.0.0.1:36205
-2022-02-22 07:17:54,011 - DEBUG [spark-submitter-phase-1-736436b9-93af-11ec-b393-d60032a2dc15:i.c.c.a.r.s.s.AbstractSparkSubmitter@199] - SparkSubmit returned for program:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.spark.phase-1 736436b9-93af-11ec-b393-d60032a2dc15
-2022-02-22 07:17:54,887 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://bq-source-bucket-c2ce7fd8-87b7-4140-9b84-82c212a3779a'
-2022-02-22 07:17:55,219 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@176] - Deleted temporary table '_E2E_SOURCE_f3d04850_64fa_4c25_9a55_91e8332b0164_e8648bbf_5dba_4132_ba02_813c4715c35f'
-2022-02-22 07:17:56,164 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://adc1e9eb-48f1-4d42-9cda-569697f1b697'
-2022-02-22 07:17:56,504 - INFO  [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySink@193] - Job JobId{project=cdf-athena, job=4c0a4ad2-4e68-4e5c-b791-19a84c6713d9, location=US} affected 26 rows
-2022-02-22 07:17:56,603 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@967] - Running Spark shutdown hook org.apache.spark.util.SparkShutdownHookManager$$anon$2@22b7a80f
-2022-02-22 07:17:56,615 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@444] - Spark program completed: SparkRuntimeContext{id=program:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.spark.phase-1, runId=736436b9-93af-11ec-b393-d60032a2dc15}
-2022-02-22 07:17:56,631 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@340] - Spark Program 'phase-1' in workflow completed
-2022-02-22 07:17:56,634 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@631] - Workflow 'DataPipelineWorkflow' with run id '6e9e4a38-93af-11ec-a0fb-d60032a2dc15' completed
-2022-02-22 07:17:56,636 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@564] - Pipeline 'TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8' succeeded.
-2022-02-22 07:17:56,703 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@77] - Workflow service terminated from RUNNING. Un-registering service workflow.default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15.
-2022-02-22 07:17:56,707 - DEBUG [pcontroller-program:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow-6e9e4a38-93af-11ec-a0fb-d60032a2dc15-3:i.c.c.a.r.AbstractProgramRuntimeService@646] - RuntimeInfo removed: program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15
-2022-02-22 07:17:56,956 - DEBUG [provisioning-task-4:i.c.c.i.p.t.ProvisioningTask@125] - Executing DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15.
-2022-02-22 07:17:56,957 - DEBUG [provisioning-task-4:i.c.c.i.p.t.ProvisioningTask@129] - Completed DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15.
-2022-02-22 07:17:56,970 - DEBUG [provisioning-task-4:i.c.c.i.p.t.ProvisioningTask@116] - Completed DEPROVISION task for program run program_run:default.TestPipeline31e86192-2d09-41c6-80a3-769a7c5f2ff8.-SNAPSHOT.workflow.DataPipelineWorkflow.6e9e4a38-93af-11ec-a0fb-d60032a2dc15.</p></pre>
+          <pre><p>2022-03-02 08:01:44,384 - DEBUG [provisioning-task-3:i.c.c.i.p.t.ProvisioningTask@116] - Completed PROVISION task for program run program_run:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.workflow.DataPipelineWorkflow.ffc07abd-99fe-11ec-b43b-22368d2d4138.
+2022-03-02 08:01:51,746 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@471] - Pipeline 'TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417' is started by user 'runner' with arguments {logical.start.time=1646208103319}
+2022-03-02 08:01:51,801 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@506] - Pipeline 'TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417' running
+2022-03-02 08:01:51,804 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@71] - Workflow service workflow.default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.DataPipelineWorkflow.ffc07abd-99fe-11ec-b43b-22368d2d4138 started
+2022-03-02 08:01:51,804 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@623] - Starting workflow execution for 'DataPipelineWorkflow' with Run id 'ffc07abd-99fe-11ec-b43b-22368d2d4138'
+2022-03-02 08:01:51,841 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@337] - Starting Spark Program 'phase-1' in workflow
+2022-03-02 08:01:51,901 - DEBUG [action-phase-1-0:i.c.c.a.r.s.SparkProgramRunner@230] - Starting Spark Job. Context: SparkRuntimeContext{id=program:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.spark.phase-1, runId=04d4ae4e-99ff-11ec-9528-22368d2d4138}
+2022-03-02 08:01:55,826 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@133] - Using GCS path gs://bq-source-bucket-5450f4e5-5179-43c8-a4fc-5cbfdd5593bd/5450f4e5-5179-43c8-a4fc-5cbfdd5593bd/hadoop/input/5450f4e5-5179-43c8-a4fc-5cbfdd5593bd as temp storage for table E2E_SOURCE_753f3a56_2ab5_483c_ad70_2b86e190df81.
+2022-03-02 08:01:55,863 - INFO  [SparkRunnerphase-1:c.g.c.h.i.b.BigQueryConfiguration@76] - Using specified project-id 'cdf-athena' for input
+2022-03-02 08:01:57,156 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.AbstractBigQuerySink@143] - Init output for table 'E2E_TEST_SINK_7189' with schema: {&quot;type&quot;:&quot;record&quot;,&quot;name&quot;:&quot;output&quot;,&quot;fields&quot;:[{&quot;name&quot;:&quot;Id&quot;,&quot;type&quot;:[&quot;long&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:[&quot;long&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;UID&quot;,&quot;type&quot;:[&quot;string&quot;,&quot;null&quot;]}]}
+2022-03-02 08:02:02,428 - DEBUG [SparkRunnerphase-1:i.c.c.i.a.r.LocalizationUtils@55] - Hard link file from /tmp/HydratorSpark7596964244746202124.config to /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646208111906-0/HydratorSpark.config
+2022-03-02 08:02:02,459 - DEBUG [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:i.c.c.a.r.s.s.AbstractSparkSubmitter@192] - Calling SparkSubmit for program:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.spark.phase-1 04d4ae4e-99ff-11ec-9528-22368d2d4138: [--master, local[2], --conf, spark.app.name=phase-1, --conf, spark.executor.memory=2048m, --conf, spark.driver.memory=2048m, --conf, spark.local.dir=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646208111906-0, --conf, spark.driver.cores=1, --conf, spark.yarn.maxAppAttempts=1, --conf, spark.executor.id=TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417, --conf, spark.network.timeout=600s, --conf, spark.executor.cores=1, --conf, spark.metrics.conf=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646208111906-0/metrics.properties, --conf, spark.speculation=false, --conf, spark.sql.caseSensitive=true, --conf, spark.app.id=TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417, --conf, spark.maxRemoteBlockSizeFetchToMem=2147483135, --conf, spark.extraListeners=io.cdap.cdap.app.runtime.spark.DelegatingSparkListener, --conf, spark.sql.autoBroadcastJoinThreshold=-1, --conf, spark.executor.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --conf, spark.cdap.localized.resources=[&quot;HydratorSpark.config&quot;], --conf, spark.driver.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --class, io.cdap.cdap.app.runtime.spark.SparkMainWrapper, /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/runtime/spark/cdapSparkJob.jar, --cdap.spark.program=program_run:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.spark.phase-1.04d4ae4e-99ff-11ec-9528-22368d2d4138, --cdap.user.main.class=io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver]
+2022-03-02 08:02:02,570 - INFO  [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@181] - Starting HTTP Service phase-1-http-service at address localhost/127.0.0.1:0
+2022-03-02 08:02:02,572 - DEBUG [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@191] - Started HTTP Service phase-1-http-service at address /127.0.0.1:44199
+2022-03-02 08:02:02,590 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:i.c.c.a.r.s.SparkMainWrapper$@78] - Launching user spark class class io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver
+2022-03-02 08:02:02,661 - WARN  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:o.a.s.SparkConf@66] - In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+2022-03-02 08:02:03,748 - DEBUG [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:i.c.c.a.r.s.SparkMetricsSink@55] - Using SparkMetricsSink for reporting metrics: {class=io.cdap.cdap.app.runtime.spark.SparkMetricsSink}
+2022-03-02 08:02:03,849 - DEBUG [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:i.c.c.e.s.SparkPipelineRunner@162] - Stage consolidation is on.
+2022-03-02 08:02:03,850 - DEBUG [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:i.c.c.e.s.SparkPipelineRunner@165] - Group1: [BigQuery2, GCS, Pub/Sub]
+2022-03-02 08:02:05,341 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Using output path 'gs://98d1a0ec-76df-4de2-a7ac-51b63c63240b/98d1a0ec-76df-4de2-a7ac-51b63c63240b/input/E2E_TEST_SINK_7189-98d1a0ec-76df-4de2-a7ac-51b63c63240b'.
+2022-03-02 08:02:05,562 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Bigquery connector version hadoop2-1.0.0
+2022-03-02 08:02:05,564 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-02 08:02:05,566 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-02 08:02:05,566 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-02 08:02:05,786 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-02 08:02:05,867 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-02 08:02:05,868 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-02 08:02:05,870 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-02 08:02:05,871 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-02 08:02:06,311 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-02 08:02:06,313 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-02 08:02:06,497 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-02 08:02:06,503 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-02 08:02:06,503 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.BigQueryConfiguration@76] - Using working path: 'gs://bq-source-bucket-5450f4e5-5179-43c8-a4fc-5cbfdd5593bd/5450f4e5-5179-43c8-a4fc-5cbfdd5593bd/hadoop/input/5450f4e5-5179-43c8-a4fc-5cbfdd5593bd'
+2022-03-02 08:02:13,963 - INFO  [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:c.g.c.h.i.b.UnshardedExportToCloudStorage@76] - Setting FileInputFormat's inputPath to 'gs://bq-source-bucket-5450f4e5-5179-43c8-a4fc-5cbfdd5593bd/5450f4e5-5179-43c8-a4fc-5cbfdd5593bd/hadoop/input/5450f4e5-5179-43c8-a4fc-5cbfdd5593bd'
+2022-03-02 08:02:14,515 - DEBUG [SparkListenerBus:i.c.c.a.r.s.AbstractSparkExecutionContext@156] - Spark program=program:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.spark.phase-1, runId=04d4ae4e-99ff-11ec-9528-22368d2d4138, jobId=0 starts with auto-commit=false on transaction Transaction{readPointer: 1646208123466000000, transactionId: 1646208123822000000, writePointer: 1646208123822000000, invalids: [1646131453260000000, 1646132125901000000, 1646161564261000000, 1646162234703000000, 1646207612727000000], inProgress: [1646208123465000001], firstShortInProgress: 1646208123465000001, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}
+2022-03-02 08:02:14,524 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@110] - Spark job started: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1646208123466000000, transactionId: 1646208123822000000, writePointer: 1646208123822000000, invalids: [1646131453260000000, 1646132125901000000, 1646161564261000000, 1646162234703000000, 1646207612727000000], inProgress: [1646208123465000001], firstShortInProgress: 1646208123465000001, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
+2022-03-02 08:02:15,584 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-02 08:02:15,675 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-02 08:02:15,676 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-02 08:02:15,677 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-02 08:02:15,678 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-02 08:02:15,708 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-02 08:02:19,644 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@144] - Spark job ended: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1646208123466000000, transactionId: 1646208123822000000, writePointer: 1646208123822000000, invalids: [1646131453260000000, 1646132125901000000, 1646161564261000000, 1646162234703000000, 1646207612727000000], inProgress: [1646208123465000001], firstShortInProgress: 1646208123465000001, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
+2022-03-02 08:02:22,601 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@187] - Allow schema relaxation: 'true'
+2022-03-02 08:02:22,602 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@189] - Create Partitioned Table type: 'TIME'
+2022-03-02 08:02:22,602 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@192] - Partition Field: 'null'
+2022-03-02 08:02:22,602 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@194] - Require partition filter: 'false'
+2022-03-02 08:02:22,604 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@210] - Partition filter: 'null'
+2022-03-02 08:02:22,604 - INFO  [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@263] - Importing into table 'cdf-athena:test_automation.E2E_TEST_SINK_7189' from 1 paths; path[0] is 'gs://98d1a0ec-76df-4de2-a7ac-51b63c63240b/98d1a0ec-76df-4de2-a7ac-51b63c63240b/input/E2E_TEST_SINK_7189-98d1a0ec-76df-4de2-a7ac-51b63c63240b/part-r-00000.avro'; awaitCompletion: true
+2022-03-02 08:02:22,609 - INFO  [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@365] - Using schema 'GenericData{classInfo=[fields], {fields=[{&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;Id&quot;,&quot;type&quot;:&quot;INTEGER&quot;}, {&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;INTEGER&quot;}, {&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;UID&quot;,&quot;type&quot;:&quot;STRING&quot;}]}}' for the load job config.
+2022-03-02 08:02:23,251 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (107 ms) b9117d6d-2e2f-4fcc-9d08-32a902606a83: RUNNING
+2022-03-02 08:02:28,487 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (5343 ms) b9117d6d-2e2f-4fcc-9d08-32a902606a83: RUNNING
+2022-03-02 08:02:41,435 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (18291 ms) b9117d6d-2e2f-4fcc-9d08-32a902606a83: RUNNING
+2022-03-02 08:03:10,023 - DEBUG [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (46878 ms) b9117d6d-2e2f-4fcc-9d08-32a902606a83: DONE
+2022-03-02 08:03:10,335 - INFO  [multi-output-committer-1:i.c.p.g.b.s.BigQueryOutputFormat@398] - Imported into table 'cdf-athena:test_automation.E2E_TEST_SINK_7189' from 1 paths; path[0] is 'gs://98d1a0ec-76df-4de2-a7ac-51b63c63240b/98d1a0ec-76df-4de2-a7ac-51b63c63240b/input/E2E_TEST_SINK_7189-98d1a0ec-76df-4de2-a7ac-51b63c63240b/part-r-00000.avro'
+2022-03-02 08:03:10,473 - INFO  [multi-output-committer-1:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Found GCS output data at 'gs://98d1a0ec-76df-4de2-a7ac-51b63c63240b/98d1a0ec-76df-4de2-a7ac-51b63c63240b/input/E2E_TEST_SINK_7189-98d1a0ec-76df-4de2-a7ac-51b63c63240b', attempting to clean up.
+2022-03-02 08:03:10,880 - INFO  [multi-output-committer-1:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Successfully deleted GCS output path 'gs://98d1a0ec-76df-4de2-a7ac-51b63c63240b/98d1a0ec-76df-4de2-a7ac-51b63c63240b/input/E2E_TEST_SINK_7189-98d1a0ec-76df-4de2-a7ac-51b63c63240b'.
+2022-03-02 08:03:11,045 - DEBUG [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:i.c.c.a.r.s.SparkRuntimeEnv$@347] - Shutting down Server and ThreadPool used by Spark org.apache.spark.SparkContext@6f952ed2
+2022-03-02 08:03:11,052 - INFO  [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@258] - Stopping HTTP Service phase-1-http-service
+2022-03-02 08:03:11,054 - DEBUG [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@276] - Stopped HTTP Service phase-1-http-service on address localhost/127.0.0.1:44199
+2022-03-02 08:03:11,055 - DEBUG [spark-submitter-phase-1-04d4ae4e-99ff-11ec-9528-22368d2d4138:i.c.c.a.r.s.s.AbstractSparkSubmitter@199] - SparkSubmit returned for program:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.spark.phase-1 04d4ae4e-99ff-11ec-9528-22368d2d4138
+2022-03-02 08:03:11,857 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://bq-source-bucket-5450f4e5-5179-43c8-a4fc-5cbfdd5593bd'
+2022-03-02 08:03:11,971 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@176] - Deleted temporary table '_E2E_SOURCE_753f3a56_2ab5_483c_ad70_2b86e190df81_7056ab9e_af1c_4b94_b5ce_f3e46c99d575'
+2022-03-02 08:03:12,706 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://98d1a0ec-76df-4de2-a7ac-51b63c63240b'
+2022-03-02 08:03:13,055 - INFO  [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySink@193] - Job JobId{project=cdf-athena, job=b9117d6d-2e2f-4fcc-9d08-32a902606a83, location=US} affected 26 rows
+2022-03-02 08:03:13,159 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@967] - Running Spark shutdown hook org.apache.spark.util.SparkShutdownHookManager$$anon$2@6322491f
+2022-03-02 08:03:13,177 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@444] - Spark program completed: SparkRuntimeContext{id=program:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.spark.phase-1, runId=04d4ae4e-99ff-11ec-9528-22368d2d4138}
+2022-03-02 08:03:13,226 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@340] - Spark Program 'phase-1' in workflow completed
+2022-03-02 08:03:13,228 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@631] - Workflow 'DataPipelineWorkflow' with run id 'ffc07abd-99fe-11ec-b43b-22368d2d4138' completed
+2022-03-02 08:03:13,229 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@564] - Pipeline 'TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417' succeeded.
+2022-03-02 08:03:13,393 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@77] - Workflow service terminated from RUNNING. Un-registering service workflow.default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.DataPipelineWorkflow.ffc07abd-99fe-11ec-b43b-22368d2d4138.
+2022-03-02 08:03:13,398 - DEBUG [pcontroller-program:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.workflow.DataPipelineWorkflow-ffc07abd-99fe-11ec-b43b-22368d2d4138-3:i.c.c.a.r.AbstractProgramRuntimeService@646] - RuntimeInfo removed: program_run:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.workflow.DataPipelineWorkflow.ffc07abd-99fe-11ec-b43b-22368d2d4138
+2022-03-02 08:03:14,611 - DEBUG [provisioning-task-9:i.c.c.i.p.t.ProvisioningTask@125] - Executing DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.workflow.DataPipelineWorkflow.ffc07abd-99fe-11ec-b43b-22368d2d4138.
+2022-03-02 08:03:14,612 - DEBUG [provisioning-task-9:i.c.c.i.p.t.ProvisioningTask@129] - Completed DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.workflow.DataPipelineWorkflow.ffc07abd-99fe-11ec-b43b-22368d2d4138.
+2022-03-02 08:03:14,626 - DEBUG [provisioning-task-9:i.c.c.i.p.t.ProvisioningTask@116] - Completed DEPROVISION task for program run program_run:default.TestPipeline64eddb1b-8088-4c95-9d80-4daaf339f417.-SNAPSHOT.workflow.DataPipelineWorkflow.ffc07abd-99fe-11ec-b43b-22368d2d4138.</p></pre>
         </div>
       </div>
   </div>
@@ -3113,7 +3113,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.217</span>
+  <span class="lead-duration duration">0.205</span>
 
           </div>
 
@@ -3126,13 +3126,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-81" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-676961439.png" download target="_blank">
+      <a href="embeddings/embedding_2064527073.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-81" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-676961439.png">
+        <img src="embeddings/embedding_2064527073.png">
       </div>
     </div>
   </div>
@@ -3150,7 +3150,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Verify the pipeline status is <span class="argument">&quot;Succeeded&quot;</span></span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.017</span>
 
 </div>
 
@@ -3187,7 +3187,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.240</span>
+  <span class="lead-duration duration">0.215</span>
 
           </div>
 
@@ -3200,13 +3200,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-83" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_885830893.png" download target="_blank">
+      <a href="embeddings/embedding_-2147161285.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-83" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_885830893.png">
+        <img src="embeddings/embedding_-2147161285.png">
       </div>
     </div>
   </div>
@@ -3224,7 +3224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Verify data is transferred to target GCS bucket</span>
 
-  <span class="lead-duration duration">0.115</span>
+  <span class="lead-duration duration">0.109</span>
 
 </div>
 
@@ -3246,7 +3246,7 @@ $(document).ready(function() {
         </div>
         <div id="output-84" class="collapse collapsable-details " >
           
-          <pre><p>Data transferred to gcs bucket cdf-e2e-test-69f11c49-0007-4012-ab4a-ad9a3e335089 successfully</p></pre>
+          <pre><p>Data transferred to gcs bucket cdf-e2e-test-5230f986-a012-4120-8f0b-62d038ca2e61 successfully</p></pre>
         </div>
       </div>
   </div>
@@ -3273,7 +3273,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.188</span>
+  <span class="lead-duration duration">0.183</span>
 
           </div>
 
@@ -3286,13 +3286,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-86" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-803570276.png" download target="_blank">
+      <a href="embeddings/embedding_1042477581.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-86" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-803570276.png">
+        <img src="embeddings/embedding_1042477581.png">
       </div>
     </div>
   </div>
@@ -3310,7 +3310,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Get count of no of records transferred to target BigQuery Table</span>
 
-  <span class="lead-duration duration">0.506</span>
+  <span class="lead-duration duration">16.827</span>
 
 </div>
 
@@ -3359,7 +3359,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.192</span>
+  <span class="lead-duration duration">0.199</span>
 
           </div>
 
@@ -3372,13 +3372,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-89" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-803570276.png" download target="_blank">
+      <a href="embeddings/embedding_1042477581.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-89" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-803570276.png">
+        <img src="embeddings/embedding_1042477581.png">
       </div>
     </div>
   </div>
@@ -3445,7 +3445,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.193</span>
+  <span class="lead-duration duration">0.186</span>
 
           </div>
 
@@ -3458,13 +3458,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-92" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-803570276.png" download target="_blank">
+      <a href="embeddings/embedding_1042477581.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-92" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-803570276.png">
+        <img src="embeddings/embedding_1042477581.png">
       </div>
     </div>
   </div>
@@ -3531,7 +3531,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.183</span>
+  <span class="lead-duration duration">0.230</span>
 
           </div>
 
@@ -3544,13 +3544,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-95" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-803570276.png" download target="_blank">
+      <a href="embeddings/embedding_1042477581.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-95" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-803570276.png">
+        <img src="embeddings/embedding_1042477581.png">
       </div>
     </div>
   </div>
@@ -3617,7 +3617,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.180</span>
+  <span class="lead-duration duration">0.185</span>
 
           </div>
 
@@ -3630,13 +3630,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-98" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-803570276.png" download target="_blank">
+      <a href="embeddings/embedding_1042477581.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-98" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-803570276.png">
+        <img src="embeddings/embedding_1042477581.png">
       </div>
     </div>
   </div>
@@ -3670,9 +3670,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">TestSetupHooks.deleteTempTargetBQTable()</span>
+              <span class="location name">TestSetupHooks.deleteTargetBucketWithFile()</span>
 
-  <span class="lead-duration duration">0.576</span>
+  <span class="lead-duration duration">1.094</span>
 
           </div>
 
@@ -3688,7 +3688,7 @@ $(document).ready(function() {
         </div>
         <div id="output-100" class="collapse collapsable-details " >
           
-          <pre><p>BQ Target table - E2E_TEST_SINK_9957 deleted successfully</p></pre>
+          <pre><p>Deleted GCS Bucket cdf-e2e-test-5230f986-a012-4120-8f0b-62d038ca2e61</p></pre>
         </div>
       </div>
   </div>
@@ -3698,9 +3698,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">TestSetupHooks.deleteTempSourceBQTable()</span>
+              <span class="location name">TestSetupHooks.deleteTempTargetBQTable()</span>
 
-  <span class="lead-duration duration">0.753</span>
+  <span class="lead-duration duration">0.591</span>
 
           </div>
 
@@ -3716,7 +3716,7 @@ $(document).ready(function() {
         </div>
         <div id="output-101" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_f3d04850_64fa_4c25_9a55_91e8332b0164 deleted successfully</p></pre>
+          <pre><p>BQ Target table - E2E_TEST_SINK_7189 deleted successfully</p></pre>
         </div>
       </div>
   </div>
@@ -3726,9 +3726,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">TestSetupHooks.deleteTargetPubSubTopic()</span>
+              <span class="location name">TestSetupHooks.deleteTempSourceBQTable()</span>
 
-  <span class="lead-duration duration">2.183</span>
+  <span class="lead-duration duration">0.690</span>
 
           </div>
 
@@ -3744,7 +3744,7 @@ $(document).ready(function() {
         </div>
         <div id="output-102" class="collapse collapsable-details " >
           
-          <pre><p>Deleted target PubSub topic cdf-e2e-test-95777111-f215-4d6e-8415-d7f6800903f6</p></pre>
+          <pre><p>BQ source Table E2E_SOURCE_753f3a56_2ab5_483c_ad70_2b86e190df81 deleted successfully</p></pre>
         </div>
       </div>
   </div>
@@ -3754,9 +3754,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">TestSetupHooks.deleteTargetBucketWithFile()</span>
+              <span class="location name">TestSetupHooks.deleteTargetPubSubTopic()</span>
 
-  <span class="lead-duration duration">1.218</span>
+  <span class="lead-duration duration">2.632</span>
 
           </div>
 
@@ -3772,7 +3772,7 @@ $(document).ready(function() {
         </div>
         <div id="output-103" class="collapse collapsable-details " >
           
-          <pre><p>Deleted GCS Bucket cdf-e2e-test-69f11c49-0007-4012-ab4a-ad9a3e335089</p></pre>
+          <pre><p>Deleted target PubSub topic cdf-e2e-test-73d0122d-6776-471d-ac71-7942dd636947</p></pre>
         </div>
       </div>
   </div>
