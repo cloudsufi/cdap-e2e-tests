@@ -1,0 +1,5006 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Tag: @BQ_PARTITIONED_SOURCE_TEST</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber Reports</td>
+        <td>1</td>
+      <td>04 Mar 2022, 10:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@BQ_PARTITIONED_SOURCE_TEST</td>
+          <td      class="passed"    >56</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">56</td>
+
+          <td  class="passed"    >2</td>
+          <td >0</td>
+          <td class="total">2</td>
+
+          <td class="duration" data-value="233848916085">3:53.848</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_2970604626.html">BigQuery source - Verification of BigQuery to BigQuery successful data transfer</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3686385745.html">@BigQuery_Source</a>
+       <a href="report-tag_3187924015.html">@BQ_PARTITIONED_SOURCE_TEST</a>
+       <a href="report-tag_890572557.html">@BQ_SINK_TEST</a>
+</div>
+
+
+  <span class="lead-duration duration">2:17.982</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify records are getting transferred with respect to partitioned date</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">BeforeActions.setUp(Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">TestSetupHooks.setTempTargetBQTableName()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-3">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-3" class="collapse collapsable-details " >
+          
+          <pre><p>BQ Target table name - E2E_TEST_SINK_3083</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">TestSetupHooks.createTempPartitionedSourceBQTable()</span>
+
+  <span class="lead-duration duration">2.440</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-4">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-4" class="collapse collapsable-details " >
+          
+          <pre><p>BQ Source Table E2E_SOURCE_ac74bedc_0b8c_4cfc_85f9_ad0827990df8 created successfully</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Open Datafusion Project to configure pipeline</span>
+
+  <span class="lead-duration duration">1.934</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-6" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.167</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-7" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1956760703.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-7" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1956760703.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Source is BigQuery</span>
+
+  <span class="lead-duration duration">0.147</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-8" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.382</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-9" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-109613563.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-9" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-109613563.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Sink is BigQuery</span>
+
+  <span class="lead-duration duration">0.177</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-10" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.209</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-11" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-411897393.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-11" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-411897393.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Open BigQuery source properties</span>
+
+  <span class="lead-duration duration">0.147</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-12" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.359</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-13" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-292495553.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-13" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-292495553.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property reference name</span>
+
+  <span class="lead-duration duration">1.361</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-14" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.198</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-15" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-422331346.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-15" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-422331346.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property projectId <span class="argument">&quot;projectId&quot;</span></span>
+
+  <span class="lead-duration duration">1.371</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-16">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-16" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.178</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-17" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1634237402.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-17" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1634237402.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property datasetProjectId <span class="argument">&quot;projectId&quot;</span></span>
+
+  <span class="lead-duration duration">0.527</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-18">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-18" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.173</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-19" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1263690711.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-19" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1263690711.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property dataset <span class="argument">&quot;dataset&quot;</span></span>
+
+  <span class="lead-duration duration">0.507</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-20">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-20" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.179</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-21" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1215938443.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-21" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1215938443.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery source property table name</span>
+
+  <span class="lead-duration duration">1.483</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-22">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-22" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.178</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-23" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_319051190.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-23" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_319051190.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery source properties partitionStartDate and partitionEndDate</span>
+
+  <span class="lead-duration duration">1.087</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-24">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-24" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.178</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-25" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1768098148.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-25" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1768098148.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate output schema with expectedSchema <span class="argument">&quot;bqPartitionSourceSchema&quot;</span></span>
+
+  <span class="lead-duration duration">3.782</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-26">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-26" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.179</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-27" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1057011989.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-27" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1057011989.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate <span class="argument">&quot;BigQuery&quot;</span> plugin properties</span>
+
+  <span class="lead-duration duration">3.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-28">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-28" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.203</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-29" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1361848414.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-29" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1361848414.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Close the BigQuery properties</span>
+
+  <span class="lead-duration duration">0.301</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-30">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-30" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.207</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-31" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_525623500.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-31" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_525623500.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Open BigQuery sink properties</span>
+
+  <span class="lead-duration duration">0.195</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-32">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-32" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.491</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-33" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1706975251.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-33" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1706975251.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter the BigQuery sink mandatory properties</span>
+
+  <span class="lead-duration duration">4.993</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-34">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-34" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.180</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-35" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-144419099.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-35" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-144419099.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate <span class="argument">&quot;BigQuery&quot;</span> plugin properties</span>
+
+  <span class="lead-duration duration">2.019</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-36">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-36" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.165</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-37" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-955710658.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-37" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-955710658.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Close the BigQuery properties</span>
+
+  <span class="lead-duration duration">0.274</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-38">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-38" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.194</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-39" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-2028834355.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-39" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-2028834355.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Connect source as <span class="argument">&quot;BigQuery&quot;</span> and sink as <span class="argument">&quot;BigQuery&quot;</span> to establish connection</span>
+
+  <span class="lead-duration duration">0.384</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-40">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-40" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.183</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-41" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1032657800.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-41" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1032657800.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Save the pipeline</span>
+
+  <span class="lead-duration duration">4.276</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-42">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-42" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.177</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-43" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1790312556.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-43" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1790312556.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Preview and run the pipeline</span>
+
+  <span class="lead-duration duration">0.318</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-44">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-44" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.175</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-45" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1925131969.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-45" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1925131969.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify the preview of pipeline is <span class="argument">&quot;success&quot;</span></span>
+
+  <span class="lead-duration duration">41.876</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-46">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-46" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.179</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-47" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-212671301.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-47" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-212671301.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Click on preview data for BigQuery sink</span>
+
+  <span class="lead-duration duration">0.363</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-48">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-48" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.394</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-49" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1776603277.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-49" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1776603277.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify preview output schema matches the outputSchema captured in properties</span>
+
+  <span class="lead-duration duration">0.485</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-50">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-50" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.159</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-51" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1509643587.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-51" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1509643587.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Close the preview data</span>
+
+  <span class="lead-duration duration">0.347</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-52">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-52" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.178</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-53" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-894640015.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-53" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-894640015.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Deploy the pipeline</span>
+
+  <span class="lead-duration duration">0.249</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-54">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-54" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.230</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-55" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1102030291.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-55" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1102030291.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Run the Pipeline in Runtime</span>
+
+  <span class="lead-duration duration">4.270</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-56">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-56" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.187</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-57" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1980569212.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-57" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1980569212.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Wait till pipeline is in running state</span>
+
+  <span class="lead-duration duration">1:0.574</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-58">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-58" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.159</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-59" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1352178080.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-59" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1352178080.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Open and capture logs</span>
+
+  <span class="lead-duration duration">0.448</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-60">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-60" class="collapse collapsable-details " >
+          
+          <pre><p>2022-03-04 10:33:33,266 - DEBUG [provisioning-task-3:i.c.c.i.p.t.ProvisioningTask@125] - Executing PROVISION subtask REQUESTING_CREATE for program run program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144.
+2022-03-04 10:33:33,267 - DEBUG [provisioning-task-3:i.c.c.i.p.t.ProvisioningTask@129] - Completed PROVISION subtask REQUESTING_CREATE for program run program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144.
+2022-03-04 10:33:33,287 - DEBUG [provisioning-task-3:i.c.c.i.p.t.ProvisioningTask@116] - Completed PROVISION task for program run program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144.
+2022-03-04 10:33:40,653 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@471] - Pipeline 'TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1' is started by user 'runner' with arguments {logical.start.time=1646390011330}
+2022-03-04 10:33:40,705 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@506] - Pipeline 'TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1' running
+2022-03-04 10:33:40,708 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@71] - Workflow service workflow.default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144 started
+2022-03-04 10:33:40,709 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@623] - Starting workflow execution for 'DataPipelineWorkflow' with Run id '89602a50-9ba6-11ec-b4a5-5ab8182f1144'
+2022-03-04 10:33:40,746 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@337] - Starting Spark Program 'phase-1' in workflow
+2022-03-04 10:33:40,822 - DEBUG [action-phase-1-0:i.c.c.a.r.s.SparkProgramRunner@230] - Starting Spark Job. Context: SparkRuntimeContext{id=program:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.spark.phase-1, runId=8efcc7c2-9ba6-11ec-bd37-5ab8182f1144}
+2022-03-04 10:33:45,072 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@133] - Using GCS path gs://bq-source-bucket-dde93377-0d50-48ef-85e7-c93075d0123e/dde93377-0d50-48ef-85e7-c93075d0123e/hadoop/input/dde93377-0d50-48ef-85e7-c93075d0123e as temp storage for table E2E_SOURCE_ac74bedc_0b8c_4cfc_85f9_ad0827990df8.
+2022-03-04 10:33:45,108 - INFO  [SparkRunnerphase-1:c.g.c.h.i.b.BigQueryConfiguration@76] - Using specified project-id 'cdf-athena' for input
+2022-03-04 10:33:46,536 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.AbstractBigQuerySink@143] - Init output for table 'E2E_TEST_SINK_3083' with schema: {&quot;type&quot;:&quot;record&quot;,&quot;name&quot;:&quot;output&quot;,&quot;fields&quot;:[{&quot;name&quot;:&quot;transaction_id&quot;,&quot;type&quot;:[&quot;long&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;transaction_uid&quot;,&quot;type&quot;:[&quot;string&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;transaction_date&quot;,&quot;type&quot;:[{&quot;type&quot;:&quot;int&quot;,&quot;logicalType&quot;:&quot;date&quot;},&quot;null&quot;]}]}
+2022-03-04 10:33:47,068 - DEBUG [SparkRunnerphase-1:i.c.c.i.a.r.LocalizationUtils@55] - Hard link file from /tmp/HydratorSpark1591312196127298793.config to /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646390020826-0/HydratorSpark.config
+2022-03-04 10:33:47,094 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.c.a.r.s.s.AbstractSparkSubmitter@192] - Calling SparkSubmit for program:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.spark.phase-1 8efcc7c2-9ba6-11ec-bd37-5ab8182f1144: [--master, local[2], --conf, spark.app.name=phase-1, --conf, spark.executor.memory=2048m, --conf, spark.driver.memory=2048m, --conf, spark.local.dir=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646390020826-0, --conf, spark.driver.cores=1, --conf, spark.yarn.maxAppAttempts=1, --conf, spark.executor.id=TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1, --conf, spark.network.timeout=600s, --conf, spark.executor.cores=1, --conf, spark.metrics.conf=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646390020826-0/metrics.properties, --conf, spark.speculation=false, --conf, spark.sql.caseSensitive=true, --conf, spark.app.id=TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1, --conf, spark.maxRemoteBlockSizeFetchToMem=2147483135, --conf, spark.extraListeners=io.cdap.cdap.app.runtime.spark.DelegatingSparkListener, --conf, spark.sql.autoBroadcastJoinThreshold=-1, --conf, spark.executor.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --conf, spark.cdap.localized.resources=[&quot;HydratorSpark.config&quot;], --conf, spark.driver.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --class, io.cdap.cdap.app.runtime.spark.SparkMainWrapper, /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/runtime/spark/cdapSparkJob.jar, --cdap.spark.program=program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.spark.phase-1.8efcc7c2-9ba6-11ec-bd37-5ab8182f1144, --cdap.user.main.class=io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver]
+2022-03-04 10:33:47,198 - INFO  [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@181] - Starting HTTP Service phase-1-http-service at address localhost/127.0.0.1:0
+2022-03-04 10:33:47,200 - DEBUG [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@191] - Started HTTP Service phase-1-http-service at address /127.0.0.1:32991
+2022-03-04 10:33:47,215 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.c.a.r.s.SparkMainWrapper$@78] - Launching user spark class class io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver
+2022-03-04 10:33:47,283 - WARN  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:o.a.s.SparkConf@66] - In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+2022-03-04 10:33:48,281 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.c.a.r.s.SparkMetricsSink@55] - Using SparkMetricsSink for reporting metrics: {class=io.cdap.cdap.app.runtime.spark.SparkMetricsSink}
+2022-03-04 10:33:49,539 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Using output path 'gs://1ddc2fe3-8018-432c-931b-7b452e65a730/1ddc2fe3-8018-432c-931b-7b452e65a730/input/E2E_TEST_SINK_3083-1ddc2fe3-8018-432c-931b-7b452e65a730'.
+2022-03-04 10:33:49,806 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Bigquery connector version hadoop2-1.0.0
+2022-03-04 10:33:49,808 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:33:49,810 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:33:49,810 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:33:50,093 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:33:50,168 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:33:50,170 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:33:50,170 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:33:50,171 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:33:50,549 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:33:50,551 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:33:58,678 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:33:58,684 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:33:58,685 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.BigQueryConfiguration@76] - Using working path: 'gs://bq-source-bucket-dde93377-0d50-48ef-85e7-c93075d0123e/dde93377-0d50-48ef-85e7-c93075d0123e/hadoop/input/dde93377-0d50-48ef-85e7-c93075d0123e'
+2022-03-04 10:34:07,714 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.UnshardedExportToCloudStorage@76] - Setting FileInputFormat's inputPath to 'gs://bq-source-bucket-dde93377-0d50-48ef-85e7-c93075d0123e/dde93377-0d50-48ef-85e7-c93075d0123e/hadoop/input/dde93377-0d50-48ef-85e7-c93075d0123e'
+2022-03-04 10:34:08,354 - DEBUG [SparkListenerBus:i.c.c.a.r.s.AbstractSparkExecutionContext@156] - Spark program=program:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.spark.phase-1, runId=8efcc7c2-9ba6-11ec-bd37-5ab8182f1144, jobId=0 starts with auto-commit=false on transaction Transaction{readPointer: 1646390028315000002, transactionId: 1646390028354000000, writePointer: 1646390028354000000, invalids: [1646378043273000000, 1646378723829000000, 1646380661816000000, 1646381340323000000, 1646389922292000000], inProgress: [1646390025225000000], firstShortInProgress: 1646390025225000000, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}
+2022-03-04 10:34:08,361 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@110] - Spark job started: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1646390028315000002, transactionId: 1646390028354000000, writePointer: 1646390028354000000, invalids: [1646378043273000000, 1646378723829000000, 1646380661816000000, 1646381340323000000, 1646389922292000000], inProgress: [1646390025225000000], firstShortInProgress: 1646390025225000000, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
+2022-03-04 10:34:09,312 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:34:09,380 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:34:09,381 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:34:09,381 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:34:09,382 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:34:09,390 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:34:11,979 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@144] - Spark job ended: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1646390028315000002, transactionId: 1646390028354000000, writePointer: 1646390028354000000, invalids: [1646378043273000000, 1646378723829000000, 1646380661816000000, 1646381340323000000, 1646389922292000000], inProgress: [1646390025225000000], firstShortInProgress: 1646390025225000000, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
+2022-03-04 10:34:14,964 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@187] - Allow schema relaxation: 'true'
+2022-03-04 10:34:14,965 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@189] - Create Partitioned Table type: 'TIME'
+2022-03-04 10:34:14,965 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@192] - Partition Field: 'null'
+2022-03-04 10:34:14,965 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@194] - Require partition filter: 'false'
+2022-03-04 10:34:14,967 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@210] - Partition filter: 'null'
+2022-03-04 10:34:14,967 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@263] - Importing into table 'cdf-athena:test_automation.E2E_TEST_SINK_3083' from 1 paths; path[0] is 'gs://1ddc2fe3-8018-432c-931b-7b452e65a730/1ddc2fe3-8018-432c-931b-7b452e65a730/input/E2E_TEST_SINK_3083-1ddc2fe3-8018-432c-931b-7b452e65a730/part-r-00000.avro'; awaitCompletion: true
+2022-03-04 10:34:14,970 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@365] - Using schema 'GenericData{classInfo=[fields], {fields=[{&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;transaction_id&quot;,&quot;type&quot;:&quot;INTEGER&quot;}, {&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;transaction_uid&quot;,&quot;type&quot;:&quot;STRING&quot;}, {&quot;mode&quot;:&quot;NULLABLE&quot;,&quot;name&quot;:&quot;transaction_date&quot;,&quot;type&quot;:&quot;DATE&quot;}]}}' for the load job config.
+2022-03-04 10:34:15,767 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (107 ms) 816b81be-21a6-4e53-8bb2-cdb8a874c0eb: RUNNING
+2022-03-04 10:34:23,684 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@493] - Job status (8024 ms) 816b81be-21a6-4e53-8bb2-cdb8a874c0eb: DONE
+2022-03-04 10:34:24,021 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@398] - Imported into table 'cdf-athena:test_automation.E2E_TEST_SINK_3083' from 1 paths; path[0] is 'gs://1ddc2fe3-8018-432c-931b-7b452e65a730/1ddc2fe3-8018-432c-931b-7b452e65a730/input/E2E_TEST_SINK_3083-1ddc2fe3-8018-432c-931b-7b452e65a730/part-r-00000.avro'
+2022-03-04 10:34:24,162 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Found GCS output data at 'gs://1ddc2fe3-8018-432c-931b-7b452e65a730/1ddc2fe3-8018-432c-931b-7b452e65a730/input/E2E_TEST_SINK_3083-1ddc2fe3-8018-432c-931b-7b452e65a730', attempting to clean up.
+2022-03-04 10:34:24,585 - INFO  [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Successfully deleted GCS output path 'gs://1ddc2fe3-8018-432c-931b-7b452e65a730/1ddc2fe3-8018-432c-931b-7b452e65a730/input/E2E_TEST_SINK_3083-1ddc2fe3-8018-432c-931b-7b452e65a730'.
+2022-03-04 10:34:24,721 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.c.a.r.s.SparkRuntimeEnv$@347] - Shutting down Server and ThreadPool used by Spark org.apache.spark.SparkContext@53faddfd
+2022-03-04 10:34:24,727 - INFO  [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@258] - Stopping HTTP Service phase-1-http-service
+2022-03-04 10:34:24,729 - DEBUG [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@276] - Stopped HTTP Service phase-1-http-service on address localhost/127.0.0.1:32991
+2022-03-04 10:34:24,730 - DEBUG [spark-submitter-phase-1-8efcc7c2-9ba6-11ec-bd37-5ab8182f1144:i.c.c.a.r.s.s.AbstractSparkSubmitter@199] - SparkSubmit returned for program:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.spark.phase-1 8efcc7c2-9ba6-11ec-bd37-5ab8182f1144
+2022-03-04 10:34:25,486 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://bq-source-bucket-dde93377-0d50-48ef-85e7-c93075d0123e'
+2022-03-04 10:34:25,755 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@176] - Deleted temporary table '_E2E_SOURCE_ac74bedc_0b8c_4cfc_85f9_ad0827990df8_33d71c76_adb2_4500_b24c_2cd93cc89b81'
+2022-03-04 10:34:26,454 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://1ddc2fe3-8018-432c-931b-7b452e65a730'
+2022-03-04 10:34:26,770 - INFO  [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySink@193] - Job JobId{project=cdf-athena, job=816b81be-21a6-4e53-8bb2-cdb8a874c0eb, location=US} affected 63 rows
+2022-03-04 10:34:26,772 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@967] - Running Spark shutdown hook org.apache.spark.util.SparkShutdownHookManager$$anon$2@64a695c2
+2022-03-04 10:34:26,782 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@444] - Spark program completed: SparkRuntimeContext{id=program:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.spark.phase-1, runId=8efcc7c2-9ba6-11ec-bd37-5ab8182f1144}
+2022-03-04 10:34:26,810 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@340] - Spark Program 'phase-1' in workflow completed
+2022-03-04 10:34:26,812 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@631] - Workflow 'DataPipelineWorkflow' with run id '89602a50-9ba6-11ec-b4a5-5ab8182f1144' completed
+2022-03-04 10:34:26,813 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@564] - Pipeline 'TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1' succeeded.
+2022-03-04 10:34:26,878 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@77] - Workflow service terminated from RUNNING. Un-registering service workflow.default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144.
+2022-03-04 10:34:26,881 - DEBUG [pcontroller-program:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow-89602a50-9ba6-11ec-b4a5-5ab8182f1144-3:i.c.c.a.r.AbstractProgramRuntimeService@646] - RuntimeInfo removed: program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144
+2022-03-04 10:34:27,405 - DEBUG [provisioning-task-9:i.c.c.i.p.t.ProvisioningTask@125] - Executing DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144.
+2022-03-04 10:34:27,406 - DEBUG [provisioning-task-9:i.c.c.i.p.t.ProvisioningTask@129] - Completed DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144.
+2022-03-04 10:34:27,417 - DEBUG [provisioning-task-9:i.c.c.i.p.t.ProvisioningTask@116] - Completed DEPROVISION task for program run program_run:default.TestPipeline9cf4d8a4-4ae8-405e-b3d2-444f0a8988f1.-SNAPSHOT.workflow.DataPipelineWorkflow.89602a50-9ba6-11ec-b4a5-5ab8182f1144.</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-61">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-61" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.199</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-62" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1850130270.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-62" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1850130270.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify the pipeline status is <span class="argument">&quot;Succeeded&quot;</span></span>
+
+  <span class="lead-duration duration">0.016</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-63">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-63" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.209</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-64" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-515886968.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-64" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-515886968.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Get count of no of records transferred to target BigQuery Table</span>
+
+  <span class="lead-duration duration">0.558</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-65">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-65" class="collapse collapsable-details " >
+          
+          <pre><p>**********No of Records Transferred******************:63</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-66">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-66" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.185</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-67" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1963830100.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-67" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1963830100.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate partition date in output partitioned table</span>
+
+  <span class="lead-duration duration">0.496</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-68">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-68" class="collapse collapsable-details " >
+          
+          <pre><p>Partitioned date in output record:2022-03-04</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-69">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-69" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.184</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-70" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1963830100.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-70" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1963830100.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-71">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-71" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">TestSetupHooks.deleteTempTargetBQTable()</span>
+
+  <span class="lead-duration duration">0.733</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-72">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-72" class="collapse collapsable-details " >
+          
+          <pre><p>BQ Target table - E2E_TEST_SINK_3083 deleted successfully</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">TestSetupHooks.deleteTempSourceBQTable()</span>
+
+  <span class="lead-duration duration">0.578</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-73">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-73" class="collapse collapsable-details " >
+          
+          <pre><p>BQ source Table E2E_SOURCE_ac74bedc_0b8c_4cfc_85f9_ad0827990df8 deleted successfully</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_2970604626.html">BigQuery source - Verification of BigQuery to BigQuery successful data transfer</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3686385745.html">@BigQuery_Source</a>
+       <a href="report-tag_3187924015.html">@BQ_PARTITIONED_SOURCE_TEST</a>
+       <a href="report-tag_890572557.html">@BQ_SINK_TEST</a>
+</div>
+
+
+  <span class="lead-duration duration">1:35.866</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-74">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify records are not getting transferred for future partitioned date</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-74" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-75">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-75" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">BeforeActions.setUp(Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">TestSetupHooks.setTempTargetBQTableName()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-76">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-76" class="collapse collapsable-details " >
+          
+          <pre><p>BQ Target table name - E2E_TEST_SINK_6790</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">TestSetupHooks.createTempPartitionedSourceBQTable()</span>
+
+  <span class="lead-duration duration">2.496</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-77">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-77" class="collapse collapsable-details " >
+          
+          <pre><p>BQ Source Table E2E_SOURCE_fd90e68e_7e5d_48e4_a852_363c6e27be0a created successfully</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-78">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-78" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Open Datafusion Project to configure pipeline</span>
+
+  <span class="lead-duration duration">2.170</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-79">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-79" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.160</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-80" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1956760703.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-80" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1956760703.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Source is BigQuery</span>
+
+  <span class="lead-duration duration">0.251</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-81">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-81" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.296</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-82" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-109613563.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-82" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-109613563.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Sink is BigQuery</span>
+
+  <span class="lead-duration duration">0.179</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-83">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-83" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.221</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-84" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1149037534.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-84" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1149037534.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Open BigQuery source properties</span>
+
+  <span class="lead-duration duration">0.170</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-85">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-85" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.279</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-86" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_476869710.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-86" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_476869710.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property reference name</span>
+
+  <span class="lead-duration duration">1.409</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-87">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-87" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.182</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-88" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-715318967.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-88" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-715318967.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property projectId <span class="argument">&quot;projectId&quot;</span></span>
+
+  <span class="lead-duration duration">1.335</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-89">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-89" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.179</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-90" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1831233443.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-90" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1831233443.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property datasetProjectId <span class="argument">&quot;projectId&quot;</span></span>
+
+  <span class="lead-duration duration">0.538</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-91">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-91" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.183</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-92" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-437418042.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-92" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-437418042.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery property dataset <span class="argument">&quot;dataset&quot;</span></span>
+
+  <span class="lead-duration duration">0.462</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-93">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-93" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.183</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-94" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1998501947.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-94" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1998501947.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery source property table name</span>
+
+  <span class="lead-duration duration">1.575</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-95">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-95" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.187</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-96" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1219781362.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-96" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1219781362.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter BigQuery source properties partitionStartDate <span class="argument">&quot;bqFuturePartitionStartDate&quot;</span> and partitionEndDate <span class="argument">&quot;bqFuturePartitionEndDate&quot;</span></span>
+
+  <span class="lead-duration duration">1.172</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-97">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-97" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.191</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-98" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1090463919.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-98" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1090463919.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate output schema with expectedSchema <span class="argument">&quot;bqPartitionSourceSchema&quot;</span></span>
+
+  <span class="lead-duration duration">4.270</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-99">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-99" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.169</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-100" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1179693273.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-100" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1179693273.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate <span class="argument">&quot;BigQuery&quot;</span> plugin properties</span>
+
+  <span class="lead-duration duration">3.119</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-101">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-101" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.193</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-102" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-2039762318.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-102" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-2039762318.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Close the BigQuery properties</span>
+
+  <span class="lead-duration duration">0.306</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-103">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-103" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.209</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-104" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_525623500.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-104" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_525623500.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Open BigQuery sink properties</span>
+
+  <span class="lead-duration duration">0.201</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-105">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-105" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.480</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-106" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1706975251.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-106" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1706975251.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Enter the BigQuery sink mandatory properties</span>
+
+  <span class="lead-duration duration">5.491</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-107">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-107" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.187</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-108" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-48488547.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-108" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-48488547.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate <span class="argument">&quot;BigQuery&quot;</span> plugin properties</span>
+
+  <span class="lead-duration duration">2.056</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-109">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-109" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.160</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-110" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1506945963.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-110" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1506945963.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Close the BigQuery properties</span>
+
+  <span class="lead-duration duration">0.272</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-111">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-111" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.212</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-112" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-593500507.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-112" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-593500507.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Connect source as <span class="argument">&quot;BigQuery&quot;</span> and sink as <span class="argument">&quot;BigQuery&quot;</span> to establish connection</span>
+
+  <span class="lead-duration duration">0.442</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-113">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-113" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.206</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-114" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1032657800.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-114" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1032657800.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Save and Deploy Pipeline</span>
+
+  <span class="lead-duration duration">4.587</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-115">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-115" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.238</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-116" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1193129038.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-116" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1193129038.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Run the Pipeline in Runtime</span>
+
+  <span class="lead-duration duration">4.095</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-117">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-117" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.191</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-118" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_697143722.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-118" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_697143722.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Wait till pipeline is in running state</span>
+
+  <span class="lead-duration duration">1:0.577</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-119">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-119" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.178</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-120" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1487302387.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-120" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1487302387.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Open and capture logs</span>
+
+  <span class="lead-duration duration">0.425</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-121">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-121" class="collapse collapsable-details " >
+          
+          <pre><p>2022-03-04 10:35:17,547 - DEBUG [provisioning-task-6:i.c.c.i.p.t.ProvisioningTask@116] - Completed PROVISION task for program run program_run:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.workflow.DataPipelineWorkflow.c81ea289-9ba6-11ec-8d2d-5ab8182f1144.
+2022-03-04 10:35:24,780 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@471] - Pipeline 'TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5' is started by user 'runner' with arguments {logical.start.time=1646390116597}
+2022-03-04 10:35:24,837 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@506] - Pipeline 'TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5' running
+2022-03-04 10:35:24,841 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@71] - Workflow service workflow.default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.DataPipelineWorkflow.c81ea289-9ba6-11ec-8d2d-5ab8182f1144 started
+2022-03-04 10:35:24,841 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@623] - Starting workflow execution for 'DataPipelineWorkflow' with Run id 'c81ea289-9ba6-11ec-8d2d-5ab8182f1144'
+2022-03-04 10:35:24,880 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@337] - Starting Spark Program 'phase-1' in workflow
+2022-03-04 10:35:24,941 - DEBUG [action-phase-1-0:i.c.c.a.r.s.SparkProgramRunner@230] - Starting Spark Job. Context: SparkRuntimeContext{id=program:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.spark.phase-1, runId=cd0e853a-9ba6-11ec-b90c-5ab8182f1144}
+2022-03-04 10:35:29,349 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@133] - Using GCS path gs://bq-source-bucket-2896d526-8b46-4ae4-a70d-84c3c45be44a/2896d526-8b46-4ae4-a70d-84c3c45be44a/hadoop/input/2896d526-8b46-4ae4-a70d-84c3c45be44a as temp storage for table E2E_SOURCE_fd90e68e_7e5d_48e4_a852_363c6e27be0a.
+2022-03-04 10:35:29,389 - INFO  [SparkRunnerphase-1:c.g.c.h.i.b.BigQueryConfiguration@76] - Using specified project-id 'cdf-athena' for input
+2022-03-04 10:35:30,629 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.AbstractBigQuerySink@143] - Init output for table 'E2E_TEST_SINK_6790' with schema: {&quot;type&quot;:&quot;record&quot;,&quot;name&quot;:&quot;output&quot;,&quot;fields&quot;:[{&quot;name&quot;:&quot;transaction_id&quot;,&quot;type&quot;:[&quot;long&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;transaction_uid&quot;,&quot;type&quot;:[&quot;string&quot;,&quot;null&quot;]},{&quot;name&quot;:&quot;transaction_date&quot;,&quot;type&quot;:[{&quot;type&quot;:&quot;int&quot;,&quot;logicalType&quot;:&quot;date&quot;},&quot;null&quot;]}]}
+2022-03-04 10:35:31,162 - DEBUG [SparkRunnerphase-1:i.c.c.i.a.r.LocalizationUtils@55] - Hard link file from /tmp/HydratorSpark2092610946267278590.config to /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646390124946-0/HydratorSpark.config
+2022-03-04 10:35:31,191 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.c.a.r.s.s.AbstractSparkSubmitter@192] - Calling SparkSubmit for program:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.spark.phase-1 cd0e853a-9ba6-11ec-b90c-5ab8182f1144: [--master, local[2], --conf, spark.app.name=phase-1, --conf, spark.executor.memory=2048m, --conf, spark.driver.memory=2048m, --conf, spark.local.dir=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646390124946-0, --conf, spark.driver.cores=1, --conf, spark.yarn.maxAppAttempts=1, --conf, spark.executor.id=TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5, --conf, spark.network.timeout=600s, --conf, spark.executor.cores=1, --conf, spark.metrics.conf=/tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/tmp/1646390124946-0/metrics.properties, --conf, spark.speculation=false, --conf, spark.sql.caseSensitive=true, --conf, spark.app.id=TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5, --conf, spark.maxRemoteBlockSizeFetchToMem=2147483135, --conf, spark.extraListeners=io.cdap.cdap.app.runtime.spark.DelegatingSparkListener, --conf, spark.sql.autoBroadcastJoinThreshold=-1, --conf, spark.executor.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --conf, spark.cdap.localized.resources=[&quot;HydratorSpark.config&quot;], --conf, spark.driver.extraJavaOptions=-Dstreaming.checkpoint.rewrite.enabled=true, --class, io.cdap.cdap.app.runtime.spark.SparkMainWrapper, /tmp/cdap-e2e-tests/cdap-e2e-tests/sandbox/cdap-sandbox-6.7.0-SNAPSHOT/data/runtime/spark/cdapSparkJob.jar, --cdap.spark.program=program_run:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.spark.phase-1.cd0e853a-9ba6-11ec-b90c-5ab8182f1144, --cdap.user.main.class=io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver]
+2022-03-04 10:35:31,299 - INFO  [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@181] - Starting HTTP Service phase-1-http-service at address localhost/127.0.0.1:0
+2022-03-04 10:35:31,300 - DEBUG [SparkDriverHttpService STARTING:i.c.h.NettyHttpService@191] - Started HTTP Service phase-1-http-service at address /127.0.0.1:45713
+2022-03-04 10:35:31,319 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.c.a.r.s.SparkMainWrapper$@78] - Launching user spark class class io.cdap.cdap.etl.spark.batch.BatchSparkPipelineDriver
+2022-03-04 10:35:31,389 - WARN  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:o.a.s.SparkConf@66] - In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+2022-03-04 10:35:32,406 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.c.a.r.s.SparkMetricsSink@55] - Using SparkMetricsSink for reporting metrics: {class=io.cdap.cdap.app.runtime.spark.SparkMetricsSink}
+2022-03-04 10:35:33,725 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Using output path 'gs://dc619cb1-8524-4560-af1e-5bb9bd0e0ac8/dc619cb1-8524-4560-af1e-5bb9bd0e0ac8/input/E2E_TEST_SINK_6790-dc619cb1-8524-4560-af1e-5bb9bd0e0ac8'.
+2022-03-04 10:35:34,007 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Bigquery connector version hadoop2-1.0.0
+2022-03-04 10:35:34,009 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:35:34,010 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:35:34,011 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:35:34,231 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:35:34,299 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:35:34,300 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:35:34,301 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:35:34,302 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:35:34,660 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:35:34,661 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:35:46,004 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:35:46,011 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:35:46,011 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.BigQueryConfiguration@76] - Using working path: 'gs://bq-source-bucket-2896d526-8b46-4ae4-a70d-84c3c45be44a/2896d526-8b46-4ae4-a70d-84c3c45be44a/hadoop/input/2896d526-8b46-4ae4-a70d-84c3c45be44a'
+2022-03-04 10:35:55,197 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.UnshardedExportToCloudStorage@76] - Setting FileInputFormat's inputPath to 'gs://bq-source-bucket-2896d526-8b46-4ae4-a70d-84c3c45be44a/2896d526-8b46-4ae4-a70d-84c3c45be44a/hadoop/input/2896d526-8b46-4ae4-a70d-84c3c45be44a'
+2022-03-04 10:35:55,779 - DEBUG [SparkListenerBus:i.c.c.a.r.s.AbstractSparkExecutionContext@156] - Spark program=program:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.spark.phase-1, runId=cd0e853a-9ba6-11ec-b90c-5ab8182f1144, jobId=0 starts with auto-commit=false on transaction Transaction{readPointer: 1646390132446000005, transactionId: 1646390132514000000, writePointer: 1646390132514000000, invalids: [1646378043273000000, 1646378723829000000, 1646380661816000000, 1646381340323000000, 1646389922292000000], inProgress: [], firstShortInProgress: 9223372036854775807, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}
+2022-03-04 10:35:55,786 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@110] - Spark job started: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1646390132446000005, transactionId: 1646390132514000000, writePointer: 1646390132514000000, invalids: [1646378043273000000, 1646378723829000000, 1646380661816000000, 1646381340323000000, 1646389922292000000], inProgress: [], firstShortInProgress: 9223372036854775807, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
+2022-03-04 10:35:56,611 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:35:56,676 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:35:56,677 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:35:56,678 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from default credential.
+2022-03-04 10:35:56,679 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.BigQueryFactory@76] - Creating BigQuery from given credential.
+2022-03-04 10:35:56,686 - INFO  [Executor task launch worker for task 0:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputFormat@76] - Delegating functionality to 'AvroOutputFormat'.
+2022-03-04 10:35:58,552 - DEBUG [SparkListenerBus:i.c.c.a.r.s.SparkTransactionHandler@144] - Spark job ended: JobTransaction{jobId=0, stageIds=[0], transaction=Transaction{readPointer: 1646390132446000005, transactionId: 1646390132514000000, writePointer: 1646390132514000000, invalids: [1646378043273000000, 1646378723829000000, 1646380661816000000, 1646381340323000000, 1646389922292000000], inProgress: [], firstShortInProgress: 9223372036854775807, type: LONG, checkpointWritePointers: [], visibilityLevel: SNAPSHOT}}
+2022-03-04 10:36:00,477 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@187] - Allow schema relaxation: 'true'
+2022-03-04 10:36:00,478 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@189] - Create Partitioned Table type: 'TIME'
+2022-03-04 10:36:00,478 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@192] - Partition Field: 'null'
+2022-03-04 10:36:00,478 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@194] - Require partition filter: 'false'
+2022-03-04 10:36:00,480 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@210] - Partition filter: 'null'
+2022-03-04 10:36:00,480 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.p.g.b.s.BigQueryOutputFormat@263] - Importing into table 'cdf-athena:test_automation.E2E_TEST_SINK_6790' from 0 paths; path[0] is '(empty)'; awaitCompletion: true
+2022-03-04 10:36:00,986 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Found GCS output data at 'gs://dc619cb1-8524-4560-af1e-5bb9bd0e0ac8/dc619cb1-8524-4560-af1e-5bb9bd0e0ac8/input/E2E_TEST_SINK_6790-dc619cb1-8524-4560-af1e-5bb9bd0e0ac8', attempting to clean up.
+2022-03-04 10:36:01,380 - INFO  [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:c.g.c.h.i.b.o.ForwardingBigQueryFileOutputCommitter@76] - Successfully deleted GCS output path 'gs://dc619cb1-8524-4560-af1e-5bb9bd0e0ac8/dc619cb1-8524-4560-af1e-5bb9bd0e0ac8/input/E2E_TEST_SINK_6790-dc619cb1-8524-4560-af1e-5bb9bd0e0ac8'.
+2022-03-04 10:36:01,851 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.c.a.r.s.SparkRuntimeEnv$@347] - Shutting down Server and ThreadPool used by Spark org.apache.spark.SparkContext@6ee4939e
+2022-03-04 10:36:01,860 - INFO  [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@258] - Stopping HTTP Service phase-1-http-service
+2022-03-04 10:36:01,862 - DEBUG [SparkDriverHttpService STOPPING:i.c.h.NettyHttpService@276] - Stopped HTTP Service phase-1-http-service on address localhost/127.0.0.1:45713
+2022-03-04 10:36:01,863 - DEBUG [spark-submitter-phase-1-cd0e853a-9ba6-11ec-b90c-5ab8182f1144:i.c.c.a.r.s.s.AbstractSparkSubmitter@199] - SparkSubmit returned for program:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.spark.phase-1 cd0e853a-9ba6-11ec-b90c-5ab8182f1144
+2022-03-04 10:36:02,717 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://bq-source-bucket-2896d526-8b46-4ae4-a70d-84c3c45be44a'
+2022-03-04 10:36:02,928 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySourceUtils@176] - Deleted temporary table '_E2E_SOURCE_fd90e68e_7e5d_48e4_a852_363c6e27be0a_3034e3e6_8ccf_46ec_9a62_255e4be746d9'
+2022-03-04 10:36:03,812 - DEBUG [SparkRunnerphase-1:i.c.p.g.b.u.BigQueryUtil@715] - Deleted temporary directory 'gs://dc619cb1-8524-4560-af1e-5bb9bd0e0ac8'
+2022-03-04 10:36:04,033 - WARN  [SparkRunnerphase-1:i.c.p.g.b.s.BigQuerySink@189] - Unable to find BigQuery job. No metric will be emitted for the number of affected rows.
+2022-03-04 10:36:04,034 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@967] - Running Spark shutdown hook org.apache.spark.util.SparkShutdownHookManager$$anon$2@67cd0fde
+2022-03-04 10:36:04,048 - DEBUG [SparkRunnerphase-1:i.c.c.a.r.s.SparkRuntimeService@444] - Spark program completed: SparkRuntimeContext{id=program:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.spark.phase-1, runId=cd0e853a-9ba6-11ec-b90c-5ab8182f1144}
+2022-03-04 10:36:04,082 - INFO  [action-phase-1-0:i.c.c.i.a.r.w.WorkflowDriver@340] - Spark Program 'phase-1' in workflow completed
+2022-03-04 10:36:04,084 - INFO  [WorkflowDriver:i.c.c.i.a.r.w.WorkflowDriver@631] - Workflow 'DataPipelineWorkflow' with run id 'c81ea289-9ba6-11ec-8d2d-5ab8182f1144' completed
+2022-03-04 10:36:04,086 - INFO  [WorkflowDriver:i.c.c.d.SmartWorkflow@564] - Pipeline 'TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5' succeeded.
+2022-03-04 10:36:04,154 - DEBUG [WorkflowDriver:i.c.c.i.a.r.w.WorkflowProgramController@77] - Workflow service terminated from RUNNING. Un-registering service workflow.default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.DataPipelineWorkflow.c81ea289-9ba6-11ec-8d2d-5ab8182f1144.
+2022-03-04 10:36:04,159 - DEBUG [pcontroller-program:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.workflow.DataPipelineWorkflow-c81ea289-9ba6-11ec-8d2d-5ab8182f1144-3:i.c.c.a.r.AbstractProgramRuntimeService@646] - RuntimeInfo removed: program_run:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.workflow.DataPipelineWorkflow.c81ea289-9ba6-11ec-8d2d-5ab8182f1144
+2022-03-04 10:36:05,581 - DEBUG [provisioning-task-2:i.c.c.i.p.t.ProvisioningTask@125] - Executing DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.workflow.DataPipelineWorkflow.c81ea289-9ba6-11ec-8d2d-5ab8182f1144.
+2022-03-04 10:36:05,582 - DEBUG [provisioning-task-2:i.c.c.i.p.t.ProvisioningTask@129] - Completed DEPROVISION subtask REQUESTING_DELETE for program run program_run:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.workflow.DataPipelineWorkflow.c81ea289-9ba6-11ec-8d2d-5ab8182f1144.
+2022-03-04 10:36:05,593 - DEBUG [provisioning-task-2:i.c.c.i.p.t.ProvisioningTask@116] - Completed DEPROVISION task for program run program_run:default.TestPipeline99a5b8c1-214b-4999-bd24-3b6be53dc1b5.-SNAPSHOT.workflow.DataPipelineWorkflow.c81ea289-9ba6-11ec-8d2d-5ab8182f1144.</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-122">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-122" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.204</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-123" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1733397667.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-123" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1733397667.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Verify the pipeline status is <span class="argument">&quot;Succeeded&quot;</span></span>
+
+  <span class="lead-duration duration">0.017</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-124">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-124" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.201</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-125" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1900317487.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-125" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1900317487.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate the records are not created in output table</span>
+
+  <span class="lead-duration duration">0.447</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-126">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-126" class="collapse collapsable-details " >
+          
+          <pre><p>**********No of Records Transferred******************:0</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-127">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-127" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.185</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-128" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_400183844.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-128" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_400183844.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Validate partitioning is not done on the output table</span>
+
+  <span class="lead-duration duration">0.289</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-129">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-129" class="collapse collapsable-details " >
+          
+          <pre><p>Partition Not Createdcom.google.cloud.bigquery.BigQueryException: Unrecognized name: _PARTITION_LOAD_TIME at [1:98]</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-130">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-130" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
+
+  <span class="lead-duration duration">0.192</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-131" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_400183844.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-131" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_400183844.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-132">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-132" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">TestSetupHooks.deleteTempTargetBQTable()</span>
+
+  <span class="lead-duration duration">0.626</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-133">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-133" class="collapse collapsable-details " >
+          
+          <pre><p>BQ Target table - E2E_TEST_SINK_6790 deleted successfully</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">TestSetupHooks.deleteTempSourceBQTable()</span>
+
+  <span class="lead-duration duration">0.598</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-134">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-134" class="collapse collapsable-details " >
+          
+          <pre><p>BQ source Table E2E_SOURCE_fd90e68e_7e5d_48e4_a852_363c6e27be0a deleted successfully</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
