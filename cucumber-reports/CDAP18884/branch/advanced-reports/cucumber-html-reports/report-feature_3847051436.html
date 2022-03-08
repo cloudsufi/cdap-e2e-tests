@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reports</td>
         <td>1</td>
-      <td>08 Mar 2022, 14:15</td>
+      <td>08 Mar 2022, 15:09</td>
     </tr>
   </tbody>
 </table>
@@ -140,7 +140,7 @@ $(document).ready(function() {
           <td  class="failed"    >5</td>
           <td class="total">8</td>
 
-          <td class="duration" data-value="511440134533">8:31.440</td>
+          <td class="duration" data-value="359325128682">5:59.325</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -195,7 +195,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1:35.447</span>
+  <span class="lead-duration duration">1:4.974</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -270,7 +270,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.691</span>
+  <span class="lead-duration duration">1.747</span>
 
 </div>
 
@@ -307,7 +307,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.165</span>
+  <span class="lead-duration duration">0.183</span>
 
           </div>
 
@@ -344,7 +344,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.125</span>
+  <span class="lead-duration duration">0.126</span>
 
 </div>
 
@@ -381,7 +381,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.193</span>
+  <span class="lead-duration duration">0.210</span>
 
           </div>
 
@@ -455,7 +455,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.246</span>
+  <span class="lead-duration duration">0.269</span>
 
           </div>
 
@@ -492,7 +492,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery properties with blank property <span class="argument">&quot;referenceName&quot;</span></span>
 
-  <span class="lead-duration duration">0.546</span>
+  <span class="lead-duration duration">0.567</span>
 
 </div>
 
@@ -529,7 +529,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.157</span>
+  <span class="lead-duration duration">0.179</span>
 
           </div>
 
@@ -566,7 +566,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Validate mandatory property error for <span class="argument">&quot;referenceName&quot;</span></span>
 
-  <span class="lead-duration duration">1:32.926</span>
+  <span class="lead-duration duration">1:2.375</span>
 
 </div>
 
@@ -581,11 +581,11 @@ $(document).ready(function() {
           <a>org.openqa.selenium.TimeoutException:</a>
       </div>
       <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 60 second(s) with 500 milliseconds interval)
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.validateMandatoryPropertyErrorFor(PipelineSteps.java:113)
 	at &#10045;.Validate mandatory property error for &quot;referenceName&quot;(file:src/e2e-test/features/bigquery/source/BigQuerySourceError.feature:9)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]&quot;}
@@ -594,9 +594,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
 System info: host: 'runner-deployment-build-e2e-cdapio-f98567fc6-r5xqb', ip: '10.116.2.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_312'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28cc46db5d2870fd5bc7bd39b7a00d6b, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.pBfiGv}, goog:chromeOptions: {debuggerAddress: localhost:36421}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36421/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
+Command: [bfc268d5c7dc4f5dd4fcab90657961e9, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.M9aELz}, goog:chromeOptions: {debuggerAddress: localhost:44897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44897/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bfc268d5c7dc4f5dd4fcab90657961e9
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -620,8 +620,8 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1336)
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1332)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.validateMandatoryPropertyErrorFor(PipelineSteps.java:113)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -701,7 +701,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.143</span>
+  <span class="lead-duration duration">0.164</span>
 
           </div>
 
@@ -751,7 +751,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 </div>
 
 
-  <span class="lead-duration duration">1:35.705</span>
+  <span class="lead-duration duration">1:5.254</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-15">
@@ -826,7 +826,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.609</span>
+  <span class="lead-duration duration">1.646</span>
 
 </div>
 
@@ -863,7 +863,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.140</span>
+  <span class="lead-duration duration">0.185</span>
 
           </div>
 
@@ -900,7 +900,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.120</span>
+  <span class="lead-duration duration">0.126</span>
 
 </div>
 
@@ -937,7 +937,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.197</span>
+  <span class="lead-duration duration">0.206</span>
 
           </div>
 
@@ -974,7 +974,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.149</span>
+  <span class="lead-duration duration">0.158</span>
 
 </div>
 
@@ -1011,7 +1011,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.304</span>
+  <span class="lead-duration duration">0.263</span>
 
           </div>
 
@@ -1048,7 +1048,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery properties with blank property <span class="argument">&quot;dataset&quot;</span></span>
 
-  <span class="lead-duration duration">0.945</span>
+  <span class="lead-duration duration">0.970</span>
 
 </div>
 
@@ -1085,7 +1085,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.158</span>
+  <span class="lead-duration duration">0.166</span>
 
           </div>
 
@@ -1098,13 +1098,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-25" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1885851244.png" download target="_blank">
+      <a href="embeddings/embedding_1769658142.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-25" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1885851244.png">
+        <img src="embeddings/embedding_1769658142.png">
       </div>
     </div>
   </div>
@@ -1122,7 +1122,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Validate mandatory property error for <span class="argument">&quot;dataset&quot;</span></span>
 
-  <span class="lead-duration duration">1:32.880</span>
+  <span class="lead-duration duration">1:2.351</span>
 
 </div>
 
@@ -1137,11 +1137,11 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
           <a>org.openqa.selenium.TimeoutException:</a>
       </div>
       <div id="msg-26" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 60 second(s) with 500 milliseconds interval)
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.validateMandatoryPropertyErrorFor(PipelineSteps.java:113)
 	at &#10045;.Validate mandatory property error for &quot;dataset&quot;(file:src/e2e-test/features/bigquery/source/BigQuerySourceError.feature:9)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]&quot;}
@@ -1150,10 +1150,11 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
 System info: host: 'runner-deployment-build-e2e-cdapio-f98567fc6-r5xqb', ip: '10.116.2.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_312'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28cc46db5d2870fd5bc7bd39b7a00d6b, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.pBfiGv}, goog:chromeOptions: {debuggerAddress: localhost:36421}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36421/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
-	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+Command: [bfc268d5c7dc4f5dd4fcab90657961e9, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.M9aELz}, goog:chromeOptions: {debuggerAddress: localhost:44897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44897/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bfc268d5c7dc4f5dd4fcab90657961e9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -1175,8 +1176,8 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1336)
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1332)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.validateMandatoryPropertyErrorFor(PipelineSteps.java:113)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1256,7 +1257,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.151</span>
+  <span class="lead-duration duration">0.164</span>
 
           </div>
 
@@ -1269,13 +1270,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-28" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-533338782.png" download target="_blank">
+      <a href="embeddings/embedding_343837572.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-28" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-533338782.png">
+        <img src="embeddings/embedding_343837572.png">
       </div>
     </div>
   </div>
@@ -1306,7 +1307,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 </div>
 
 
-  <span class="lead-duration duration">1:35.871</span>
+  <span class="lead-duration duration">1:5.363</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-29">
@@ -1381,7 +1382,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.652</span>
+  <span class="lead-duration duration">1.640</span>
 
 </div>
 
@@ -1418,7 +1419,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.146</span>
+  <span class="lead-duration duration">0.161</span>
 
           </div>
 
@@ -1455,7 +1456,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.151</span>
+  <span class="lead-duration duration">0.134</span>
 
 </div>
 
@@ -1492,7 +1493,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.201</span>
+  <span class="lead-duration duration">0.219</span>
 
           </div>
 
@@ -1505,13 +1506,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-35" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-2075482220.png" download target="_blank">
+      <a href="embeddings/embedding_-109613563.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-35" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-2075482220.png">
+        <img src="embeddings/embedding_-109613563.png">
       </div>
     </div>
   </div>
@@ -1529,7 +1530,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.125</span>
+  <span class="lead-duration duration">0.153</span>
 
 </div>
 
@@ -1566,7 +1567,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.274</span>
+  <span class="lead-duration duration">0.256</span>
 
           </div>
 
@@ -1579,13 +1580,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-37" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-552385646.png" download target="_blank">
+      <a href="embeddings/embedding_-1007539323.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-37" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-552385646.png">
+        <img src="embeddings/embedding_-1007539323.png">
       </div>
     </div>
   </div>
@@ -1603,7 +1604,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery properties with blank property <span class="argument">&quot;table&quot;</span></span>
 
-  <span class="lead-duration duration">1.032</span>
+  <span class="lead-duration duration">1.056</span>
 
 </div>
 
@@ -1640,7 +1641,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.160</span>
+  <span class="lead-duration duration">0.177</span>
 
           </div>
 
@@ -1653,13 +1654,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-39" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-122998278.png" download target="_blank">
+      <a href="embeddings/embedding_1135669613.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-39" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-122998278.png">
+        <img src="embeddings/embedding_1135669613.png">
       </div>
     </div>
   </div>
@@ -1677,7 +1678,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Validate mandatory property error for <span class="argument">&quot;table&quot;</span></span>
 
-  <span class="lead-duration duration">1:32.908</span>
+  <span class="lead-duration duration">1:2.377</span>
 
 </div>
 
@@ -1692,11 +1693,11 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
           <a>org.openqa.selenium.TimeoutException:</a>
       </div>
       <div id="msg-40" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 60 second(s) with 500 milliseconds interval)
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.validateMandatoryPropertyErrorFor(PipelineSteps.java:113)
 	at &#10045;.Validate mandatory property error for &quot;table&quot;(file:src/e2e-test/features/bigquery/source/BigQuerySourceError.feature:9)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]&quot;}
@@ -1705,10 +1706,11 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
 System info: host: 'runner-deployment-build-e2e-cdapio-f98567fc6-r5xqb', ip: '10.116.2.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_312'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28cc46db5d2870fd5bc7bd39b7a00d6b, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.pBfiGv}, goog:chromeOptions: {debuggerAddress: localhost:36421}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36421/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
-	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+Command: [bfc268d5c7dc4f5dd4fcab90657961e9, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.M9aELz}, goog:chromeOptions: {debuggerAddress: localhost:44897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44897/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bfc268d5c7dc4f5dd4fcab90657961e9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -1730,8 +1732,8 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1336)
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1332)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.validateMandatoryPropertyErrorFor(PipelineSteps.java:113)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1811,7 +1813,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.143</span>
+  <span class="lead-duration duration">0.158</span>
 
           </div>
 
@@ -1824,13 +1826,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-42" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1728896941.png" download target="_blank">
+      <a href="embeddings/embedding_1938732630.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-42" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1728896941.png">
+        <img src="embeddings/embedding_1938732630.png">
       </div>
     </div>
   </div>
@@ -1862,7 +1864,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 </div>
 
 
-  <span class="lead-duration duration">9.379</span>
+  <span class="lead-duration duration">9.435</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
@@ -1916,7 +1918,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">Before</span>
               <span class="location name">TestSetupHooks.createTempSourceBQTable()</span>
 
-  <span class="lead-duration duration">1.762</span>
+  <span class="lead-duration duration">1.910</span>
 
           </div>
 
@@ -1932,7 +1934,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
         </div>
         <div id="output-45" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_8e511588_305e_4984_9a18_d7657061f0f5 created successfully</p></pre>
+          <pre><p>BQ source Table E2E_SOURCE_36e51d57_386d_4a45_b384_fc5ea737e5db created successfully</p></pre>
         </div>
       </div>
   </div>
@@ -1965,7 +1967,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.616</span>
+  <span class="lead-duration duration">1.656</span>
 
 </div>
 
@@ -2002,7 +2004,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.154</span>
+  <span class="lead-duration duration">0.165</span>
 
           </div>
 
@@ -2015,13 +2017,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-48" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1956760703.png" download target="_blank">
+      <a href="embeddings/embedding_910631102.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-48" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1956760703.png">
+        <img src="embeddings/embedding_910631102.png">
       </div>
     </div>
   </div>
@@ -2039,7 +2041,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.142</span>
+  <span class="lead-duration duration">0.175</span>
 
 </div>
 
@@ -2076,7 +2078,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.192</span>
+  <span class="lead-duration duration">0.206</span>
 
           </div>
 
@@ -2113,7 +2115,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.152</span>
+  <span class="lead-duration duration">0.153</span>
 
 </div>
 
@@ -2150,7 +2152,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.280</span>
+  <span class="lead-duration duration">0.257</span>
 
           </div>
 
@@ -2187,7 +2189,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property reference name</span>
 
-  <span class="lead-duration duration">0.823</span>
+  <span class="lead-duration duration">0.809</span>
 
 </div>
 
@@ -2224,7 +2226,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.186</span>
+  <span class="lead-duration duration">0.171</span>
 
           </div>
 
@@ -2237,13 +2239,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-54" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-90716529.png" download target="_blank">
+      <a href="embeddings/embedding_1415835893.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-54" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-90716529.png">
+        <img src="embeddings/embedding_1415835893.png">
       </div>
     </div>
   </div>
@@ -2261,7 +2263,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery source properties with incorrect property <span class="argument">&quot;dataset&quot;</span> value <span class="argument">&quot;bqIncorrectDataset&quot;</span></span>
 
-  <span class="lead-duration duration">4.047</span>
+  <span class="lead-duration duration">4.020</span>
 
 </div>
 
@@ -2298,7 +2300,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.150</span>
+  <span class="lead-duration duration">0.163</span>
 
           </div>
 
@@ -2311,13 +2313,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-56" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1878041279.png" download target="_blank">
+      <a href="embeddings/embedding_-272129462.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-56" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1878041279.png">
+        <img src="embeddings/embedding_-272129462.png">
       </div>
     </div>
   </div>
@@ -2335,7 +2337,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Validate BigQuery source incorrect property error for table <span class="argument">&quot;dataset&quot;</span> value <span class="argument">&quot;bqIncorrectDataset&quot;</span></span>
 
-  <span class="lead-duration duration">2.598</span>
+  <span class="lead-duration duration">2.620</span>
 
 </div>
 
@@ -2372,7 +2374,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.141</span>
+  <span class="lead-duration duration">0.170</span>
 
           </div>
 
@@ -2385,13 +2387,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-58" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_2112066544.png" download target="_blank">
+      <a href="embeddings/embedding_-330618679.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-58" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_2112066544.png">
+        <img src="embeddings/embedding_-330618679.png">
       </div>
     </div>
   </div>
@@ -2427,7 +2429,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">TestSetupHooks.deleteTempSourceBQTable()</span>
 
-  <span class="lead-duration duration">0.596</span>
+  <span class="lead-duration duration">0.649</span>
 
           </div>
 
@@ -2443,7 +2445,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
         </div>
         <div id="output-60" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_8e511588_305e_4984_9a18_d7657061f0f5 deleted successfully</p></pre>
+          <pre><p>BQ source Table E2E_SOURCE_36e51d57_386d_4a45_b384_fc5ea737e5db deleted successfully</p></pre>
         </div>
       </div>
   </div>
@@ -2467,7 +2469,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 </div>
 
 
-  <span class="lead-duration duration">10.795</span>
+  <span class="lead-duration duration">10.804</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-61">
@@ -2521,7 +2523,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">Before</span>
               <span class="location name">TestSetupHooks.createTempSourceBQTable()</span>
 
-  <span class="lead-duration duration">1.604</span>
+  <span class="lead-duration duration">1.669</span>
 
           </div>
 
@@ -2537,7 +2539,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
         </div>
         <div id="output-63" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_b70f832b_028d_41f5_b2f4_8d015c9ffccc created successfully</p></pre>
+          <pre><p>BQ source Table E2E_SOURCE_e6bfae78_c67f_4ae1_936c_797022b95bac created successfully</p></pre>
         </div>
       </div>
   </div>
@@ -2570,7 +2572,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.575</span>
+  <span class="lead-duration duration">1.621</span>
 
 </div>
 
@@ -2607,7 +2609,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.155</span>
+  <span class="lead-duration duration">0.156</span>
 
           </div>
 
@@ -2644,7 +2646,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.139</span>
+  <span class="lead-duration duration">0.149</span>
 
 </div>
 
@@ -2681,7 +2683,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.212</span>
+  <span class="lead-duration duration">0.222</span>
 
           </div>
 
@@ -2718,7 +2720,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.121</span>
+  <span class="lead-duration duration">0.149</span>
 
 </div>
 
@@ -2755,7 +2757,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.273</span>
+  <span class="lead-duration duration">0.253</span>
 
           </div>
 
@@ -2792,7 +2794,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property reference name</span>
 
-  <span class="lead-duration duration">0.783</span>
+  <span class="lead-duration duration">0.777</span>
 
 </div>
 
@@ -2829,7 +2831,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.166</span>
+  <span class="lead-duration duration">0.182</span>
 
           </div>
 
@@ -2842,13 +2844,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-72" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_2000073598.png" download target="_blank">
+      <a href="embeddings/embedding_2079411613.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-72" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_2000073598.png">
+        <img src="embeddings/embedding_2079411613.png">
       </div>
     </div>
   </div>
@@ -2866,7 +2868,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery source properties with incorrect property <span class="argument">&quot;table&quot;</span> value <span class="argument">&quot;bqIncorrectTableName&quot;</span></span>
 
-  <span class="lead-duration duration">5.656</span>
+  <span class="lead-duration duration">5.607</span>
 
 </div>
 
@@ -2903,7 +2905,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.155</span>
+  <span class="lead-duration duration">0.169</span>
 
           </div>
 
@@ -2916,13 +2918,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-74" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-204322881.png" download target="_blank">
+      <a href="embeddings/embedding_-779177344.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-74" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-204322881.png">
+        <img src="embeddings/embedding_-779177344.png">
       </div>
     </div>
   </div>
@@ -2940,7 +2942,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Validate BigQuery source incorrect property error for table <span class="argument">&quot;table&quot;</span> value <span class="argument">&quot;bqIncorrectTableName&quot;</span></span>
 
-  <span class="lead-duration duration">2.519</span>
+  <span class="lead-duration duration">2.499</span>
 
 </div>
 
@@ -2977,7 +2979,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.138</span>
+  <span class="lead-duration duration">0.166</span>
 
           </div>
 
@@ -2990,13 +2992,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-76" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1918130109.png" download target="_blank">
+      <a href="embeddings/embedding_1058064323.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-76" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1918130109.png">
+        <img src="embeddings/embedding_1058064323.png">
       </div>
     </div>
   </div>
@@ -3032,7 +3034,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">TestSetupHooks.deleteTempSourceBQTable()</span>
 
-  <span class="lead-duration duration">0.631</span>
+  <span class="lead-duration duration">0.592</span>
 
           </div>
 
@@ -3048,7 +3050,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
         </div>
         <div id="output-78" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_b70f832b_028d_41f5_b2f4_8d015c9ffccc deleted successfully</p></pre>
+          <pre><p>BQ source Table E2E_SOURCE_e6bfae78_c67f_4ae1_936c_797022b95bac deleted successfully</p></pre>
         </div>
       </div>
   </div>
@@ -3072,7 +3074,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 </div>
 
 
-  <span class="lead-duration duration">8.683</span>
+  <span class="lead-duration duration">8.884</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-79">
@@ -3126,7 +3128,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">Before</span>
               <span class="location name">TestSetupHooks.createTempSourceBQTable()</span>
 
-  <span class="lead-duration duration">1.659</span>
+  <span class="lead-duration duration">2.353</span>
 
           </div>
 
@@ -3142,7 +3144,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
         </div>
         <div id="output-81" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_a125bd63_82e4_46c7_b38e_4b194d97bec7 created successfully</p></pre>
+          <pre><p>BQ source Table E2E_SOURCE_b225518c_4b50_4e79_aa02_3989ef11e1ad created successfully</p></pre>
         </div>
       </div>
   </div>
@@ -3175,7 +3177,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.571</span>
+  <span class="lead-duration duration">1.662</span>
 
 </div>
 
@@ -3212,7 +3214,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.150</span>
+  <span class="lead-duration duration">0.157</span>
 
           </div>
 
@@ -3249,7 +3251,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.155</span>
+  <span class="lead-duration duration">0.180</span>
 
 </div>
 
@@ -3286,7 +3288,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.233</span>
+  <span class="lead-duration duration">0.258</span>
 
           </div>
 
@@ -3299,13 +3301,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-86" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-109613563.png" download target="_blank">
+      <a href="embeddings/embedding_-2075482220.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-86" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-109613563.png">
+        <img src="embeddings/embedding_-2075482220.png">
       </div>
     </div>
   </div>
@@ -3323,7 +3325,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.143</span>
+  <span class="lead-duration duration">0.122</span>
 
 </div>
 
@@ -3360,7 +3362,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.282</span>
+  <span class="lead-duration duration">0.273</span>
 
           </div>
 
@@ -3373,13 +3375,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-88" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-552385646.png" download target="_blank">
+      <a href="embeddings/embedding_-1007539323.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-88" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-552385646.png">
+        <img src="embeddings/embedding_-1007539323.png">
       </div>
     </div>
   </div>
@@ -3397,7 +3399,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property reference name</span>
 
-  <span class="lead-duration duration">0.792</span>
+  <span class="lead-duration duration">0.789</span>
 
 </div>
 
@@ -3434,7 +3436,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.158</span>
+  <span class="lead-duration duration">0.174</span>
 
           </div>
 
@@ -3447,13 +3449,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-90" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-764731244.png" download target="_blank">
+      <a href="embeddings/embedding_1981053781.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-90" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-764731244.png">
+        <img src="embeddings/embedding_1981053781.png">
       </div>
     </div>
   </div>
@@ -3471,7 +3473,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter the BigQuery source properties with incorrect property <span class="argument">&quot;datasetProject&quot;</span> value <span class="argument">&quot;bqIncorrectDatasetProjectId&quot;</span></span>
 
-  <span class="lead-duration duration">3.619</span>
+  <span class="lead-duration duration">3.680</span>
 
 </div>
 
@@ -3508,7 +3510,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.159</span>
+  <span class="lead-duration duration">0.188</span>
 
           </div>
 
@@ -3521,13 +3523,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-92" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1651188812.png" download target="_blank">
+      <a href="embeddings/embedding_-1064887809.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-92" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1651188812.png">
+        <img src="embeddings/embedding_-1064887809.png">
       </div>
     </div>
   </div>
@@ -3545,7 +3547,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Validate BigQuery source incorrect property error for table <span class="argument">&quot;datasetProject&quot;</span> value <span class="argument">&quot;bqIncorrectDatasetProjectId&quot;</span></span>
 
-  <span class="lead-duration duration">2.400</span>
+  <span class="lead-duration duration">2.447</span>
 
 </div>
 
@@ -3582,7 +3584,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.151</span>
+  <span class="lead-duration duration">0.170</span>
 
           </div>
 
@@ -3595,13 +3597,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-94" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1817199809.png" download target="_blank">
+      <a href="embeddings/embedding_-380739690.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-94" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1817199809.png">
+        <img src="embeddings/embedding_-380739690.png">
       </div>
     </div>
   </div>
@@ -3637,7 +3639,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">TestSetupHooks.deleteTempSourceBQTable()</span>
 
-  <span class="lead-duration duration">0.694</span>
+  <span class="lead-duration duration">0.632</span>
 
           </div>
 
@@ -3653,7 +3655,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
         </div>
         <div id="output-96" class="collapse collapsable-details " >
           
-          <pre><p>BQ source Table E2E_SOURCE_a125bd63_82e4_46c7_b38e_4b194d97bec7 deleted successfully</p></pre>
+          <pre><p>BQ source Table E2E_SOURCE_b225518c_4b50_4e79_aa02_3989ef11e1ad deleted successfully</p></pre>
         </div>
       </div>
   </div>
@@ -3676,7 +3678,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 </div>
 
 
-  <span class="lead-duration duration">1:37.687</span>
+  <span class="lead-duration duration">1:7.214</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-97">
@@ -3751,7 +3753,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.509</span>
+  <span class="lead-duration duration">1.645</span>
 
 </div>
 
@@ -3788,7 +3790,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.147</span>
+  <span class="lead-duration duration">0.169</span>
 
           </div>
 
@@ -3825,7 +3827,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.170</span>
+  <span class="lead-duration duration">0.162</span>
 
 </div>
 
@@ -3862,7 +3864,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.219</span>
+  <span class="lead-duration duration">0.241</span>
 
           </div>
 
@@ -3899,7 +3901,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.151</span>
+  <span class="lead-duration duration">0.152</span>
 
 </div>
 
@@ -3973,7 +3975,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property reference name</span>
 
-  <span class="lead-duration duration">0.922</span>
+  <span class="lead-duration duration">0.925</span>
 
 </div>
 
@@ -4010,7 +4012,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.159</span>
+  <span class="lead-duration duration">0.174</span>
 
           </div>
 
@@ -4023,13 +4025,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-107" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_469680797.png" download target="_blank">
+      <a href="embeddings/embedding_1627125369.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-107" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_469680797.png">
+        <img src="embeddings/embedding_1627125369.png">
       </div>
     </div>
   </div>
@@ -4047,7 +4049,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property projectId <span class="argument">&quot;bqIncorrectFormatProjectId&quot;</span></span>
 
-  <span class="lead-duration duration">1.220</span>
+  <span class="lead-duration duration">1.219</span>
 
 </div>
 
@@ -4084,7 +4086,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.163</span>
+  <span class="lead-duration duration">0.179</span>
 
           </div>
 
@@ -4097,13 +4099,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-109" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_859314300.png" download target="_blank">
+      <a href="embeddings/embedding_-1744826752.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-109" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_859314300.png">
+        <img src="embeddings/embedding_-1744826752.png">
       </div>
     </div>
   </div>
@@ -4121,7 +4123,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property datasetProjectId <span class="argument">&quot;projectId&quot;</span></span>
 
-  <span class="lead-duration duration">0.439</span>
+  <span class="lead-duration duration">0.433</span>
 
 </div>
 
@@ -4158,7 +4160,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.160</span>
+  <span class="lead-duration duration">0.169</span>
 
           </div>
 
@@ -4171,13 +4173,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-111" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1324326048.png" download target="_blank">
+      <a href="embeddings/embedding_1052398357.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-111" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1324326048.png">
+        <img src="embeddings/embedding_1052398357.png">
       </div>
     </div>
   </div>
@@ -4195,7 +4197,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property dataset <span class="argument">&quot;dataset&quot;</span></span>
 
-  <span class="lead-duration duration">0.322</span>
+  <span class="lead-duration duration">0.323</span>
 
 </div>
 
@@ -4232,7 +4234,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.160</span>
+  <span class="lead-duration duration">0.173</span>
 
           </div>
 
@@ -4245,13 +4247,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-113" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_593105993.png" download target="_blank">
+      <a href="embeddings/embedding_1415447821.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-113" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_593105993.png">
+        <img src="embeddings/embedding_1415447821.png">
       </div>
     </div>
   </div>
@@ -4269,7 +4271,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery source property table name</span>
 
-  <span class="lead-duration duration">0.039</span>
+  <span class="lead-duration duration">0.040</span>
 
 </div>
 
@@ -4306,7 +4308,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.160</span>
+  <span class="lead-duration duration">0.175</span>
 
           </div>
 
@@ -4319,13 +4321,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-115" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1308325065.png" download target="_blank">
+      <a href="embeddings/embedding_389353605.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-115" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1308325065.png">
+        <img src="embeddings/embedding_389353605.png">
       </div>
     </div>
   </div>
@@ -4343,7 +4345,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Verify plugin properties validation fails with <span class="argument">1</span> error</span>
 
-  <span class="lead-duration duration">1:32.911</span>
+  <span class="lead-duration duration">1:2.310</span>
 
 </div>
 
@@ -4358,11 +4360,11 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
           <a>org.openqa.selenium.TimeoutException:</a>
       </div>
       <div id="msg-116" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 60 second(s) with 500 milliseconds interval)
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.verifyPluginPropertiesValidationFailsWithError(PipelineSteps.java:120)
 	at &#10045;.Verify plugin properties validation fails with 1 error(file:src/e2e-test/features/bigquery/source/BigQuerySourceError.feature:39)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]&quot;}
@@ -4371,10 +4373,11 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
 System info: host: 'runner-deployment-build-e2e-cdapio-f98567fc6-r5xqb', ip: '10.116.2.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_312'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28cc46db5d2870fd5bc7bd39b7a00d6b, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.pBfiGv}, goog:chromeOptions: {debuggerAddress: localhost:36421}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36421/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
-	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+Command: [bfc268d5c7dc4f5dd4fcab90657961e9, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.M9aELz}, goog:chromeOptions: {debuggerAddress: localhost:44897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44897/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bfc268d5c7dc4f5dd4fcab90657961e9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -4396,8 +4399,8 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1336)
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1332)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.verifyPluginPropertiesValidationFailsWithError(PipelineSteps.java:120)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4477,7 +4480,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.151</span>
+  <span class="lead-duration duration">0.161</span>
 
           </div>
 
@@ -4490,13 +4493,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-118" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-277849760.png" download target="_blank">
+      <a href="embeddings/embedding_-1595426778.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-118" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-277849760.png">
+        <img src="embeddings/embedding_-1595426778.png">
       </div>
     </div>
   </div>
@@ -4527,7 +4530,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 </div>
 
 
-  <span class="lead-duration duration">1:37.868</span>
+  <span class="lead-duration duration">1:7.394</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-119">
@@ -4602,7 +4605,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">1.614</span>
+  <span class="lead-duration duration">1.687</span>
 
 </div>
 
@@ -4639,7 +4642,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.139</span>
+  <span class="lead-duration duration">0.164</span>
 
           </div>
 
@@ -4652,13 +4655,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-123" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_910631102.png" download target="_blank">
+      <a href="embeddings/embedding_-1956760703.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-123" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_910631102.png">
+        <img src="embeddings/embedding_-1956760703.png">
       </div>
     </div>
   </div>
@@ -4676,7 +4679,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">When</span>
   <span class="name">Source is BigQuery</span>
 
-  <span class="lead-duration duration">0.180</span>
+  <span class="lead-duration duration">0.183</span>
 
 </div>
 
@@ -4713,7 +4716,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.230</span>
+  <span class="lead-duration duration">0.260</span>
 
           </div>
 
@@ -4726,13 +4729,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-125" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-109613563.png" download target="_blank">
+      <a href="embeddings/embedding_-2075482220.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-125" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-109613563.png">
+        <img src="embeddings/embedding_-2075482220.png">
       </div>
     </div>
   </div>
@@ -4750,7 +4753,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Open BigQuery source properties</span>
 
-  <span class="lead-duration duration">0.163</span>
+  <span class="lead-duration duration">0.157</span>
 
 </div>
 
@@ -4787,7 +4790,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.267</span>
+  <span class="lead-duration duration">0.279</span>
 
           </div>
 
@@ -4824,7 +4827,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property reference name</span>
 
-  <span class="lead-duration duration">0.938</span>
+  <span class="lead-duration duration">0.961</span>
 
 </div>
 
@@ -4861,7 +4864,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.168</span>
+  <span class="lead-duration duration">0.179</span>
 
           </div>
 
@@ -4874,13 +4877,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-129" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1712642569.png" download target="_blank">
+      <a href="embeddings/embedding_1599190599.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-129" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1712642569.png">
+        <img src="embeddings/embedding_1599190599.png">
       </div>
     </div>
   </div>
@@ -4898,7 +4901,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property projectId <span class="argument">&quot;projectId&quot;</span></span>
 
-  <span class="lead-duration duration">1.138</span>
+  <span class="lead-duration duration">1.126</span>
 
 </div>
 
@@ -4935,7 +4938,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.158</span>
+  <span class="lead-duration duration">0.177</span>
 
           </div>
 
@@ -4948,13 +4951,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-131" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1354240513.png" download target="_blank">
+      <a href="embeddings/embedding_1691178959.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-131" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1354240513.png">
+        <img src="embeddings/embedding_1691178959.png">
       </div>
     </div>
   </div>
@@ -5009,7 +5012,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.162</span>
+  <span class="lead-duration duration">0.178</span>
 
           </div>
 
@@ -5022,13 +5025,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-133" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_2100787961.png" download target="_blank">
+      <a href="embeddings/embedding_1123130647.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-133" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_2100787961.png">
+        <img src="embeddings/embedding_1123130647.png">
       </div>
     </div>
   </div>
@@ -5046,7 +5049,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery property dataset <span class="argument">&quot;dataset&quot;</span></span>
 
-  <span class="lead-duration duration">0.333</span>
+  <span class="lead-duration duration">0.332</span>
 
 </div>
 
@@ -5083,7 +5086,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.150</span>
+  <span class="lead-duration duration">0.181</span>
 
           </div>
 
@@ -5096,13 +5099,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-135" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-148545212.png" download target="_blank">
+      <a href="embeddings/embedding_438343033.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-135" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-148545212.png">
+        <img src="embeddings/embedding_438343033.png">
       </div>
     </div>
   </div>
@@ -5120,7 +5123,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Enter BigQuery source property table name</span>
 
-  <span class="lead-duration duration">0.040</span>
+  <span class="lead-duration duration">0.041</span>
 
 </div>
 
@@ -5157,7 +5160,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.157</span>
+  <span class="lead-duration duration">0.174</span>
 
           </div>
 
@@ -5170,13 +5173,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-137" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1952999829.png" download target="_blank">
+      <a href="embeddings/embedding_-405211348.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-137" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1952999829.png">
+        <img src="embeddings/embedding_-405211348.png">
       </div>
     </div>
   </div>
@@ -5194,7 +5197,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <span class="keyword indention">Then</span>
   <span class="name">Verify plugin properties validation fails with <span class="argument">1</span> error</span>
 
-  <span class="lead-duration duration">1:32.890</span>
+  <span class="lead-duration duration">1:2.335</span>
 
 </div>
 
@@ -5209,11 +5212,11 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
           <a>org.openqa.selenium.TimeoutException:</a>
       </div>
       <div id="msg-138" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 60 second(s) with 500 milliseconds interval)
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]' (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.verifyPluginPropertiesValidationFailsWithError(PipelineSteps.java:120)
 	at &#10045;.Verify plugin properties validation fails with 1 error(file:src/e2e-test/features/bigquery/source/BigQuerySourceError.feature:39)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]&quot;}
@@ -5222,10 +5225,10 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
 System info: host: 'runner-deployment-build-e2e-cdapio-f98567fc6-r5xqb', ip: '10.116.2.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_312'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28cc46db5d2870fd5bc7bd39b7a00d6b, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.pBfiGv}, goog:chromeOptions: {debuggerAddress: localhost:36421}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36421/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
-	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+Command: [bfc268d5c7dc4f5dd4fcab90657961e9, findElement {using=xpath, value=//button[contains(@class, 'validate-btn')]//span[contains(@class, 'fa-spin')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /tmp/.com.google.Chrome.M9aELz}, goog:chromeOptions: {debuggerAddress: localhost:44897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44897/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bfc268d5c7dc4f5dd4fcab90657961e9
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
@@ -5247,8 +5250,8 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1336)
 	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1332)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
-	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:155)
-	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:61)
+	at io.cdap.e2e.utils.WaitHelper.waitForElementToBeHidden(WaitHelper.java:171)
+	at io.cdap.e2e.pages.actions.CdfPluginPropertiesActions.clickValidateButton(CdfPluginPropertiesActions.java:62)
 	at stepsdesign.PipelineSteps.verifyPluginPropertiesValidationFailsWithError(PipelineSteps.java:120)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -5328,7 +5331,7 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.145</span>
+  <span class="lead-duration duration">0.164</span>
 
           </div>
 
@@ -5341,13 +5344,13 @@ Session ID: 28cc46db5d2870fd5bc7bd39b7a00d6b
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-140" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-1781647637.png" download target="_blank">
+      <a href="embeddings/embedding_-1352602235.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-140" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1781647637.png">
+        <img src="embeddings/embedding_-1352602235.png">
       </div>
     </div>
   </div>
