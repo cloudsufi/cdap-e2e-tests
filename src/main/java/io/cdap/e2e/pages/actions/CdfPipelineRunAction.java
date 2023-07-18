@@ -32,6 +32,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
@@ -86,6 +87,15 @@ public class CdfPipelineRunAction {
   }
 
   /**
+   * Check if the pipeline is in Starting Status
+   *
+   * @return Boolean
+   */
+  public static Boolean isStarting() {
+    return validatePipelineExpectedStatus(CdfPipelineRunLocators.startingStatus);
+  }
+
+  /**
    * Check if the pipeline is in Provisioning Status
    *
    * @return Boolean
@@ -109,7 +119,16 @@ public class CdfPipelineRunAction {
    * Wait till the Pipeline's status changes (from Running) to either Succeeded, Failed or Stopped within the
    * Timeout: {@link ConstantsUtil#PIPELINE_RUN_TIMEOUT_SECONDS}
    */
-  public static void waitTillPipelineRunCompletes() {
+  public static void waitTillPipelineRunCompletes() throws InterruptedException, IOException {
+    // Adding a page refresh in case tests are running on CDF to update the pipeline status.
+    if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) ||
+      Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
+      do {
+        PageHelper.refreshCurrentPage();
+        SeleniumDriver.getWaitDriver(ConstantsUtil.PAGE_LOAD_TIMEOUT_SECONDS);
+      } while (isStarting() || isRunning() || isProvisioning());
+    }
+
     SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS).until(ExpectedConditions.or(
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.succeededStatus),
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.failedStatus),
