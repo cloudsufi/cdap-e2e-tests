@@ -122,6 +122,31 @@ public class ElementHelper {
   }
 
   /**
+   * Click on the WebElement if it was displayed within a small timeout: {@link ConstantsUtil#SMALL_TIMEOUT_SECONDS}
+   *
+   * If the next element which we are waiting for to be displayed is not displayed yet that means we were not able to
+   * click on the desired element, so we will retry to click on the element we wanted to click on.
+   *
+   * @param locatorToClick Locator of the WebElement we want to click on.
+   * @param timeOutInSeconds small timeout to wait before clicking.
+   * @param locatorToWaitFor Locator of the WebElement we want to be displayed next.
+   */
+  public static void clickIfDisplayed(By locatorToClick, long timeOutInSeconds, By locatorToWaitFor) {
+    clickIfDisplayed(locatorToClick, timeOutInSeconds);
+
+    // If the next webElement is not displayed we will click on the desired element again.
+    if (!isElementDisplayed(locatorToWaitFor, timeOutInSeconds)) {
+      logger.info("Retry : Click on " + locatorToClick);
+      clickIfDisplayed(locatorToClick);
+
+      // Checking if the next webElement is displayed.
+      if (isElementDisplayed(locatorToWaitFor, timeOutInSeconds)) {
+        logger.info("Element " + locatorToWaitFor + " is displayed.");
+      }
+    }
+  }
+
+  /**
    * Send keys to a WebElement
    *
    * @param element WebElement
