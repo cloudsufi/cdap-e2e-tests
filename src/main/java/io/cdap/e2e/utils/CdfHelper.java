@@ -16,6 +16,8 @@
 
 package io.cdap.e2e.utils;
 
+import ch.qos.logback.classic.Level;
+import io.cdap.e2e.pages.actions.BigQueryActions;
 import io.cdap.e2e.pages.actions.CdfGcsActions;
 import io.cdap.e2e.pages.actions.CdfLogActions;
 import io.cdap.e2e.pages.actions.CdfPipelineRunAction;
@@ -29,13 +31,20 @@ import io.cdap.e2e.pages.locators.CdfStudioLocators;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import stepsdesign.BeforeActions;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -43,12 +52,20 @@ import java.util.UUID;
  */
 public interface CdfHelper {
 
+  Logger LOGGER = LoggerFactory.getLogger(BigQueryActions.class);
   CdfSchemaLocators SCHEMA_LOCATORS = SeleniumHelper.getPropertiesLocators(CdfSchemaLocators.class);
 
   default void openCdf() throws IOException, InterruptedException {
     SeleniumDriver.openPage(SeleniumHelper.readParameters(ConstantsUtil.CDFURL));
+
+    BeforeActions.scenario.write("Opened the Page using the URL waiting for login window to show up.");
+    collectBrowserConsoleErrors();
+
     PageHelper.acceptAlertIfPresent();
+    collectBrowserConsoleErrors();
     WaitHelper.waitForPageToLoad();
+    collectBrowserConsoleErrors();
+
 
     if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF)) && !HdfSignInActions.logged()) {
       HdfSignInActions.login();
@@ -59,6 +76,7 @@ public interface CdfHelper {
     if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) && !CdfSignInActions.
       isUserLoggedInCDF()) {
       CdfSignInActions.login();
+      collectBrowserConsoleErrors();
       PageHelper.acceptAlertIfPresent();
       WaitHelper.waitForPageToLoad();
     }
@@ -66,6 +84,27 @@ public interface CdfHelper {
     /* TODO: Remove below wait once https://cdap.atlassian.net/browse/CDAP-18862 is fixed */
     WaitHelper.waitForElementToBeDisplayed(
       CdfStudioLocators.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
+  }
+
+  default void collectBrowserConsoleErrors() {
+    //To collect console errors.
+    Set<String> logTypes = SeleniumDriver.getDriver().manage().logs().getAvailableLogTypes();
+    for (String log : logTypes) {
+      BeforeActions.scenario.write("Logging the Type : " + log);
+    }
+
+    LogEntries logEntries = SeleniumDriver.getDriver().manage().logs().get(LogType.BROWSER);
+    List<LogEntry> errorsFromBrowser = logEntries.getAll();
+
+    BeforeActions.scenario.write("Size of Error list :" + errorsFromBrowser.size());
+
+    for (int error = 0; error < errorsFromBrowser.size(); error++) {
+      BeforeActions.scenario.write("Error " + error + " from browser : " +
+              errorsFromBrowser.get(error).getMessage());
+
+      LOGGER.info("Error " + error + " from browser : " +
+              errorsFromBrowser.get(error).getMessage());
+    }
   }
 
   default int countOfNoOfRecordsTransferredToBigQueryIn(String tableName) throws IOException, InterruptedException {

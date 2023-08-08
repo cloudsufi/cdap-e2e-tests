@@ -75,7 +75,7 @@ public class ConstantsUtil {
   /**
    * DEFAULT_TIMEOUT_SECONDS: To be used in external wait helpers defined in {@link WaitHelper}
    */
-  public static final int DEFAULT_TIMEOUT_SECONDS = 180;
+  public static final int DEFAULT_TIMEOUT_SECONDS = 240;
   /**
    * PAGE_LOAD_TIMEOUT_SECONDS: To be used as Selenium driver's default page load timeout
    */

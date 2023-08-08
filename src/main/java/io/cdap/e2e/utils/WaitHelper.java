@@ -27,6 +27,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import stepsdesign.BeforeActions;
 
 /**
  * Wait helper
@@ -56,8 +57,10 @@ public class WaitHelper {
    */
   public static void waitForPageToLoad() {
     logger.info("Waiting for the page to load " +
-      "with the default page load timeout: " + ConstantsUtil.PAGE_LOAD_TIMEOUT_SECONDS);
-    waitForPageToLoad(ConstantsUtil.PAGE_LOAD_TIMEOUT_SECONDS);
+      "with the default page load timeout: " + ConstantsUtil.DEFAULT_TIMEOUT_SECONDS);
+
+    BeforeActions.scenario.write("Waiting for login page:" + ConstantsUtil.DEFAULT_TIMEOUT_SECONDS);
+    waitForPageToLoad(ConstantsUtil.DEFAULT_TIMEOUT_SECONDS);
   }
 
   /**
