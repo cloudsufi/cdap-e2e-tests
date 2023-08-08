@@ -41,6 +41,12 @@ public class CdfSignInActions {
         ElementHelper.clickOnElement(cdfSignInLocator.nextButton);
 
         // Adding optional operations here.
+
+        // We will encounter these Authentication steps only once when we login for the first time in a browser.
+
+        // Based on the observations in case of CDF test execution from local we see Allow Button
+        // and in case of CDF test execution from Cloud Build we see Continue Button.
+
         ElementHelper.clickIfDisplayed(cdfSignInLocator.selectTestAccount(), ConstantsUtil.MEDIUM_TIMEOUT_SECONDS,
           cdfSignInLocator.clickOnAllowButton());
 
@@ -51,7 +57,7 @@ public class CdfSignInActions {
           cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
     }
 
-    public static boolean logged() {
+    public static boolean isUserLoggedInCDF() {
         return !WaitHelper.waitForElementToBeOptionallyDisplayed(
                 CdfSignInLocator.locatorOfEmailTextBox(), ConstantsUtil.SMALL_TIMEOUT_SECONDS);
     }

@@ -115,7 +115,7 @@ public class CdfPipelineRunAction {
       CdfPipelineRunLocators.locatePipelineStatus(pipelineStatus), timeoutInSeconds);
   }
 
-    /**
+  /**
    * Wait till the Pipeline's status changes (from Running) to either Succeeded, Failed or Stopped within the
    * Timeout: {@link ConstantsUtil#PIPELINE_RUN_TIMEOUT_SECONDS}
    */
@@ -125,7 +125,7 @@ public class CdfPipelineRunAction {
       Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
       do {
         PageHelper.refreshCurrentPage();
-        Thread.sleep(1000 * 60);
+        SeleniumDriver.getWaitDriver(ConstantsUtil.PAGE_LOAD_TIMEOUT_SECONDS);
       } while (isStarting() || isRunning() || isProvisioning());
     }
 

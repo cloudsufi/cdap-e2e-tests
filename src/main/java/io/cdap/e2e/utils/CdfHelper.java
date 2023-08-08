@@ -56,7 +56,8 @@ public interface CdfHelper {
       WaitHelper.waitForPageToLoad();
     }
 
-    if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) && !CdfSignInActions.logged()) {
+    if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) && !CdfSignInActions.
+      isUserLoggedInCDF()) {
       CdfSignInActions.login();
       PageHelper.acceptAlertIfPresent();
       WaitHelper.waitForPageToLoad();
