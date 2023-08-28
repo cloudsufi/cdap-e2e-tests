@@ -21,8 +21,7 @@ import io.cdap.e2e.utils.ElementHelper;
 import io.cdap.e2e.utils.SeleniumHelper;
 import io.cdap.e2e.utils.WaitHelper;
 import java.io.IOException;
-import static io.cdap.e2e.utils.ConstantsUtil.CDFPASSWORD;
-import static io.cdap.e2e.utils.ConstantsUtil.CDFUSERNAME;
+
 
 
 /**
@@ -35,9 +34,9 @@ public class CdfSignInActions {
     }
 
     public static void login() throws IOException {
-        ElementHelper.sendKeys(cdfSignInLocator.cdfUsername, SeleniumHelper.readParameters(CDFUSERNAME));
+        ElementHelper.sendKeys(cdfSignInLocator.cdfUsername, SeleniumHelper.readParameters(ConstantsUtil.CDFUSERNAME));
         ElementHelper.clickOnElement(cdfSignInLocator.nextButton);
-        ElementHelper.sendKeys(cdfSignInLocator.cdfPassword, SeleniumHelper.readParameters(CDFPASSWORD));
+        ElementHelper.sendKeys(cdfSignInLocator.cdfPassword, SeleniumHelper.readParameters(ConstantsUtil.CDFPASSWORD));
         ElementHelper.clickOnElement(cdfSignInLocator.nextButton);
 
         // Adding optional operations here.
