@@ -117,19 +117,27 @@ public class CdfPipelineRunAction {
 
   /**
    * Wait till the Pipeline's status changes (from Running) to either Succeeded, Failed or Stopped within the
-   * Timeout: {@link ConstantsUtil#PIPELINE_RUN_TIMEOUT_SECONDS}
+   * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
   public static void waitTillPipelineRunCompletes() throws InterruptedException, IOException {
+    int pipelineExecutionTimeFlag = 0;
     // Adding a page refresh in case tests are running on CDF to update the pipeline status.
     if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) ||
       Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
+      // Adding pipelineExecutionTimeFlag to break the loop if pipeline status is Running state for more than
+      // 900 seconds.
       do {
+        pipelineExecutionTimeFlag += 120;
+        if (pipelineExecutionTimeFlag > 900) {
+          break;
+        }
+
         PageHelper.refreshCurrentPage();
-        SeleniumDriver.getWaitDriver(ConstantsUtil.PAGE_LOAD_TIMEOUT_SECONDS);
+        SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS);
       } while (isStarting() || isRunning() || isProvisioning());
     }
 
-    SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS).until(ExpectedConditions.or(
+    SeleniumDriver.getWaitDriver(ConstantsUtil.IMPLICIT_TIMEOUT_SECONDS).until(ExpectedConditions.or(
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.succeededStatus),
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.failedStatus),
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.stoppedStatus)

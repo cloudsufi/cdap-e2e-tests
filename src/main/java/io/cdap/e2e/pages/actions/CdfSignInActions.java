@@ -20,6 +20,7 @@ import io.cdap.e2e.utils.ConstantsUtil;
 import io.cdap.e2e.utils.ElementHelper;
 import io.cdap.e2e.utils.SeleniumHelper;
 import io.cdap.e2e.utils.WaitHelper;
+
 import java.io.IOException;
 
 
@@ -39,22 +40,9 @@ public class CdfSignInActions {
         ElementHelper.sendKeys(cdfSignInLocator.cdfPassword, SeleniumHelper.readParameters(ConstantsUtil.CDFPASSWORD));
         ElementHelper.clickOnElement(cdfSignInLocator.nextButton);
 
-        // Adding optional operations here.
-
-        /*
-        Based on the observations in case of CDF test execution from local we encounter Allow Button
-        and in case of CDF test execution from Cloud Build we encounter Continue Button that's why we
-        are using 2 confirmation buttons here.
-        */
-
-        String testAccountName = SeleniumHelper.readParameters("testAccountName");
-        ElementHelper.clickIfDisplayed(cdfSignInLocator.selectTestAccount(testAccountName),
-          ConstantsUtil.MEDIUM_TIMEOUT_SECONDS, cdfSignInLocator.clickOnAllowButton());
-
-        ElementHelper.clickIfDisplayed(cdfSignInLocator.clickOnContinueButton(), ConstantsUtil.MEDIUM_TIMEOUT_SECONDS,
-          cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
-
-        ElementHelper.clickIfDisplayed(cdfSignInLocator.clickOnAllowButton(), ConstantsUtil.MEDIUM_TIMEOUT_SECONDS,
+        ElementHelper.clickIfDisplayed(cdfSignInLocator.selectTestAccount(ConstantsUtil.CDF_TEST_ACCOUNT_NAME),
+          ConstantsUtil.SMALL_TIMEOUT_SECONDS, cdfSignInLocator.clickOnContinueButton());
+        ElementHelper.clickIfDisplayed(cdfSignInLocator.clickOnContinueButton(), ConstantsUtil.SMALL_TIMEOUT_SECONDS,
           cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
     }
 

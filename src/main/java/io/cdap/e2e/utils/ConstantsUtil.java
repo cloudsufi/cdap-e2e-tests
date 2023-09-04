@@ -37,6 +37,7 @@ public class ConstantsUtil {
   public static final String CDFUSERNAME = "cdfUsername";
   public static final String CDFPASSWORD = "cdfPassword";
   public static final String TESTONCDF = "testOnCdf";
+  public static final String CDF_TEST_ACCOUNT_NAME = "CloudDataFution Automation";
   public static final String CDFURL = "cdfurl";
   public static final String WRANGLER_CONNECTIONS_URL = "cdfConnectionsUrl";
   public static final String REPLICATION_URL = "replicationUrl";
@@ -97,9 +98,4 @@ public class ConstantsUtil {
    * PIPELINE_RUN_TIMEOUT_SECONDS: To be used as a timeout for Pipeline Runs
    */
   public static final int PIPELINE_RUN_TIMEOUT_SECONDS = 900;
-
-  /**
-   * MEDIUM_TIMEOUT_SECONDS: To be used as a wait for retry
-   */
-  public static final int MEDIUM_TIMEOUT_SECONDS = 10;
 }
