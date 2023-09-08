@@ -86,6 +86,10 @@ public class ConstantsUtil {
    */
   public static final int SMALL_TIMEOUT_SECONDS = 5;
   /**
+   * MEDIUM_TIMEOUT_SECONDS: To be used as a medium static wait (only if needed)
+   */
+  public static final int MEDIUM_TIMEOUT_SECONDS = 10;
+  /**
    * PIPELINE_DEPLOY_TIMEOUT_SECONDS: To be used as a timeout for deploying the pipeline
    */
   public static final int PIPELINE_DEPLOY_TIMEOUT_SECONDS = 120;
@@ -98,4 +102,6 @@ public class ConstantsUtil {
    * PIPELINE_RUN_TIMEOUT_SECONDS: To be used as a timeout for Pipeline Runs
    */
   public static final int PIPELINE_RUN_TIMEOUT_SECONDS = 900;
+
+  public static final int PIPELINE_REFRESH_TIMEOUT_SECONDS = 120;
 }
