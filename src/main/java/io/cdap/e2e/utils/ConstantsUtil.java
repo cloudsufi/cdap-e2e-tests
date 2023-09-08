@@ -98,4 +98,6 @@ public class ConstantsUtil {
    * PIPELINE_RUN_TIMEOUT_SECONDS: To be used as a timeout for Pipeline Runs
    */
   public static final int PIPELINE_RUN_TIMEOUT_SECONDS = 900;
+
+  public static final int PIPELINE_REFRESH_TIMEOUT_SECONDS = 120;
 }

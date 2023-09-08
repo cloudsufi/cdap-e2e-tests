@@ -34,6 +34,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.function.Predicate;
 
 /**
  * Represents Cdf Pipeline Run Page Actions
@@ -134,6 +135,7 @@ public class CdfPipelineRunAction {
 
         PageHelper.refreshCurrentPage();
         SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS);
+        // retry (ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS);
       } while (isStarting() || isRunning() || isProvisioning());
     }
 
@@ -142,6 +144,19 @@ public class CdfPipelineRunAction {
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.failedStatus),
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.stoppedStatus)
     ));
+  }
+
+  public static void retry (int retryDelay, int maxRetryDelay, int maxRetryCount) throws Exception {
+    while (maxRetryCount > 0) {
+      retryDelay += ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS;
+      if (retryDelay > maxRetryDelay) {
+        return;
+      }
+      maxRetryCount--;
+
+      PageHelper.refreshCurrentPage();
+      SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS);
+    }
   }
 
   /**
