@@ -34,6 +34,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * Represents Cdf Pipeline Run Page Actions
@@ -119,22 +121,18 @@ public class CdfPipelineRunAction {
    * Wait till the Pipeline's status changes (from Running) to either Succeeded, Failed or Stopped within the
    * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
-  public static void waitTillPipelineRunCompletes() throws InterruptedException, IOException {
-    int pipelineExecutionTimeFlag = 0;
+  public static void waitTillPipelineRunCompletes() throws IOException {
     // Adding a page refresh in case tests are running on CDF to update the pipeline status.
     if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) ||
-      Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
-      // Adding pipelineExecutionTimeFlag to break the loop if pipeline status is Running state for more than
-      // 900 seconds.
-      do {
-        pipelineExecutionTimeFlag += 120;
-        if (pipelineExecutionTimeFlag > 900) {
-          break;
-        }
+            Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
 
+
+      retry(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS,
+        5, () -> {
         PageHelper.refreshCurrentPage();
-        SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS);
-      } while (isStarting() || isRunning() || isProvisioning());
+        return !(isStarting() || isRunning() || isProvisioning());
+        }
+      );
     }
 
     SeleniumDriver.getWaitDriver(ConstantsUtil.IMPLICIT_TIMEOUT_SECONDS).until(ExpectedConditions.or(
@@ -142,6 +140,23 @@ public class CdfPipelineRunAction {
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.failedStatus),
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.stoppedStatus)
     ));
+  }
+
+  public static void retry(int retryDelay, int maxRetryDelay, int maxRetryCount, Supplier<Boolean> retryOperation) {
+
+    int currentRetryDelay = 0;
+    while (maxRetryCount > 0 && currentRetryDelay <= maxRetryDelay) {
+      if (retryOperation.get()) {
+        // If Operation succeeded, exit the retry loop.
+        return;
+      }
+
+      // Update the delay and retry count.
+      currentRetryDelay += retryDelay;
+      maxRetryCount--;
+
+      SeleniumDriver.getWaitDriver(retryDelay);
+    }
   }
 
   /**

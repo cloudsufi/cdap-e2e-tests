@@ -34,7 +34,7 @@ public class CdfSignInActions {
         cdfSignInLocator = SeleniumHelper.getPropertiesLocators(CdfSignInLocator.class);
     }
 
-    public static void login() throws IOException {
+    public static void login() throws IOException, InterruptedException {
         ElementHelper.sendKeys(cdfSignInLocator.cdfUsername, SeleniumHelper.readParameters(ConstantsUtil.CDFUSERNAME));
         ElementHelper.clickOnElement(cdfSignInLocator.nextButton);
         ElementHelper.sendKeys(cdfSignInLocator.cdfPassword, SeleniumHelper.readParameters(ConstantsUtil.CDFPASSWORD));
@@ -42,8 +42,13 @@ public class CdfSignInActions {
 
         ElementHelper.clickIfDisplayed(cdfSignInLocator.selectTestAccount(ConstantsUtil.CDF_TEST_ACCOUNT_NAME),
           ConstantsUtil.SMALL_TIMEOUT_SECONDS, cdfSignInLocator.clickOnContinueButton());
+
         ElementHelper.clickIfDisplayed(cdfSignInLocator.clickOnContinueButton(), ConstantsUtil.SMALL_TIMEOUT_SECONDS,
           cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
+
+        ElementHelper.clickIfDisplayed(cdfSignInLocator.clickOnAllowButton(), ConstantsUtil.SMALL_TIMEOUT_SECONDS,
+          cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
+
     }
 
     public static boolean isUserLoggedInCDF() {

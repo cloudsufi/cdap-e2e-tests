@@ -16,6 +16,7 @@
 
 package io.cdap.e2e.utils;
 
+import io.cdap.e2e.pages.actions.CdfPipelineRunAction;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -132,17 +133,17 @@ public class ElementHelper {
    * @param locatorToWaitFor Locator of the WebElement we want to be displayed next.
    */
   public static void clickIfDisplayed(By locatorToClick, long timeOutInSeconds, By locatorToWaitFor) {
+
     clickIfDisplayed(locatorToClick, timeOutInSeconds);
 
     // If the next webElement is not displayed we will click on the desired element again.
     if (!isElementDisplayed(locatorToWaitFor, timeOutInSeconds)) {
-      logger.info("Retry : Click on " + locatorToClick);
-      clickIfDisplayed(locatorToClick);
-
-      // Checking if the next webElement is displayed.
-      if (isElementDisplayed(locatorToWaitFor, timeOutInSeconds)) {
-        logger.info("Element " + locatorToWaitFor + " is displayed.");
-      }
+      CdfPipelineRunAction.retry(5, 10, 2,
+        () -> {
+          logger.info("Retry : Click on " + locatorToClick);
+          clickIfDisplayed(locatorToClick);
+          return isElementDisplayed(locatorToWaitFor, timeOutInSeconds);
+        });
     }
   }
 
