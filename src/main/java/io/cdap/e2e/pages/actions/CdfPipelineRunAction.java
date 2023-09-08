@@ -21,6 +21,7 @@ import io.cdap.e2e.utils.AssertionHelper;
 import io.cdap.e2e.utils.ConstantsUtil;
 import io.cdap.e2e.utils.ElementHelper;
 import io.cdap.e2e.utils.PageHelper;
+import io.cdap.e2e.utils.RetryUtils;
 import io.cdap.e2e.utils.SeleniumDriver;
 import io.cdap.e2e.utils.SeleniumHelper;
 import io.cdap.e2e.utils.WaitHelper;
@@ -119,23 +120,15 @@ public class CdfPipelineRunAction {
    * Wait till the Pipeline's status changes (from Running) to either Succeeded, Failed or Stopped within the
    * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
-  public static void waitTillPipelineRunCompletes() throws InterruptedException, IOException {
-    int pipelineExecutionTimeFlag = 0;
-    // Adding a page refresh in case tests are running on CDF to update the pipeline status.
-    if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) ||
-      Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
-      // Adding pipelineExecutionTimeFlag to break the loop if pipeline status is Running state for more than
-      // 900 seconds.
-      do {
-        pipelineExecutionTimeFlag += 120;
-        if (pipelineExecutionTimeFlag > 900) {
-          break;
-        }
-
+  public static void waitTillPipelineRunCompletes() throws IOException {
+    // Adding a page refresh in case tests are running on CDF to update the pipeline status
+      RetryUtils.retry(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS,
+        10, () -> {
+        SeleniumDriver.getWaitDriver(ConstantsUtil.SMALL_TIMEOUT_SECONDS);
         PageHelper.refreshCurrentPage();
-        SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS);
-      } while (isStarting() || isRunning() || isProvisioning());
-    }
+        return !(isStarting() || isRunning() || isProvisioning());
+        }
+      );
 
     SeleniumDriver.getWaitDriver(ConstantsUtil.IMPLICIT_TIMEOUT_SECONDS).until(ExpectedConditions.or(
       ExpectedConditions.visibilityOf(CdfPipelineRunLocators.succeededStatus),
