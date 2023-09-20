@@ -127,8 +127,8 @@ public class CdfPipelineRunAction {
             Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
 
 
-      retry(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS,
-        5, () -> {
+      retry(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS,
+        10, () -> {
         PageHelper.refreshCurrentPage();
         return !(isStarting() || isRunning() || isProvisioning());
         }
