@@ -121,19 +121,10 @@ public class CdfPipelineRunAction {
    * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
   public static void waitTillPipelineRunCompletes() throws InterruptedException, IOException {
-    // Adding a page refresh in case tests are running on CDF to update the pipeline status.
-    if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) ||
-            Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
-      do {
-        PageHelper.refreshCurrentPage();
-        SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS);
-      } while (isStarting() || isRunning() || isProvisioning());
-    }
-
-    SeleniumDriver.getWaitDriver(ConstantsUtil.IMPLICIT_TIMEOUT_SECONDS).until(ExpectedConditions.or(
-      ExpectedConditions.visibilityOf(CdfPipelineRunLocators.succeededStatus),
-      ExpectedConditions.visibilityOf(CdfPipelineRunLocators.failedStatus),
-      ExpectedConditions.visibilityOf(CdfPipelineRunLocators.stoppedStatus)
+    SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS).until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOf(CdfPipelineRunLocators.succeededStatus),
+            ExpectedConditions.visibilityOf(CdfPipelineRunLocators.failedStatus),
+            ExpectedConditions.visibilityOf(CdfPipelineRunLocators.stoppedStatus)
     ));
   }
 
