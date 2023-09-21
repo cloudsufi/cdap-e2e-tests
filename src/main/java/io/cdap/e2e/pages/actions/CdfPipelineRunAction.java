@@ -121,21 +121,12 @@ public class CdfPipelineRunAction {
    * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
   public static void waitTillPipelineRunCompletes() throws InterruptedException, IOException {
-    int pipelineExecutionTimeFlag = 0;
     // Adding a page refresh in case tests are running on CDF to update the pipeline status.
     if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) ||
-      Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
-      // Adding pipelineExecutionTimeFlag to break the loop if pipeline status is Running state for more than
-      // 900 seconds.
+            Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
       do {
-        pipelineExecutionTimeFlag += 120;
-        if (pipelineExecutionTimeFlag > 900) {
-          break;
-        }
-
         PageHelper.refreshCurrentPage();
-        SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS);
-        // retry (ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS);
+        SeleniumDriver.getWaitDriver(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS);
       } while (isStarting() || isRunning() || isProvisioning());
     }
 
