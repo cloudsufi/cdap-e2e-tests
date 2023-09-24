@@ -126,9 +126,9 @@ public class CdfPipelineRunAction {
     if (Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONCDF)) ||
             Boolean.parseBoolean(SeleniumHelper.readParameters(ConstantsUtil.TESTONHDF))) {
 
-
       retry(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS,
         10, () -> {
+        SeleniumDriver.getWaitDriver(ConstantsUtil.SMALL_TIMEOUT_SECONDS);
         PageHelper.refreshCurrentPage();
         return !(isStarting() || isRunning() || isProvisioning());
         }
@@ -143,15 +143,14 @@ public class CdfPipelineRunAction {
   }
 
   public static void retry(int retryDelay, int maxRetryDelay, int maxRetryCount, Supplier<Boolean> retryOperation) {
-
     int currentRetryDelay = 0;
+
     while (maxRetryCount > 0 && currentRetryDelay <= maxRetryDelay) {
       if (retryOperation.get()) {
         // If Operation succeeded, exit the retry loop.
         return;
       }
 
-      // Update the delay and retry count.
       currentRetryDelay += retryDelay;
       maxRetryCount--;
 
