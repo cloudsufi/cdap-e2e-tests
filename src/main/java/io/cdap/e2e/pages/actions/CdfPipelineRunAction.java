@@ -135,11 +135,7 @@ public class CdfPipelineRunAction {
         }
       );
 
-    SeleniumDriver.getWaitDriver(ConstantsUtil.IMPLICIT_TIMEOUT_SECONDS).until(ExpectedConditions.or(
-      ExpectedConditions.visibilityOf(CdfPipelineRunLocators.succeededStatus),
-      ExpectedConditions.visibilityOf(CdfPipelineRunLocators.failedStatus),
-      ExpectedConditions.visibilityOf(CdfPipelineRunLocators.stoppedStatus)
-    ));
+    waitTillPipelineRunCompletes(ConstantsUtil.DEFAULT_TIMEOUT_SECONDS);
   }
 
   /**
