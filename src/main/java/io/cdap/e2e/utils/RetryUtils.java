@@ -16,6 +16,7 @@
 
 package io.cdap.e2e.utils;
 
+import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /**
@@ -32,19 +33,21 @@ public class RetryUtils {
      * @param retryOperation Operation which needs to be performed while retrying.
      *
      */
-    public static void retry(int retryDelay, int maxRetryDelay, int maxRetryCount, Supplier<Boolean> retryOperation) {
-        int currentRetryDelay = 0;
+    public static void retry(int retryDelay, int maxRetryDelay, int maxRetryCount, Supplier<Boolean> retryOperation)
+      throws InterruptedException {
+      int currentRetryDelay = 0;
+      TimeUnit wait = TimeUnit.SECONDS;
 
-        while (maxRetryCount > 0 && currentRetryDelay <= maxRetryDelay) {
-            if (retryOperation.get()) {
-                // If Operation succeeded, exit the retry loop.
-                return;
-            }
-
-            currentRetryDelay += retryDelay;
-            maxRetryCount--;
-
-            SeleniumDriver.getWaitDriver(retryDelay);
+      while (maxRetryCount > 0 && currentRetryDelay <= maxRetryDelay) {
+        if (retryOperation.get()) {
+          // If Operation succeeded, exit the retry loop.
+          return;
         }
+
+        currentRetryDelay += retryDelay;
+        maxRetryCount--;
+
+        wait.sleep(retryDelay);
+      }
     }
 }

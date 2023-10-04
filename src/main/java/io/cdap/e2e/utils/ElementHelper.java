@@ -132,7 +132,8 @@ public class ElementHelper {
    * @param timeOutInSeconds small timeout to wait before clicking.
    * @param locatorToWaitFor Locator of the WebElement we want to be displayed next.
    */
-  public static void clickIfDisplayed(By locatorToClick, long timeOutInSeconds, By locatorToWaitFor) {
+  public static void clickIfDisplayed(By locatorToClick, long timeOutInSeconds, By locatorToWaitFor)
+    throws InterruptedException {
     clickIfDisplayed(locatorToClick, timeOutInSeconds);
 
     // If the next webElement is not displayed we will click on the desired element again.

@@ -47,8 +47,6 @@ public class CdfPipelineRunAction {
     SeleniumHelper.getPropertiesLocators(CdfPipelineRunLocators.class);
   }
 
-  private static final Logger logger = LoggerFactory.getLogger(ElementHelper.class);
-
   /**
    * Click on the Run button
    */
@@ -124,14 +122,12 @@ public class CdfPipelineRunAction {
    * Wait till the Pipeline's status changes (from Running) to either Succeeded, Failed or Stopped within the
    * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
-  public static void waitTillPipelineRunCompletes() throws IOException {
+  public static void waitTillPipelineRunCompletes() throws IOException, InterruptedException {
     // Adding a page refresh in case tests are running on CDF to update the pipeline status
       RetryUtils.retry(ConstantsUtil.PIPELINE_REFRESH_TIMEOUT_SECONDS, ConstantsUtil.PIPELINE_RUN_TIMEOUT_SECONDS,
         10, () -> {
-        logger.info("Refreshing the page.");
         PageHelper.refreshCurrentPage();
-        SeleniumDriver.getWaitDriver(ConstantsUtil.SMALL_TIMEOUT_SECONDS);
-        return !(isStarting() || isRunning() || isProvisioning());
+        return !(isRunning());
         }
       );
 
