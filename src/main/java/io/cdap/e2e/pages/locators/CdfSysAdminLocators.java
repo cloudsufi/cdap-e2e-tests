@@ -16,6 +16,8 @@
 
 package io.cdap.e2e.pages.locators;
 
+import io.cdap.e2e.utils.SeleniumDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -51,4 +53,47 @@ public class CdfSysAdminLocators {
 
   @FindBy(how = How.XPATH, using = "//*[@data-cy='Clear All']")
   public static WebElement clearAll;
+
+  @FindBy(how = How.XPATH, using = "//*[@data-cy='wizard-result-icon-close-btn']")
+  public static WebElement clickOnCloseNamespaceWindow;
+
+  public static WebElement namespaceAdded(String nameSpace) {
+    String path = "//*[@href=\"/cdap/ns/" + nameSpace + "/details\"]";
+    return SeleniumDriver.getDriver().findElement(By.xpath(path));
+  }
+
+  @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Switch to')]")
+  public static WebElement switchToCreatedNamespace;
+
+  @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Go to homepage')]")
+  public static WebElement goToHomepage;
+
+  @FindBy(how = How.XPATH, using = "//a[@href='/cdap/httpexecutor']")  //remove later
+  public static WebElement makeHttpCall;
+
+  @FindBy(how = How.XPATH, using = "//span[contains(@title, 'Successfully created the namespace')] ")
+  public static WebElement locateNameSpaceSuccessMessage;
+
+  @FindBy(how = How.XPATH, using = "//span[contains(text(),'Edit')]")
+  public static WebElement editPreferencesButton;
+
+  @FindBy(how = How.XPATH, using = "//*[@data-cy='navbar-hamburger-icon']")
+  public static WebElement hamburgerMenu;
+
+  public static WebElement locateMenuLink(String menuLink) {
+    String xpath = "//*[@data-cy='navbar-" + menuLink + "-link']";
+    return SeleniumDriver.getDriver().findElement(By.xpath(xpath));
+  }
+
+  public static WebElement nameSpaceModules(String module, String nameSpace) {
+    String path = "//*[@href=\"/cdap/ns/" + nameSpace + "/details/" + module + "\"]";
+    return SeleniumDriver.getDriver().findElement(By.xpath(path));
+  }
+
+  public static By locateDropdownItem(String option) {
+    return By.xpath("//select//option[@value='" + option + "']");
+  }
+
+  @FindBy(how = How.XPATH, using = "//*[@data-cy='request-method-selector']")
+  public static WebElement requestMethod;
 }

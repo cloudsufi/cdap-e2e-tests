@@ -17,8 +17,12 @@
 package io.cdap.e2e.pages.actions;
 
 import io.cdap.e2e.pages.locators.CdfSysAdminLocators;
+import io.cdap.e2e.utils.AssertionHelper;
+import io.cdap.e2e.utils.ConstantsUtil;
 import io.cdap.e2e.utils.ElementHelper;
+import io.cdap.e2e.utils.PluginPropertyUtils;
 import io.cdap.e2e.utils.SeleniumHelper;
+import io.cdap.e2e.utils.WaitHelper;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
@@ -76,5 +80,102 @@ public class CdfSysAdminActions {
       logger.info("Success");
     }
     Assert.assertTrue(checkParam);
+  }
+
+  /**
+   * Check whether Namespace created successfully
+   */
+  public static void namespaceCreatedSuccessMessage() {
+    WaitHelper.waitForElementToBeDisplayed(CdfSysAdminLocators.locateNameSpaceSuccessMessage,
+        ConstantsUtil.DEFAULT_TIMEOUT_SECONDS);
+  }
+
+  /**
+   * Click on Switch button to switch to created Namespace
+   */
+  public static void clickOnSwitchToButton() {
+    ElementHelper.clickOnElement(CdfSysAdminLocators.switchToCreatedNamespace);
+  }
+
+  /**
+   * Click on close button to close the Namespace window
+   */
+  public static void clickOnCloseIconOnNamespaceWindow() {
+    ElementHelper.clickOnElement(CdfSysAdminLocators.clickOnCloseNamespaceWindow);
+  }
+
+  /**
+   * Check whether created Namespace is displayed in System Admin's Namespace tab
+   *
+   * @param namespaceName any specific title created
+   */
+  public static void verifyCreatedNamespaceIsDisplayed(String namespaceName) {
+    WaitHelper.waitForElementToBeDisplayed(CdfSysAdminLocators.namespaceAdded
+        (PluginPropertyUtils.pluginProp(namespaceName)));
+    AssertionHelper.verifyElementDisplayed(CdfSysAdminLocators.
+        namespaceAdded(PluginPropertyUtils.pluginProp(namespaceName)));
+  }
+
+  /**
+   * Click on Make HTTP calls
+   */
+  public static void clickOnMakeHttpCalls() {
+    ElementHelper.clickOnElement(CdfSysAdminLocators.makeHttpCall);
+  }
+
+  /**
+   * Click on EDIT button to add Namespace preferences
+   */
+  public static void clickOnEditNamespacePreference() {
+    ElementHelper.clickOnElement(CdfSysAdminLocators.editPreferencesButton);
+  }
+
+  /**
+   * Click on Hamburger Menu
+   */
+  public static void clickOnHamburgerMenu() {
+    ElementHelper.clickOnElement(CdfSysAdminLocators.hamburgerMenu);
+  }
+
+  /**
+   * Select the type of tab from hamburger menu list
+   *
+   * @param listName        @data-cy attribute value from menu list. If Provisioner is present in
+   *                        {@link ConstantsUtil#DEFAULT_DATACY_ATTRIBUTES_FILE} then its data-cy is
+   *                        fetched from it else Provisioner is used as it is.
+   */
+  public static void selectHamburgerMenuList(String listName) {
+    String pluginPropertyDataCyAttribute = PluginPropertyUtils.getPluginPropertyDataCyAttribute(
+        listName);
+    if (pluginPropertyDataCyAttribute == null) {
+      pluginPropertyDataCyAttribute = listName;
+    }
+    ElementHelper.clickOnElement(
+        CdfSysAdminLocators.locateMenuLink(pluginPropertyDataCyAttribute));
+  }
+
+  /**
+   * Click on Namespace tab links
+   *
+   * @param tabName            @data-cy attribute value of tabName. If tabName is present in
+   *                           {@link ConstantsUtil#DEFAULT_DATACY_ATTRIBUTES_FILE}
+   *                           then its data-cy is fetched from it else tabName is used
+   *                           as it is.
+   * @param nameSpaceName      Actual nameSpaceName is fetched from {@link
+   *                           ConstantsUtil#DEFAULT_PLUGIN_PROPERTIES_FILE} else nameSpaceName param is used as it is
+   */
+  public static void clickOnNameSpaceAdminTabs(String tabName, String nameSpaceName) {
+    ElementHelper.clickOnElement(
+        CdfSysAdminLocators.nameSpaceModules(tabName, PluginPropertyUtils.pluginProp(nameSpaceName)));
+  }
+
+  /**
+   * Select the request method from drop down
+   *
+   * @param requestMethod any specific value
+   */
+  public static void selectRequestDropdownOption(String requestMethod) {
+    Select objSelect = new Select(CdfSysAdminLocators.requestMethod);
+    objSelect.selectByVisibleText(PluginPropertyUtils.pluginProp(requestMethod));
   }
 }
