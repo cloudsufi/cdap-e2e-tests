@@ -67,8 +67,15 @@ public class CdfNameSpaceAdminActions {
     if (pluginPropertyDataCyAttribute == null) {
       pluginPropertyDataCyAttribute = pluginProperty;
     }
-
     ElementHelper.clickOnElement(
         CdfSysAdminLocators.clickPreference(pluginPropertyDataCyAttribute));
+  }
+
+  public static void openNameSpacedropdown() {
+    ElementHelper.clickOnElement(CdfNameSpaceAdminLocators.namespaceDropdown);
+  }
+
+  public static void addNameSpacefromHamnugerMenu() {
+    ElementHelper.clickOnElement(CdfNameSpaceAdminLocators.addNamespace);
   }
 }

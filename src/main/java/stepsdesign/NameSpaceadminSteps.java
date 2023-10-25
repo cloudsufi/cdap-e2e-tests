@@ -52,4 +52,14 @@ public class NameSpaceadminSteps implements CdfHelper {
   public void clickOnEditNameSpacePreferences() {
     CdfNameSpaceAdminActions.clickOnEditPreference();
   }
+
+  @Then("Click on Namespace dropdown button")
+  public void openNameSpaceDropdown() {
+    CdfNameSpaceAdminActions.openNameSpacedropdown();
+  }
+
+  @Then("Click on the Add Namespace tab")
+  public void addNamespaceFromHamburgerMenu() {
+    CdfNameSpaceAdminActions.addNameSpacefromHamnugerMenu();
+  }
 }
