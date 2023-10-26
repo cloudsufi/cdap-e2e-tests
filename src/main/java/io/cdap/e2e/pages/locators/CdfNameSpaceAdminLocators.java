@@ -47,6 +47,28 @@ public class CdfNameSpaceAdminLocators {
     return SeleniumDriver.getDriver().findElement(By.xpath(path));
   }
 
+  public static WebElement locateMenuLink(String menuLink) {
+    String xpath = "//*[@data-cy='navbar-" + menuLink + "-link']";
+    return SeleniumDriver.getDriver().findElement(By.xpath(xpath));
+  }
+
+  public static WebElement locateKeyProperty(String pluginProperty, int row) {
+    String xpath = "//*[@data-cy='" + pluginProperty + "" + row + "']//input[@placeholder='key']";
+    return SeleniumDriver.getDriver().findElement(By.xpath(xpath));
+  }
+
+  public static WebElement locateValueProperty(String pluginProperty, int row) {
+    String xpath = "//*[@data-cy='" + pluginProperty + "" + row + "']//input[@placeholder='value']";
+    return SeleniumDriver.getDriver().findElement(By.xpath(xpath));
+  }
+
+  public static WebElement locateAddRowButtonProperty(String pluginProperty, int row) {
+    String xpath =
+        "//*[@data-cy='" + pluginProperty + "" + row + "']//span"
+            + "//button[@type='submit' and @class='btn add-row-btn btn-link']";
+    return SeleniumDriver.getDriver().findElement(By.xpath(xpath));
+  }
+
   @FindBy(how = How.XPATH, using = "//*[@class='namespace-dropdown']")
   public static WebElement namespaceDropdown;
 
@@ -79,6 +101,16 @@ public class CdfNameSpaceAdminLocators {
     String xpath = "//*[@data-cy= 'key-value-pair-" + row + "']//span//button[@type='submit' and " +
         "@class='btn add-row-btn btn-link']";
     return SeleniumDriver.getDriver().findElement(By.xpath(xpath));
+  }
+
+  public static WebElement locateProvisionerInList(String provisionerName) {
+    return SeleniumDriver.getDriver()
+        .findElement(By.xpath("//div[@data-cy='" + provisionerName + "']"));
+  }
+
+  public static WebElement locateButtonType(String buttonType) {
+    return SeleniumDriver.getDriver()
+        .findElement(By.xpath("//button[@data-cy='" + buttonType + "']"));
   }
 
   @FindBy(how = How.XPATH, using = "//a[contains(text(),\"Switch to\")]")
@@ -120,5 +152,22 @@ public class CdfNameSpaceAdminLocators {
   @FindBy(how = How.XPATH, using = "//span[contains(text(),'Create Profile')]")
   public static WebElement createProfileInNamespaceAdmin;
 
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'Close')]")
+  public static WebElement closeButton;
+
+  @FindBy(how = How.XPATH, using = "//span//button[@type='submit' and @class='btn remove-row-btn btn-link']")
+  public static WebElement clickDelete;
+
+  @FindBy(how = How.XPATH, using = "//span[contains(@class,'reset')]")
+  public static WebElement clickReset;
+
+  @FindBy(how = How.XPATH, using = "//span[contains(@class,'success reset-success')]")
+  public static WebElement resetSuccessMsg;
+
+  @FindBy(how = How.XPATH, using = "//div[contains(@class, 'error-section text-danger')]")
+  public static WebElement errorMessageOnFooter;
+
+  @FindBy(how = How.XPATH, using = "//div[contains(@class, 'card-action-feedback DANGER')]")
+  public static WebElement failMessage;
 }
 

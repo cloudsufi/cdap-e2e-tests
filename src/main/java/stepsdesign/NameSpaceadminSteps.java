@@ -62,4 +62,69 @@ public class NameSpaceadminSteps implements CdfHelper {
   public void addNamespaceFromHamburgerMenu() {
     CdfNameSpaceAdminActions.addNameSpacefromHamnugerMenu();
   }
+
+  @Then("Select navigation item: {string} from the Hamburger menu list")
+  public void selectNavigationItemFromMenu(String tabName) {
+    CdfNameSpaceAdminActions.selectHamburgerMenuList(tabName);
+  }
+
+  @Then("Set nameSpace preferences with key: {string} and value: {string}")
+  public void setSystemPreferencesWithKeyAndValue(String pluginProperty, String keyValuePairs) {
+    CdfNameSpaceAdminActions.enterKeyValuePreferences(pluginProperty, keyValuePairs);
+  }
+
+  @Then("Click on the Save & Close preferences button")
+  public void clickOnSaveAndClosePreferencesButton() {
+    CdfNameSpaceAdminActions.clickOnSavePreference();
+  }
+
+  @Then("Select a provisioner: {string} for the compute profile")
+  public void selectProvisionerForComputeProfile(String provisionerName) {
+    CdfNameSpaceAdminActions.selectProvisioner(provisionerName);
+  }
+
+  @Then("Click on close button of compute profile properties page")
+  public void closeButtonComputeProfile() {
+    CdfNameSpaceAdminActions.clickCloseButton();
+  }
+
+  @Then("Delete the preferences")
+  public void clickOnDeletePreference() {
+    CdfNameSpaceAdminActions.deletePreference();
+  }
+
+  @Then("Reset the preferences")
+  public void clickOnResetPreference() {
+    CdfNameSpaceAdminActions.clickOnResetPreference();
+  }
+
+  @Then("Verify the reset is successful for added preferences")
+  public void verifyIfResetValidatedSuccessfully() {
+    CdfNameSpaceAdminActions.verifyIfResetValidatedSuccessfully();
+  }
+
+  @Then("Click on: {string} button in the properties")
+  public void clickOnButtonInTheProperties(String buttonType) {
+    CdfNameSpaceAdminActions.clickCreateButtonComputeProfile(buttonType);
+  }
+
+  @Then("Verify that the compute profile is displaying an error message: {string} on the footer")
+  public void verifyErrorMessageDisplayedOnFooter(String errorMessageLocation) {
+    CdfNameSpaceAdminActions.verifyErrorMessageOnFooter(errorMessageLocation);
+  }
+
+  @Then("Enter the New Namespace Name with value: {string}")
+  public void enterNamespaceNameValue(String value) {
+    CdfNameSpaceAdminActions.enterNamespaceName(value);
+  }
+
+  @Then("Enter the Namespace Description with value: {string}")
+  public void enterNamespaceDescriptionValue(String value) {
+    CdfNameSpaceAdminActions.enterNamespaceDescription(value);
+  }
+
+  @Then("Verify the failed error message: {string} displayed on dialog box")
+  public void verifyFailedErrorMessageDisplayedOnDialogBox(String errorMessageLocation) {
+    CdfNameSpaceAdminActions.verifyFailedErrorMessageOnDialogBox(errorMessageLocation);
+  }
 }
