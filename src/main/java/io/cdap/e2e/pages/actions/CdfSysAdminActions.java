@@ -175,7 +175,7 @@ public class CdfSysAdminActions {
    * @param requestMethod any specific value
    */
   public static void selectRequestDropdownOption(String requestMethod) {
-    Select objSelect = new Select(CdfSysAdminLocators.requestMethod);
-    objSelect.selectByVisibleText(PluginPropertyUtils.pluginProp(requestMethod));
+    Select selectRequestMethod = new Select(CdfSysAdminLocators.requestMethod);
+    selectRequestMethod.selectByVisibleText(PluginPropertyUtils.pluginProp(requestMethod));
   }
 }
