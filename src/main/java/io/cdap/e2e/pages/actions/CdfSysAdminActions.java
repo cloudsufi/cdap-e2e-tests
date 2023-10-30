@@ -101,7 +101,7 @@ public class CdfSysAdminActions {
    * Click on close button to close the Namespace window
    */
   public static void clickOnCloseIconOnNamespaceWindow() {
-    ElementHelper.clickOnElement(CdfSysAdminLocators.clickOnCloseNamespaceWindow);
+    ElementHelper.clickOnElement(CdfSysAdminLocators.closeNamespaceWindow);
   }
 
   /**

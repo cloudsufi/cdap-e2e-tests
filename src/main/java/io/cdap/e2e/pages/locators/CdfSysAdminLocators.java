@@ -55,7 +55,7 @@ public class CdfSysAdminLocators {
   public static WebElement clearAll;
 
   @FindBy(how = How.XPATH, using = "//*[@data-cy='wizard-result-icon-close-btn']")
-  public static WebElement clickOnCloseNamespaceWindow;
+  public static WebElement closeNamespaceWindow;
 
   public static WebElement namespaceAdded(String nameSpace) {
     String path = "//*[@href=\"/cdap/ns/" + nameSpace + "/details\"]";
@@ -67,9 +67,6 @@ public class CdfSysAdminLocators {
 
   @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Go to homepage')]")
   public static WebElement goToHomepage;
-
-  @FindBy(how = How.XPATH, using = "//a[@href='/cdap/httpexecutor']")  //remove later
-  public static WebElement makeHttpCall;
 
   @FindBy(how = How.XPATH, using = "//span[contains(@title, 'Successfully created the namespace')] ")
   public static WebElement locateNameSpaceSuccessMessage;
