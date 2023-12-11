@@ -106,7 +106,7 @@ else:
             plugin_name = root.find('{http://maven.apache.org/POM/4.0.0}artifactId').text
         else:
             plugin_name = root.find('{http://maven.apache.org/POM/4.0.0}artifactId').text
-        os.chdir("target")
+        print(os.chdir("target"))
         plugin_properties = {}
         plugin_parents = []
         # Get plugin properties and parent from plugin json.
@@ -117,7 +117,7 @@ else:
         data = None
         with open(f'{plugin_name}-{plugin_version}.jar', 'rb') as f:
             data = f.read()
-        # Install the plugin on the sandbox.
+        # Installing the plugin on the sandbox.
         print("Installing plugin")
         res=requests.post(f"http://localhost:11015/v3/namespaces/default/artifacts/{plugin_name}", headers={"Content-Type": "application/octet-stream", "Artifact-Extends": '/'.join(plugin_parents), "Artifact-Version": plugin_version}, data=data)
         assert res.ok or print(res.text)
