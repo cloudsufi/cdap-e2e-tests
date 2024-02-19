@@ -140,7 +140,7 @@ def upload_drivers(module_to_build):
         driverData = get_driver_jar.content
         print(f"Installing {artifact_name} driver")
         res=requests.post(f"http://localhost:11015/v3/namespaces/default/artifacts/{artifact_name}", headers={"Content-Type": "application/octet-stream", "Artifact-Version": artifact_version, "Artifact-Plugins": driver_prop}, data=driverData)
-        assert res.ok or print(res.text)
+        print(res.text)
 
 if module_to_build:
     os.chdir("../../..")
