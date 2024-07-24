@@ -24,12 +24,12 @@ import io.cdap.e2e.utils.WaitHelper;
 import java.io.IOException;
 
 
-
 /**
  * Represents CdfSignInActions
  */
 public class CdfSignInActions {
     private static CdfSignInLocator cdfSignInLocator;
+
     static {
         cdfSignInLocator = SeleniumHelper.getPropertiesLocators(CdfSignInLocator.class);
     }
@@ -41,18 +41,30 @@ public class CdfSignInActions {
         ElementHelper.clickOnElement(cdfSignInLocator.nextButton);
 
         ElementHelper.clickIfDisplayed(cdfSignInLocator.selectTestAccount(ConstantsUtil.CDF_TEST_ACCOUNT_NAME),
-          ConstantsUtil.SMALL_TIMEOUT_SECONDS, cdfSignInLocator.clickOnContinueButton());
+                ConstantsUtil.SMALL_TIMEOUT_SECONDS, cdfSignInLocator.clickOnContinueButton());
 
         ElementHelper.clickIfDisplayed(cdfSignInLocator.clickOnContinueButton(), ConstantsUtil.SMALL_TIMEOUT_SECONDS,
-          cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
+                cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
 
         ElementHelper.clickIfDisplayed(cdfSignInLocator.clickOnAllowButton(), ConstantsUtil.SMALL_TIMEOUT_SECONDS,
-          cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
+                cdfSignInLocator.locatePluginNameInList(ConstantsUtil.FIRST_PLUGIN_IN_LIST, "Source"));
 
     }
 
     public static boolean isUserLoggedInCDF() {
         return !WaitHelper.waitForElementToBeOptionallyDisplayed(
                 CdfSignInLocator.locatorOfEmailTextBox(), ConstantsUtil.SMALL_TIMEOUT_SECONDS);
+    }
+
+    public static void byoidLogin() throws IOException, InterruptedException {
+        ElementHelper.sendKeys(cdfSignInLocator.byoidProvider,
+                SeleniumHelper.readParameters(ConstantsUtil.BYOID_PROVIDER));
+        ElementHelper.clickOnElement(cdfSignInLocator.nextButton);
+        WaitHelper.waitForElementToBeDisplayed(cdfSignInLocator.keycloakLogo);
+        ElementHelper.sendKeys(cdfSignInLocator.byoidUsername,
+                SeleniumHelper.readParameters(ConstantsUtil.BYOID_USERNAME));
+        ElementHelper.sendKeys(cdfSignInLocator.byoidPassword,
+                SeleniumHelper.readParameters(ConstantsUtil.BYOID_PASSWORD));
+        ElementHelper.clickOnElement(cdfSignInLocator.byoidSignInButton);
     }
 }
