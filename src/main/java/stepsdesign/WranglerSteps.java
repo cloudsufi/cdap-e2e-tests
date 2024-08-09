@@ -16,7 +16,6 @@
 package stepsdesign;
 
 import io.cdap.e2e.pages.actions.WranglerActions;
-import io.cdap.e2e.pages.locators.CdfHubLocators;
 import io.cdap.e2e.pages.locators.WranglerLocators;
 import io.cdap.e2e.utils.CdfHelper;
 import io.cdap.e2e.utils.SeleniumHelper;
@@ -28,46 +27,70 @@ import org.slf4j.LoggerFactory;
  * CDF wrangler related steps.
  */
 public class WranglerSteps implements CdfHelper {
-  private static final Logger logger = LoggerFactory.getLogger(CdfHubSteps.class);
+  private static final Logger logger = LoggerFactory.getLogger(WranglerSteps.class);
+
   static {
-    SeleniumHelper.getPropertiesLocators(CdfHubLocators.class);
+    SeleniumHelper.getPropertiesLocators(WranglerLocators.class);
   }
 
 
-@Then("Expand the dropdown to apply column transformations for column: {string}")
-public static void expandButton(String columnName) {
-  WranglerActions.clickOnTransformationButton(columnName);
+  @Then("Expand the dropdown to apply column transformations for column: {string}")
+  public static void expandButton(String columnName) {
+    WranglerActions.clickOnTransformationButton(columnName);
   }
 
-  @Then("Apply directive: {string} as {string}")
-  public static void selectDirectiveAndOption(String directive, String option) throws InterruptedException {
-    WranglerActions.selectDirectiveType(directive, option);
-  }
+//  @Then("Apply directive: {string} as {string}")
+//  public static void selectDirectiveAndOption(String directive, String option) throws InterruptedException {
+//    WranglerActions.selectDirectiveType(directive, option);
+//  }
 
   @Then("Apply directive: {string}")
   public static void selectDirective(String directive) {
     WranglerActions.selectDirective(directive);
   }
 
-  @Then("Apply directive: {string} with value {string}")
-  public static void selectDirectiveAndEnterText(String directive, String text) throws InterruptedException {
-    WranglerActions.selectDirectiveAndEnterValue(directive, text);
+  @Then("Click on Create pipeline button")
+  public static void createPipelineButton() {
+    WranglerActions.createPipelineButton();
+  }
+
+  @Then("Apply directive: {string} as {string}")
+  public static void selectDirectiveAndEnterOption(String directive, String text) throws InterruptedException {
+    WranglerActions.selectDirectiveAndOption(directive, text);
+  }
+
+  @Then("Enter directive from CLI {string}")
+  public static void enterDirectiveFromUserInput(String directive) throws InterruptedException {
+    WranglerActions.enterDirectiveFromCommandLine(directive);
   }
 
   @Then("Apply directive: {string} as {string} with {string} option")
-  public static void selectDirectiveAndOption(String directive, String option, String optionType)
+  public static void selectDirectiveWithThreeOption(String directive, String option, String optionType)
     throws InterruptedException {
-    WranglerActions.selectDirectiveTypeWithOption(directive, option, optionType);
+    WranglerActions.selectDirectiveTypeWithThreeOptions(directive, option, optionType);
   }
 
-  @Then("Click on scroll down option")
-  public static void clickOnScrollOption() throws InterruptedException {
-    WranglerActions.clickOnScrollDownOption();
+  @Then("Select checkbox on two columns {string} and {string}")
+  public static void selectDirectiveOnTwoColumns(String column1, String column2)
+    throws InterruptedException {
+    WranglerActions.selectCheckboxOnTwoColumns(column1, column2);
   }
 
-  @Then("Apply directive:{string} as {string} and enter {string} at {string}")
+  @Then("Apply directive: {string} and select: {string} and enter: {string}")
+  public static void selectDirectiveDropdownAndText(String directive, String option, String optionType)
+    throws InterruptedException {
+    WranglerActions.selectDirectiveTypeWithDropdownAndText(directive, option, optionType);
+  }
+
+  @Then("Apply directive:{string} with directive type: {string} and select {string} and enter {string}")
   public static void clickOnMultipleOption(String directive, String option, String text, String dropdown)
     throws InterruptedException {
-    WranglerActions.selectDirectiveTypeWithMultipleOption(directive, option, text, dropdown);
+    WranglerActions.selectDirectiveTypeWithFourOption(directive, option, text, dropdown);
+  }
+
+  @Then("Apply directive:{string} and select {string} with condition {string} with option {string} and name {string}")
+  public static void clickOnFiveOption(String directive, String option1, String option2, String option3, String option4)
+    throws InterruptedException {
+    WranglerActions.selectDirectiveTypeWithFiveOption(directive, option1, option2, option3, option4);
   }
 }
