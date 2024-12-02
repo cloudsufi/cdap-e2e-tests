@@ -27,16 +27,16 @@ jobs:
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: data-integrations/google-cloud
           path: plugin
       - name: Checkout e2e test repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: e2e
       - name: Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ github.workflow }}-${{ hashFiles('**/pom.xml') }}
@@ -45,7 +45,7 @@ jobs:
       - name: Run required e2e tests
         run: python3 e2e/src/main/scripts/run_e2e_test.py --testRunner TestRunnerRequired.java --framework yes
       - name: Upload debug files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: Debug files
