@@ -46,9 +46,7 @@ public class CdfLogLocators {
 
   @FindBy(xpath = "//*[contains(text(),'Pipeline') and contains(text(),'succeeded')]")
   public static WebElement validateSucceeded;
-
-  @FindBy(xpath = "//*[contains(@class, 'close')]")
-  public static WebElement closeLogs;
+  public static By closeLogs = By.xpath("//*[contains(@class, 'close')]");
 
   public static WebElement getPipelineStatusFromLogs(String status) {
     return SeleniumDriver.getDriver()

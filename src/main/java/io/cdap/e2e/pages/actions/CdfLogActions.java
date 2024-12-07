@@ -100,6 +100,6 @@ public class CdfLogActions {
    * Click on the close button(x) for the Logs page
    */
   public static void closeLogs() {
-    ElementHelper.clickOnElement(CdfLogLocators.closeLogs);
+    ElementHelper.clickIfDisplayed(CdfLogLocators.closeLogs);
   }
 }
