@@ -20,11 +20,13 @@ import io.cdap.e2e.pages.actions.CdfLogActions;
 import io.cdap.e2e.pages.actions.CdfPipelineRunAction;
 import io.cdap.e2e.pages.actions.CdfPluginPropertiesActions;
 import io.cdap.e2e.pages.actions.CdfStudioActions;
+import io.cdap.e2e.pages.locators.CdfPipelineRunLocators;
 import io.cdap.e2e.pages.locators.CdfStudioLocators;
 import io.cdap.e2e.utils.CdfHelper;
 import io.cdap.e2e.utils.ConstantsUtil;
 import io.cdap.e2e.utils.PluginPropertyUtils;
 import io.cdap.e2e.utils.SeleniumHelper;
+import io.cdap.e2e.utils.WaitHelper;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -384,6 +386,13 @@ public class PipelineSteps implements CdfHelper {
   @Then("Run the Pipeline in Runtime with runtime arguments")
   public void runThePipelineInRuntimeWithRuntimeArguments() {
     CdfPipelineRunAction.clickDeployedConfigRunButton();
+  }
+
+  @Then("Wait for run index to change to Run 2")
+  public void waitForRunIndexToChange() {
+    WaitHelper.waitForPageToLoad();
+    WaitHelper.waitForElementToBeDisplayed(CdfPipelineRunLocators.runIndex);
+    WaitHelper.waitForPageToLoad();
   }
 
   @Then("Wait for pipeline to be in status: {string} with a timeout of {long} seconds")

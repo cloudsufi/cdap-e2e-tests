@@ -94,6 +94,9 @@ public class CdfPipelineRunLocators {
   @FindBy(how = How.XPATH, using = "//*[contains(text(),'saved successfully.')]")
   public static WebElement savedSuccessMessage;
 
+  @FindBy(how = How.XPATH, using = "//*[@class='run-number' and text()='Run 2 of 2']")
+  public static WebElement runIndex;
+
   @FindBy(how = How.XPATH, using = "//div[contains(@class,'pipeline-actions-btn')]")
   public static WebElement pipelineActionsButton;
 
