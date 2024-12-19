@@ -52,6 +52,13 @@ public class CdfPipelineRunAction {
   }
 
   /**
+   * Click on the Runtime Dropdown button
+   */
+  public static void runtimeDropdownClick() {
+    ElementHelper.clickOnElement(CdfPipelineRunLocators.runDropdownButton);
+  }
+
+  /**
    * Click on the Run button inside 'Runtime Arguments' dialog
    */
   public static void clickDeployedConfigRunButton() {

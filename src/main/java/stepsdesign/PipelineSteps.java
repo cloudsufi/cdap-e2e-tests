@@ -381,6 +381,11 @@ public class PipelineSteps implements CdfHelper {
     CdfPipelineRunAction.runClick();
   }
 
+  @Then("Click on the Runtime Arguments Dropdown button")
+  public void clickOnRuntimeArgumentsDropdownButton() {
+    CdfPipelineRunAction.runtimeDropdownClick();
+  }
+
   @Then("Run the Pipeline in Runtime with runtime arguments")
   public void runThePipelineInRuntimeWithRuntimeArguments() {
     CdfPipelineRunAction.clickDeployedConfigRunButton();
