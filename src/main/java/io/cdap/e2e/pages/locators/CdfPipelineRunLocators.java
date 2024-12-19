@@ -28,6 +28,9 @@ public class CdfPipelineRunLocators {
   @FindBy(xpath = "//button[@data-cy='pipeline-run-btn']")
   public static WebElement run;
 
+  @FindBy(xpath = "//*[@data-testid='arrow-btn-container']")
+  public static WebElement runDropdownButton;
+
   @FindBy(xpath = "//div[@data-cy='pipeline-configure-btn']//*[contains(@class, 'configure-icon')]")
   public static WebElement configure;
 
