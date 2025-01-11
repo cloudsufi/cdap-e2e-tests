@@ -41,7 +41,7 @@ public class CdfLogLocators {
   @FindBy(xpath = "//*[contains(text(),'Pipeline') and contains(text(),'failed')]/parent::*//child::div[2]")
   public static WebElement validateCategoryError;
 
-  @FindBy(xpath = "//*[@class=\"MuiButton-label\"  and contains(text(),'View')]")
+  @FindBy(xpath = "//*[@data-testid='view-advanced-logs']")
   public static WebElement getGoToAdvanceLogs;
 
   @FindBy(xpath = "//*[contains(text(),'Pipeline') and contains(text(),'succeeded')]")
