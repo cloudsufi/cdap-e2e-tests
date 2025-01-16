@@ -66,7 +66,7 @@ public class CdfPipelineRunLocators {
     return SeleniumDriver.getDriver().findElement(By.xpath("//*[@data-cy='" + status + "']"));
   }
 
-  @FindBy(xpath = "//div[@data-cy='log-viewer-btn-toggle']//div[contains(@class, 'run-logs-btn')]")
+  @FindBy(xpath = "//*[@data-testid='log-viewer-btn-toggle']")
   public static WebElement logs;
 
   @FindBy(xpath = "//span[text()='Download All']/parent::a/following-sibling::div//button")
