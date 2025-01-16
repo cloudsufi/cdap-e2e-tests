@@ -127,7 +127,7 @@ public class CdfPipelineRunAction {
    * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
   public static void waitTillPipelineRunCompletes() throws InterruptedException {
-    try{
+    try {
       // Wait for the Pipeline run to complete for the default timeout
       WaitHelper.waitForElementToBeHidden(CdfPipelineRunLocators.runningStatus);
     } catch (Exception e) {
