@@ -127,8 +127,13 @@ public class CdfPipelineRunAction {
    * Timeout: {@link ConstantsUtil#IMPLICIT_TIMEOUT_SECONDS}
    */
   public static void waitTillPipelineRunCompletes() throws InterruptedException {
-    // Wait for the Pipeline run to complete for the default timeout
-    WaitHelper.waitForElementToBeHidden(CdfPipelineRunLocators.runningStatus);
+    try{
+      // Wait for the Pipeline run to complete for the default timeout
+      WaitHelper.waitForElementToBeHidden(CdfPipelineRunLocators.runningStatus);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
 
     // Loop to refresh the page if the pipeline is still running till max refresh count
     int maxRefreshCount = ConstantsUtil.MAX_PAGE_REFRESH_ATTEMPTS;
@@ -137,6 +142,15 @@ public class CdfPipelineRunAction {
 
       if (isPipelineRunning) {
         PageHelper.refreshCurrentPage();
+
+        try {
+          Thread.sleep(5000); // Wait for 5 second after the refresh
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+
+        WaitHelper.waitForPageToLoad();
+        WaitHelper.waitForElementToBeClickable(CdfPipelineRunLocators.runDropdownButton);
         WaitHelper.waitForElementToBeHidden(
                 CdfPipelineRunLocators.runningStatus, ConstantsUtil.IMPLICIT_TIMEOUT_SECONDS);
       } else {
