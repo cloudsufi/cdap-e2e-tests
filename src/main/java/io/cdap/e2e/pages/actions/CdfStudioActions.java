@@ -534,4 +534,42 @@ public class CdfStudioActions {
     FileImportUtil.uploadFile(CdfStudioLocators.importPipelineInputTag(), filePath);
     clickOnFixAllButtonIfDisplayed();
   }
+
+  /**
+   * Wait till the Pipeline's preview run status banner is displayed within error details
+   * Timeout: {@link ConstantsUtil#PIPELINE_PREVIEW_TIMEOUT_SECONDS}
+   */
+  public static void waitTillPipelinePreviewRunCompletesWithError() {
+    waitTillPipelinePreviewRunCompletesWithErrorDetails(ConstantsUtil.PIPELINE_PREVIEW_TIMEOUT_SECONDS);
+  }
+
+  /**
+   * Wait till the Pipeline's preview run status banner is displayed with error within the given timeout
+   *
+   * @param timeoutInSeconds timeout
+   */
+  public static void waitTillPipelinePreviewRunCompletesWithErrorDetails(long timeoutInSeconds) {
+    WaitHelper.waitForElementToBeDisplayed(CdfStudioLocators.errorDetailsBannerText, timeoutInSeconds);
+  }
+
+  /**
+   * Click on the View Details button on the Pipeline preview error banner
+   */
+  public static void clickOnViewDetailsButtonOnErrorBanner() {
+    ElementHelper.clickOnElement(CdfStudioLocators.errorDetailsBannerViewDetailsButton);
+  }
+
+  /**
+   * Click on the Close button on the Pipeline preview error banner
+   */
+  public static void clickOnCloseButtonOnErrorBanner() {
+    ElementHelper.clickOnElement(CdfStudioLocators.errorDetailsBannerCloseButton);
+  }
+
+  /**
+   * Click on the View Logs button on the Pipeline preview error banner
+   */
+  public static void clickOnViewLogsButtonOnErrorBanner() {
+    ElementHelper.clickOnElement(CdfStudioLocators.errorStatusBannerViewLogsButton);
+  }
 }
