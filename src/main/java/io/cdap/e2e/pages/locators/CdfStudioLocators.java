@@ -292,4 +292,8 @@ public class CdfStudioLocators {
 
   @FindBy(how = How.XPATH, using = "//*[@data-testid='features-pipelineDetails-errorDetails-viewLogsButton']")
   public static WebElement errorStatusBannerViewLogsButton;
+
+  public static By errorDetailsTextOnBanner()  {
+    return By.xpath("//*[@data-testid='features-pipelineDetails-errorDetails-errorCountMessage']");
+  }
 }
