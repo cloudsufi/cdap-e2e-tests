@@ -537,19 +537,16 @@ public class CdfStudioActions {
 
   /**
    * Wait till the Pipeline's preview run status banner is displayed within error details
-   * Timeout: {@link ConstantsUtil#PIPELINE_PREVIEW_TIMEOUT_SECONDS}
    */
   public static void waitTillPipelinePreviewRunCompletesWithError() {
-    waitTillPipelinePreviewRunCompletesWithErrorDetails(ConstantsUtil.PIPELINE_PREVIEW_TIMEOUT_SECONDS);
+    waitTillPipelinePreviewRunCompletesWithErrorDetails();
   }
 
   /**
-   * Wait till the Pipeline's preview run status banner is displayed with error within the given timeout
-   *
-   * @param timeoutInSeconds timeout
+   * Wait till the Pipeline's preview run status banner is displayed with error text on banner
    */
-  public static void waitTillPipelinePreviewRunCompletesWithErrorDetails(long timeoutInSeconds) {
-    WaitHelper.waitForElementToBeDisplayed(CdfStudioLocators.errorDetailsBannerText, timeoutInSeconds);
+  public static void waitTillPipelinePreviewRunCompletesWithErrorDetails() {
+    WaitHelper.waitForElementToBePresent(CdfStudioLocators.errorDetailsTextOnBanner());
   }
 
   /**
