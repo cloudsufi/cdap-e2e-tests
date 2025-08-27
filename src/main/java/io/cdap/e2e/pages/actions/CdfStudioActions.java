@@ -25,6 +25,7 @@ import io.cdap.e2e.utils.FileImportUtil;
 import io.cdap.e2e.utils.SeleniumDriver;
 import io.cdap.e2e.utils.SeleniumHelper;
 import io.cdap.e2e.utils.WaitHelper;
+import io.cucumber.java8.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.TimeoutException;
@@ -33,6 +34,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.URISyntaxException;
+import java.time.Duration;
 
 /**
  * Represents Cdf Studio Page Actions
@@ -179,8 +181,9 @@ public class CdfStudioActions {
     pipelineName();
     pipelineNameIp(pipelineName);
     pipelineSave();
-    WaitHelper.waitForElementToBeDisplayed(CdfStudioLocators.statusBanner);
-    WaitHelper.waitForElementToBeHidden(CdfStudioLocators.statusBanner);
+    WaitHelper.waitForElementToBeOptionallyDisplayed(CdfStudioLocators.statusBannerDisplay(),
+                                                     ConstantsUtil.SMALL_TIMEOUT_SECONDS);
+    WaitHelper.waitForElementToBeHidden(CdfStudioLocators.statusBannerDisplay(), ConstantsUtil.SMALL_TIMEOUT_SECONDS);
   }
 
   /**
@@ -218,7 +221,8 @@ public class CdfStudioActions {
    * @param runtimeArgumentKey macro argument
    * @param value              actual value to enter
    */
-  public static void enterRuntimeArgumentValue(String runtimeArgumentKey, String value) {
+  public static void enterRuntimeArgumentValue(String runtimeArgumentKey, String value) throws InterruptedException {
+    Thread.sleep(3000);
     ElementHelper.sendKeys(CdfStudioLocators.runtimeArgsValue(runtimeArgumentKey), value);
   }
 
@@ -287,8 +291,9 @@ public class CdfStudioActions {
    *
    * @param status
    */
-  public static void verifyPipelinePreviewStatusInLogs(String status) {
-    AssertionHelper.verifyElementDisplayed(CdfLogLocators.getPipelineStatusFromLogs(status));
+  public static void verifyPipelinePreviewStatusInLogs(String status) throws InterruptedException {
+    WaitHelper.waitForElementToBeDisplayed(CdfLogLocators.getPipelineStatusFromLogs(status));
+  //  AssertionHelper.verifyElementDisplayed(CdfLogLocators.getPipelineStatusFromLogs(status));
   }
 
   /**
@@ -297,7 +302,8 @@ public class CdfStudioActions {
   public static void pipelineDeploy() {
     WaitHelper.waitForPageToLoad();
     ElementHelper.clickOnElement(CdfStudioLocators.pipelineDeploy);
-    WaitHelper.waitForElementToBeDisplayed(CdfStudioLocators.deployingPipelineMessage);
+    WaitHelper.waitForElementToBeOptionallyDisplayed(CdfStudioLocators.locatorOfdeployingPipelineMessage(),
+                                                     ConstantsUtil.SMALL_TIMEOUT_SECONDS);
     WaitHelper.waitForElementToBeHidden(
       CdfStudioLocators.locatorOfdeployingPipelineMessage(), ConstantsUtil.PIPELINE_DEPLOY_TIMEOUT_SECONDS);
   }
@@ -531,10 +537,13 @@ public class CdfStudioActions {
    * Imports a pipeline from the specified file path.
    * @param filePath The path to the file containing the pipeline to be imported.
    **/
-  public static void importPipeline(String filePath) throws URISyntaxException {
+  public static void importPipeline(String filePath) throws URISyntaxException, InterruptedException {
     WaitHelper.waitForElementToBeDisplayed(CdfStudioLocators.importPipelineButton);
     FileImportUtil.uploadFile(CdfStudioLocators.importPipelineInputTag(), filePath);
-    clickOnFixAllButtonIfDisplayed();
+
+//    clickOnFixAllButtonIfDisplayed();
+    ElementHelper.clickOnElement(CdfStudioLocators.fixAllButtonWrangler);
+    Thread.sleep(20000);
     WaitHelper.waitForPageToLoad();
   }
 

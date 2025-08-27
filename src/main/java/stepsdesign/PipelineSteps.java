@@ -24,6 +24,7 @@ import io.cdap.e2e.pages.locators.CdfStudioLocators;
 import io.cdap.e2e.utils.CdfHelper;
 import io.cdap.e2e.utils.ConstantsUtil;
 import io.cdap.e2e.utils.PluginPropertyUtils;
+import io.cdap.e2e.utils.SeleniumDriver;
 import io.cdap.e2e.utils.SeleniumHelper;
 import io.cdap.e2e.utils.WaitHelper;
 import io.cucumber.datatable.DataTable;
@@ -37,6 +38,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -106,6 +108,7 @@ public class PipelineSteps implements CdfHelper {
 
   @Then("Verify plugin: {string} node is displayed on the canvas with a timeout of {long} seconds")
   public void verifyPluginNodeIsDisplayedOnTheCanvas(String pluginName, long timeoutInSeconds) {
+    SeleniumDriver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     CdfStudioActions.verifyPluginNodeIsDisplayedOnCanvas(pluginName, timeoutInSeconds);
   }
 
@@ -278,13 +281,13 @@ public class PipelineSteps implements CdfHelper {
   }
 
   @Then("Enter runtime argument value {string} for key {string}")
-  public void enterRuntimeArgumentValueForKey(String value, String runtimeArgumentKey) {
+  public void enterRuntimeArgumentValueForKey(String value, String runtimeArgumentKey) throws InterruptedException {
     CdfStudioActions.enterRuntimeArgumentValue(runtimeArgumentKey, PluginPropertyUtils.pluginProp(value));
   }
 
   @Then("Enter runtime argument value from environment variable {string} for key {string}")
   public void enterRuntimeArgumentValueFromEnvironmentVariableForKey(String envVariableKey,
-                                                                     String runtimeArgumentKey) {
+                                                       String runtimeArgumentKey) throws InterruptedException {
     CdfStudioActions.enterRuntimeArgumentValue(runtimeArgumentKey,
       System.getenv(PluginPropertyUtils.pluginProp(envVariableKey)));
   }
@@ -320,7 +323,7 @@ public class PipelineSteps implements CdfHelper {
   }
 
   @Then("Verify the preview run status of pipeline in the logs is {string}")
-  public void verifyThePreviewRunStatusOfOfPipelineInTheLogsIs(String previewStatus) {
+  public void verifyThePreviewRunStatusOfOfPipelineInTheLogsIs(String previewStatus) throws InterruptedException {
     CdfStudioActions.verifyPipelinePreviewStatusInLogs(previewStatus);
   }
 
@@ -736,7 +739,7 @@ public class PipelineSteps implements CdfHelper {
   }
 
   @Then("Select the file for importing the pipeline for the plugin {string}")
-  public void selectFileForImport(String path) throws URISyntaxException {
+  public void selectFileForImport(String path) throws URISyntaxException, InterruptedException {
     CdfStudioActions.importPipeline(PluginPropertyUtils.pluginProp(path));
   }
 

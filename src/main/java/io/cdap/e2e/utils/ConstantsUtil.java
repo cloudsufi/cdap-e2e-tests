@@ -92,6 +92,12 @@ public class ConstantsUtil {
    * SMALL_TIMEOUT_SECONDS: To be used as a small static wait (only if needed)
    */
   public static final int SMALL_TIMEOUT_SECONDS = 20;
+
+  /**
+   * CDFLOGIN_TIMEOUT_SECONDS: To be used as a small static wait (only if needed) for cdf login page
+   */
+  public static final int CDF_LOGIN_TIMEOUT_SECONDS = 50;
+
   /**
    * MEDIUM_TIMEOUT_SECONDS: To be used as a medium static wait (only if needed)
    */
